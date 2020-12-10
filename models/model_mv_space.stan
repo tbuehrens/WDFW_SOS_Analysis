@@ -9,11 +9,17 @@ data{
   int pop_obs[n];
   int year_obs[n];
   vector<lower=0>[P] N_0_med_prior;
-  real x[P];//distances (check format stan)
+  vector[P] x;//easting
+  vector[P] y;//northing
 }
 transformed data{
   vector[P] Zero; //vector used for process error correlation matrix
+  row_vector[2] XY[P];
 	Zero = rep_vector(0,P);
+  for (p in 1:P) {
+        XY[p, 1] = x[p];
+        XY[p, 2] = y[p];
+  }
 }
 parameters{
   matrix[T-1,P] eps;
@@ -36,9 +42,9 @@ transformed parameters{
   vector<lower=0>[P] sigma_rn = sigma_rn_mu + eps_sigma_rn * sigma_rn_sigma; 
   vector<lower=0>[P] sigma_wn = sigma_wn_mu + eps_sigma_wn * sigma_wn_sigma; 
   matrix[P,P] L_K;
-  matrix[P,P] K = cov_exp_quad(x, alpha, rho);//alpha is same for all pops....hmmm
+  matrix[P,P] K = cov_exp_quad(XY,alpha, rho);//alpha is same for all pops....hmmm
   for (p in 1:P){
-    K[p,p] = K[p,p] + square(sigma_rn[p]); #sigma_rn is nonspatial process error here
+    K[p,p] = K[p,p] + square(sigma_rn[p]); //sigma_rn is nonspatial process error here
   }
   L_K = cholesky_decompose(K);
   N[1,1:P] = to_row_vector(N_0[1:P]);
@@ -72,7 +78,7 @@ model{
   //initial states
   N_0 ~ lognormal(log(N_0_med_prior),2);
   //length-scale
-  rho ~ inv_gamma(5, 5);
+  rho ~ gamma(1, 0.01);
   //marginal (spatial) variance
   alpha ~ std_normal();
   //=========likelihood=============
