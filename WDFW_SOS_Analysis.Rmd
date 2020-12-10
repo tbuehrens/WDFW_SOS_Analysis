@@ -245,32 +245,30 @@ plotfunc(data=bind_rows(data=dat[,colnames(dat)%in%colnames(dat2)],dat2),
 Here we will run the status and trend analysis using Stan via rstan. We will then tidy up the results to prepare for summarization and plotting. You must have rtools installed and stan installed for this to work:
 ```{r run_analysis,message=FALSE, warning=FALSE,results = "hide"}
 #run analysis for any populations that is not yet complete 
-#(un-comment section of code below inluding specific ESUs you want to run)
-
-# analyzedata(data_date=data_date,
-#             ESUsubset= c(# "Lower Columbia coho"
-#                # ,"Lower Columbia Chinook"
-#                # ,"Lower Columbia steelhead"
-#                # ,"Mid-Columbia steelhead"
-#                # ,"Snake River spring and summer Chinook"
-#                # ,"Snake River steelhead"
-#                # ,"Upper Columbia spring Chinook"
-#                # ,"Upper Columbia steelhead"
-#                # ,"Snake River fall Chinook"
-#                # ,"Puget Sound steelhead"
-#                # ,"Puget Sound Chinook"
-#                # ,"Ozette Lake sockeye"
-#                # ,"Hood Canal summer chum"
-#                # ,"Lower Columbia chum"
-#               ),
-#             ESU_DPS_list=ESU_DPS_list,
-#             cores=4,
-#             chains = 4,
-#             iter = 2000,
-#             warmup= 1000,
-#             thin = 1,
-#             control=list(adapt_delta=0.9995)
-#             )
+analyzedata(data_date=data_date,
+            ESUsubset= c(# "Lower Columbia coho"
+               # ,"Lower Columbia Chinook"
+               # ,"Lower Columbia steelhead"
+               # ,"Mid-Columbia steelhead"
+               # ,"Snake River spring and summer Chinook"
+               # ,"Snake River steelhead"
+               # ,"Upper Columbia spring Chinook"
+               # ,"Upper Columbia steelhead"
+               # ,"Snake River fall Chinook"
+               # ,"Puget Sound steelhead"
+               # ,"Puget Sound Chinook"
+               # ,"Ozette Lake sockeye"
+               # ,"Hood Canal summer chum"
+               # ,"Lower Columbia chum"
+              ),
+            ESU_DPS_list=ESU_DPS_list,
+            cores=4,
+            chains = 4,
+            iter = 2000,
+            warmup= 1000,
+            thin = 1,
+            control=list(adapt_delta=0.9995)
+            )
 
 #combine results output
 combineresults(data_date=data_date,Recovery_Goals=Recovery_Goals)
