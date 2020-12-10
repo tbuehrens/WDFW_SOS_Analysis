@@ -291,7 +291,7 @@ resultsplots<-plotfunc2(resultsdata=resultsdata,
                         data_date=data_date
                         )
 
-# #make ESU and DIP Results
+#make ESU and DIP Results
 ESU_DIP_results<-make_ESU_DIP_results(
   resultsdata=resultsdata,
   lastyear=lastyear,data_date =data_date,
