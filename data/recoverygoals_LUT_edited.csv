@@ -1,0 +1,148 @@
+COMMON_POPULATION_NAME,Stock.Number,WDFW.Name
+Cispus River - spring Chinook salmon,9991,
+Coweeman River - fall Chinook salmon,1560,Coweeman Fall (Tule) Chinook
+Elochoman River - fall Chinook salmon,1508,Elochoman/Skamokawa Fall (Tule) Chinook
+Grays and Chinook Rivers - fall Chinook salmon,1496,Grays/Chinook Fall (Tule) Chinook
+Kalama River - fall Chinook salmon,1595,Kalama Fall (Tule) Chinook
+Kalama River - spring Chinook salmon,1592,Kalama Spring Chinook
+Lewis River - fall Chinook salmon,1610,Lewis River Fall (Tule) Chinook
+Lewis River - late fall Chinook salmon,1620,Lewis River Late Fall (Bright) Chinook
+Lower Cowlitz River - fall Chinook salmon,1557,Lower Cowlitz Fall (Tule) Chinook
+Lower Gorge Tributaries - fall Chinook salmon,9996,
+"Mill, Abernathy, and Germany Creeks - fall Chinook salmon",1525,Mill/Abernathy/Germany Creeks Fall (Tule) Chinook
+North Fork Lewis River - spring Chinook salmon,1600,North Fork Lewis Spring Chinook
+Salmon Creek - fall Chinook salmon,1623,Salmon Creek Fall (Tule) Chinook
+Tilton River - spring Chinook salmon,9992,
+Toutle River - fall Chinook salmon,1577,Toutle Fall (Tule) Chinook
+Toutle River - spring Chinook salmon,9993,
+Upper Cowlitz River - fall Chinook salmon,1558,Upper Cowlitz Fall (Tule) Chinook
+Upper Cowlitz River - spring Chinook salmon,1553,Upper Cowlitz and Cispus Spring Chinook
+Upper Gorge Tributaries - fall Chinook salmon,1634,Upper Gorge (Columbia) Fall (Tule) Chinook
+Washougal River - fall Chinook salmon,1624,Washougal Fall (Tule) Chinook
+White Salmon River - fall Chinook salmon,1656,Big White Salmon River Fall (Tule) Chinook
+White Salmon River - spring Chinook salmon,1658,Big White Salmon River Spring Chinook
+Cascade River - spring Chinook salmon,1072,Cascade Chinook
+Cedar River - fall Chinook salmon,1144,Cedar Chinook
+Dungeness River - summer Chinook salmon,1240,Dungeness Chinook
+Elwha River - fall Chinook salmon,1248,Elwha Chinook
+Green River - fall Chinook salmon,1160,Green River (Duwamish) Chinook
+Lower Sauk River - summer Chinook salmon,1048,Lower Sauk Chinook
+Lower Skagit River - fall Chinook salmon,1040,Lower Skagit Chinook
+Mid-Hood Canal - fall Chinook salmon,1236,Mid Hood Canal Chinook
+Nisqually River - fall Chinook salmon,1200,Nisqually Chinook
+North Fork Nooksack River (including Middle Fork Nooksack River) - spring Chinook salmon,1008,North Fork Nooksack Chinook (including Middle Fork Nooksack River)
+North Fork Stillaguamish River - summer Chinook salmon,1081,North Fork Stillaguamish Chinook
+Puyallup River - fall Chinook salmon,1176,Puyallup Chinook
+Sammamish River - fall Chinook salmon,1128,Sammamish Chinook
+Skokomish River - fall Chinook salmon,1208,Skokomish Chinook
+Skykomish River - summer Chinook salmon,1106,Skykomish Chinook
+Snoqualmie River - fall Chinook salmon,1108,Snoqualmie Chinook
+South Fork Nooksack River - spring Chinook salmon,1016,South Fork Nooksack Chinook
+South Fork Stillaguamish River - fall Chinook salmon,1083,South Fork Stillaguamish Chinook
+Suiattle River - spring Chinook salmon,1064,Suiattle Chinook
+Upper Sauk River - spring Chinook salmon,1600,North Fork Lewis Spring Chinook
+Upper Skagit River - summer Chinook salmon,1032,Upper Skagit Chinook
+White River - spring Chinook salmon,1184,White River Chinook
+Snake River - fall Chinook salmon,1696,Snake Fall Chinook
+Tucannon River - spring Chinook salmon,1704,Tucannon Spring Chinook
+Entiat River - spring Chinook salmon,1808,Entiat Spring Chinook
+Methow River - spring Chinook salmon,1824,Methow Spring Chinook
+Wenatchee River - spring Chinook salmon,1770,Wenatchee Spring Chinook
+Cowlitz River - fall Chum salmon,2752,Cowlitz Fall Chum
+Cowlitz River - summer Chum salmon,2751,Cowlitz Summer Chum
+Elochoman River - fall Chum salmon,2749,Elochoman/Skamokawa Fall Chum
+Grays and Chinook Rivers - fall Chum salmon,2748,Grays/Chinook Fall Chum
+Kalama River - fall Chum salmon,2753,Kalama Fall Chum
+Lewis River - fall Chum salmon,2755,Lewis Fall Chum
+Lower Gorge Tributaries - fall Chum salmon,2765,Lower Gorge (Columbia) Fall Chum
+"Mill, Abernathy, and Germany Creeks - fall Chum salmon",2750,Mill/Abernathy/Germany Creeks Fall Chum
+Salmon Creek - fall Chum salmon,2754,Salmon Creek Fall Chum
+Upper Gorge Tributaries - fall Chum salmon,2757,Upper Gorge (Columbia) Fall Chum
+Washougal River - fall Chum salmon,2756,Washougal Fall Chum
+Hood Canal - summer chum salmon,2300,Hood Canal Summer Chum
+Strait of Juan de Fuca - summer chum salmon,2500,Strait of Juan de Fuca Summer Chum
+Cispus River - early and late Coho salmon,9994,
+Coweeman River - late Coho salmon,3700,Coweeman Coho
+East Fork Lewis River - early and late Coho salmon,3760,East Fork Lewis Coho
+Elochoman River - late Coho salmon,3645,Elochoman/Skamokawa Coho
+Grays and Chinook Rivers - late Coho salmon,3630,Grays/Chinook Coho
+Kalama River - late Coho salmon,3740,Kalama Coho
+Lower Cowlitz River - late Coho salmon,3692,Lower Cowlitz Coho
+Lower Gorge Tributaries - late Coho salmon,3790,Lower Gorge (Columbia) Coho
+"Mill, Abernathy, and Germany Creeks - late Coho salmon",3666,Mill/Abernathy/Germany Creeks Coho
+North Fork Lewis River - early and late Coho salmon,3031,North Fork Lewis Coho
+North Fork Toutle River - early and late Coho salmon,3793,North Fork Toutle Coho
+Salmon Creek - late Coho salmon,3770,Salmon Creek Coho
+South Fork Toutle River - early and late Coho salmon,3720,South Fork Toutle Coho
+Tilton River - early and late Coho salmon,3696,Tilton Coho
+Upper Cowlitz River - early and late Coho salmon,3694,Upper Cowlitz and Cispus Coho
+Upper Gorge Tributaries - late Coho salmon,3792,Upper Gorge (Columbia) Coho
+Washougal River - late Coho salmon,3780,Washougal Coho
+Ozette Lake - sockeye salmon,5500,Ozette Sockeye
+Cispus River - winter Steelhead,9995,
+Coweeman River - winter Steelhead,6707,Coweeman Winter Steelhead
+East Fork Lewis River - summer Steelhead,6763,East Fork Lewis Summer Steelhead
+East Fork Lewis River - winter Steelhead,6770,East Fork Lewis Winter Steelhead
+Kalama River - summer Steelhead,6735,Kalama Summer Steelhead
+Kalama River - winter Steelhead,6742,Kalama Winter Steelhead
+Lower Cowlitz River - winter Steelhead,6701,Lower Cowlitz Winter Steelhead
+Lower Gorge Tributaries - winter Steelhead,6795,Lower Gorge (Columbia) Winter Steelhead
+North Fork Lewis River - summer Steelhead,6756,North Fork Lewis Summer Steelhead
+North Fork Lewis River - winter Steelhead,6749,North Fork Lewis Winter Steelhead
+North Fork Toutle River - winter Steelhead,6714,North Fork Toutle Winter Steelhead
+Salmon Creek - winter Steelhead,6777,Salmon Creek Winter Steelhead
+South Fork Toutle River - winter Steelhead,6721,South Fork Toutle Winter Steelhead
+Tilton River - winter Steelhead,6704,Tilton Winter Steelhead
+Upper Cowlitz River - winter Steelhead,6702,Upper Cowlitz and Cispus Winter Steelhead
+Upper Gorge Tributaries - winter Steelhead,6810,Upper Gorge (Columbia) Winter Steelhead
+Washougal River - summer Steelhead,6784,Washougal Summer Steelhead
+Washougal River - winter Steelhead,6791,Washougal Winter Steelhead
+Wind River - summer Steelhead,6805,Wind River (Upper Gorge) Summer Steelhead
+Klickitat River - summer and winter Steelhead,6830,Klickitat Summer and Winter Steelhead
+Naches River - summer Steelhead,6892,Naches Summer Steelhead
+Rock Creek - summer Steelhead,6847,Rock Creek Summer Steelhead
+Satus Creek - summer Steelhead,6888,Satus Creek Summer Steelhead
+Toppenish Creek - summer Steelhead,6890,Toppenish Creek Summer Steelhead
+Touchet River - summer Steelhead,6861,Touchet Summer Steelhead
+Walla Walla River - summer Steelhead,6854,Walla Walla Summer Steelhead
+Yakima River Upper Mainstem - summer Steelhead,6894,Upper Yakima Summer Steelhead
+White Salmon River - summer Steelhead,6819,Big White Salmon River Summer Steelhead
+Baker River - summer and winter Steelhead,6050,Baker River Summer and Winter Steelhead
+Canyon Creek - summer Steelhead,6112,Canyon Creek (Stillaguamish) Summer Steelhead
+Cedar River - winter Steelhead,6156,Cedar River Winter Steelhead
+Deer Creek - summer Steelhead,6105,Deer Creek Summer Steelhead
+Drayton Harbor Tributaries - winter Steelhead,6007,Drayton Harbor Tributaries Winter Steelhead
+Dungeness River - summer and winter Steelhead,6301,Dungeness Winter Steelhead
+East Hood Canal Tributaries - winter Steelhead,6223,East Hood Canal Winter Steelhead
+East Kitsap Peninsula Tributaries - winter Steelhead,6220,East Kitsap Winter Steelhead
+Elwha River - winter Steelhead,6322,Elwha Winter Steelhead
+Green River - winter Steelhead,6175,Green River (Duwamish) Winter Steelhead
+Nisqually River - winter Steelhead,6203,Nisqually Winter Steelhead
+Nookachamps Creek - winter Steelhead,6921,Nookachamps Creek Winter Steelhead
+Nooksack River - winter Steelhead,6015,Nooksack Winter Steelhead
+North Fork Skykomish River - summer Steelhead,6125,North Fork Skykomish Summer Steelhead
+North Lake Washington and Lake Sammamish - winter Steelhead,6158,North Lake Washington and Lake Sammamish Winter Steelhead
+Pilchuck River - winter Steelhead,6121,Pilchuck Winter Steelhead
+Puyallup River/Carbon River - winter Steelhead,6183,Puyallup\Carbon Winter Steelhead
+Samish River and Bellingham Bay Tributaries - winter Steelhead,6042,Samish Winter Steelhead
+Sauk River - summer and winter Steelhead,6071,Sauk River Summer and Winter Steelhead
+Sequim/Discovery Bays Tributaries - winter Steelhead,6289,Sequim and Discovery Bays Tributaries Winter Steelhead
+Skagit River - summer and winter Steelhead,6049,Skagit River Summer and Winter Steelhead
+Skokomish River - winter Steelhead,6245,Skokomish Winter Steelhead
+Snohomish/Skykomish Rivers - winter Steelhead,6117,Snohomish/Skykomish Winter Steelhead
+Snoqualmie River - winter Steelhead,6140,Snoqualmie Winter Steelhead
+South Fork Nooksack River - summer Steelhead,6021,South Fork Nooksack Summer Steelhead
+South Hood Canal Tributaries - winter Steelhead,6225,South Hood Canal Winter Steelhead
+South Puget Sound Tributaries - winter Steelhead,6219,South Sound Tributaries Winter Steelhead
+Stillaguamish River - winter Steelhead,6091,Stillaguamish Winter Steelhead
+Strait of Juan de Fuca Tributaries - winter Steelhead,6308,Strait of Juan de Fuca Independent Tributaries Winter Steelhead
+Tolt River - summer Steelhead,6147,Tolt Summer Steelhead
+West Hood Canal Tributaries - winter Steelhead,6247,West Hood Canal Winter Steelhead
+White River - winter Steelhead,6189,White River (Puyallup) Winter Steelhead
+Asotin Creek - summer Steelhead,6875,Asotin Creek Summer Steelhead
+Joseph Creek - summer Steelhead,6884,Joseph Creek Summer Steelhead
+Tucannon River - summer Steelhead,6868,Tucannon Summer Steelhead
+Entiat River - summer Steelhead,6903,Entiat Summer Steelhead
+Methow River - summer Steelhead,6912,Methow Summer Steelhead
+Okanogan River - summer Steelhead,6920,Okanogan Summer Steelhead
+Wenatchee River - summer Steelhead,6896,Wenatchee Summer Steelhead
