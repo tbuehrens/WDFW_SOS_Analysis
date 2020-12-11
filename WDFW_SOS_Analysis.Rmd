@@ -24,13 +24,13 @@ This document was generated on `r format(Sys.time(), '%m/%d/%Y')`.
 options(width = 100)
 knitr::opts_chunk$set(message = FALSE)
 set.seed(123)
-if(file.exists("cnt_time.txt")) {
-  file.remove("cnt_time.txt")
-}
 ```
+# Purpose
+The purpose of this document is to record the steps and code necessary to reproduce the 2020 State Of the Salmon (SOS) analysis completed by WDFW. A full report with methods, results, and conclusions is found here: [***Full WDFW SOS Report Link***](https://data.wa.gov/Natural-Resources-Environment/WDFW-Status-and-Trends-Analysis-of-Salmon-Abundanc/fs39-yvqy)
+
 
 # Requirements
-All analyses require the [R software](https://cran.r-project.org/) (v3.4.3) for data retrieval, data processing, and summarizing model results, and the [Stan Software](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started/) for Hamiltonian Monte Carlo (HMC) simulation. 
+All analyses require R software [**(link)**](https://cran.r-project.org/) (v3.4.3) for data retrieval, data processing, and summarizing model results, and Stan software [**(link)**](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started/) for Hamiltonian Monte Carlo (HMC) simulation. 
 
 
 # Functions
