@@ -213,7 +213,28 @@ filtergeomeansforpopswithnonewdata="No"
 ```
 
 # Data Preparation
-Here we will use a data filtering algorithm described in the full report to select appropriate natural origin spawner abundance data for use in the status and trend analysis, we will prepare analysis input files, and we will plot the raw abundance data. DESCRIBE ALGORITHM HERE. the program will look for NOSAIJ or NOSAEJ data first and then proceed to TSAIJ and TSAEJ data only if NOSA data does not exist.
+Here we will use a data filtering algorithm described in the full report to select appropriate natural origin spawner abundance data for use in the status and trend analysis. We will then prepare analysis input files (for Stan), and we will plot the raw abundance data. An abbreviated description of the algorithm used to identify final data used for the analysis follows:
+
+1. We downloaded the entire Coordinated Assessments database here [**(link)**](https://cax.streamnet.org/). The retrieval date is part of the file name (located in the "data" folder).
+
+2. Data were limited to ESA/DPS-listed populations located partially or entirely in Washington State.
+
+3. Data were limited to those with "POPFIT" designated as “Same” or “Multiple”, indicating that the population estimate had complete spatial and temporal coverage (as opposed to commonly monitored indexes of abundance measured at the sub-population scale, for which comparison with population-level recovery goals is inappropriate). There were `r length(POPFIT_exceptions)` exceptions to this, which are documented as "POPFIT_exceptions" in the user inputs.
+
+4. Data were limited to those for which “BESTVALUE” was designated “Yes” indicating that of multiple potential abundance estimates available for that year and population, a particular estimate was the best estimate.
+
+5. A series of population-specific manual filters (`r length(specialcaselist)` total) were applied to eliminate duplicate data sets (i.e., more than one data point per population per year), which are documented as "specialcaselist" in the user inputs.
+
+6. An algorithm selected the type of data to use for the analysis, looking for data types in the following order and stopping when the first data type was found with records: Natural Origin Spawner Abundance Including Jacks, Natural Origin Spawner Abundance Excluding Jacks, Total Spawner Abundance Including Jacks, Total Spawner Abundance Excluding Jacks. 
+
+7. A final population-specific manual filter was applied to eliminate datasets for which Total Spawner Abundance was not an appropriate surrogate for Natural Origin Spawner Abundance because the population contained a non-negligible proportion of hatchery spawners. For the vast majority of populations, if any data was available, natural origin spawner data was available. For some, our algorithm only identified total spawner data (i.e., hatchery and wild). We manually inspected the list of populations for which total spawner data was selected to identify those for which total spawners potentially contained a non-negligible proportion of hatchery origin spawners. These populations (n = `r length(HatchPops)`) were filtered out, leaving only the total spawner data that could be appropriately treated for analysis purposes as natural origin spawner abundance. The filter list is available in user inputs as "HatchPops". The final data type used for each population is listed in the field "final_abundance_data_type" in the "All_Data" file in the results folder here: [**(link)**](https://github.com/tbuehrens/WDFW_SOS_Analysis/blob/main/results).
+
+8. Data were then filtered to only include years from ESA listing (which varied by ESU/DPS) through present as our focus was on status and trend since the ESA listing.
+
+9. Finally, we compared our final population list to the complete list of populations to determine if any populations had suitable data that was not yet available in Coordinated Assessments. Twenty-one populations were identified for which data was available either in WDFW-SCORE here [**(link)**](https://fortress.wa.gov/dfw/score/score/), or through co-manager agreed to datasets provided via personal communication. These data were formatted to match the Coordinated Assessments data, loaded via the "prepNONCAdata" function, and merged with the filtered Coordinated Assessments data to complete the final analysis. This supplemental data not from coordinated assessments may be found in the "Raw data for pops not in CA" file in the "data" folder here: [**(link)**](https://github.com/tbuehrens/WDFW_SOS_Analysis/tree/main/data)
+
+Other data inputs (available in the "data" folder) included recovery goals (pulled from various NOAA-adopted recovery plans, of which we used either the minimum viability goals or low productivity goals), a list of the ESA-listed ESU/DPSs in Washington ("ESU_DPS_List") that included listing dates, and a list of all populations by listed ESU/DPS in Washington ("ESU_DIP_List_all").
+
 ```{r data_prep,message=FALSE, warning=FALSE,results = "hide"}
 #prep and filter ca data
 dat<-prepCAdata(CAfilename = CAfilename, 
