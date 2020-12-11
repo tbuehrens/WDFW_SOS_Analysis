@@ -204,6 +204,8 @@
 "Puget Sound Chinook","Hood Canal","Skokomish River - fall Chinook salmon","Chinook salmon","Fall","Skokomish River",2016,232,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Hood Canal","Skokomish River - fall Chinook salmon","Chinook salmon","Fall","Skokomish River",2017,798,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Hood Canal","Skokomish River - fall Chinook salmon","Chinook salmon","Fall","Skokomish River",2018,161,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Whidbey Basin","Skykomish River - summer Chinook salmon","Chinook salmon","Summer","Skykomish River",1997,1540,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Whidbey Basin","Skykomish River - summer Chinook salmon","Chinook salmon","Summer","Skykomish River",1998,1495,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Whidbey Basin","Skykomish River - summer Chinook salmon","Chinook salmon","Summer","Skykomish River",1999,1401,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Whidbey Basin","Skykomish River - summer Chinook salmon","Chinook salmon","Summer","Skykomish River",2000,1775,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Whidbey Basin","Skykomish River - summer Chinook salmon","Chinook salmon","Summer","Skykomish River",2001,3054,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -221,6 +223,8 @@
 "Puget Sound Chinook","Whidbey Basin","Skykomish River - summer Chinook salmon","Chinook salmon","Summer","Skykomish River",2017,2783,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Whidbey Basin","Skykomish River - summer Chinook salmon","Chinook salmon","Summer","Skykomish River",2018,2259,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Whidbey Basin","Skykomish River - summer Chinook salmon","Chinook salmon","Summer","Skykomish River",2019,569,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Whidbey Basin","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",1997,1796,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Whidbey Basin","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",1998,1361,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Whidbey Basin","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",1999,1040,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Whidbey Basin","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2000,1248,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Whidbey Basin","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2001,3284,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -323,6 +327,27 @@
 "Puget Sound Chinook","-","Upper Skagit River - summer Chinook salmon","Chinook","-","-",2016,15406,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","-","Upper Skagit River - summer Chinook salmon","Chinook","-","-",2017,7792,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","-","Upper Skagit River - summer Chinook salmon","Chinook","-","-",2018,8602,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1978,98,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1979,57,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1980,57,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1981,177,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1982,17,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1983,21,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1984,6,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1985,20,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1986,6,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1987,117,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1988,127,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1989,111,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1990,275,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1991,195,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1992,406,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1993,401,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1994,385,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1995,605,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1996,619,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1997,402,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1998,19,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1999,93,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2000,872,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Central/South Sound","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2001,1455,1,-99,-99,-99,-99,-99,-99,-99,-99

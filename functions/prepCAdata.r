@@ -1,5 +1,5 @@
 #prep CA data for analysis function
-prepCAdata<-function(mainDir,CAfilename, data_date, ESU_DPS_list, Recovery_Goals, POPFIT_exceptions,specialcaselist){
+prepCAdata<-function(mainDir,CAfilename, data_date, ESU_DPS_list, Recovery_Goals, POPFIT_exceptions,specialcaselistif,databeforelisting="No"){
   SubDir <- paste("results ", data_date,sep="")
   if (!file.exists(SubDir)){
     dir.create(file.path(SubDir))
@@ -20,10 +20,7 @@ prepCAdata<-function(mainDir,CAfilename, data_date, ESU_DPS_list, Recovery_Goals
   dat<-dat[dat$ESU_DPS%in%ESU_DPS_list$USECA,]
   
   #filter pops in WA list
-  # unique(dat$COMMONPOPNAME2[dat$SUBMITAGENCY=="WDFW"])
-  # unique(Recovery_Goals$COMMON_POPULATION_NAME)
-  # unique(dat$COMMONPOPNAME2[dat$SUBMITAGENCY=="WDFW"])[!unique(dat$COMMONPOPNAME2[dat$SUBMITAGENCY=="WDFW"]) %in%  unique(Recovery_Goals$COMMON_POPULATION_NAME)]
-  dat<-dat[dat$COMMONPOPNAME2%in%Recovery_Goals$COMMON_POPULATION_NAME,]
+    dat<-dat[dat$COMMONPOPNAME2%in%Recovery_Goals$COMMON_POPULATION_NAME,]
   
   #pop fit is same/multiple (data at Recovery Pop Scale only, not subpops)
   dat<-dat[dat$POPFIT%in%c("Same","Multiple") | dat$COMMONPOPNAME2%in%POPFIT_exceptions,]
@@ -40,7 +37,9 @@ prepCAdata<-function(mainDir,CAfilename, data_date, ESU_DPS_list, Recovery_Goals
   
   #merge with ESU_DPS_list including listing years
   dat<-merge(ESU_DPS_list,dat,by="ESU_DPS",all.x = F,all.y=F)
-  dat<-dat[dat$SPAWNINGYEAR>=dat$ESA.listing.year,]
+  if(databeforelisting=="No"){
+    dat<-dat[dat$SPAWNINGYEAR>=dat$ESA.listing.year,]
+  }
   
   #identify final abundance data: priority 1:4 = NOSAIJ, NOSAEJ,TSAIJ,TSAEJ.
   NOSAIJpops<-dat%>%group_by(ESAPOPNAME)%>%filter(max(NOSAIJ,na.rm = T)>0)%>%summarise(minyr=min(SPAWNINGYEAR),maxyr=max(SPAWNINGYEAR))
@@ -70,8 +69,9 @@ prepCAdata<-function(mainDir,CAfilename, data_date, ESU_DPS_list, Recovery_Goals
   #check for duplicate abundance data (more than 1 series per year)
   dups<-data.frame(dat%>%group_by(ESU_DPS,ESAPOPNAME,SPAWNINGYEAR)%>%summarise(count=n()))%>%filter(count>1)
   print(paste("Number of duplicate entries (>1 value per year and pop): ",nrow(dups),sep=""))
-  if(nrow(dups)>1){print(dups)}
+  if(nrow(dups)>1){print(dups); stop("There is more than one data point per pop per year; additional filters needed!")}
   
+
   #look at table of final ESUs, Pops, data type, yrs of data (to see what's there)
   #print("Summary of ESUs, Populations, and Years of Data (a more complete dataset will be saved to your results folder)")
   #print(data.frame(dat%>%group_by(ESU_DPS,ESAPOPNAME)%>%summarise(final_abundance_data_type=first(final_abundance_data_type),minyr=min(SPAWNINGYEAR),maxyr=max(SPAWNINGYEAR))))
@@ -100,7 +100,9 @@ prepCAdata<-function(mainDir,CAfilename, data_date, ESU_DPS_list, Recovery_Goals
                        )
   )
   alldat<-alldat[order(alldat$ESU_DPS,alldat$COMMONPOPNAME2,alldat$SPAWNINGYEAR),]
-  write.csv(alldat,paste(SubDir,"/All_CA_Data_",data_date,".csv",sep=""),row.names = F)
+  if(databeforelisting=="No"){
+    write.csv(alldat,paste(SubDir,"/All_CA_Data_",data_date,".csv",sep=""),row.names = F)
+  }else(write.csv(alldat,paste(SubDir,"/All_CA_Data_incl_before_listing_",data_date,".csv",sep=""),row.names = F))
   dat<-dat %>% mutate_if(is.factor, as.character)
   return(dat)
 }
