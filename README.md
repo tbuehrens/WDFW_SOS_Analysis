@@ -1,3 +1,4 @@
+![](https://user-images.githubusercontent.com/40445951/101853410-684a0c00-3b14-11eb-9ad4-974b0a1b440a.JPG)
 # WDFW_SOS_Analysis
 This is a repository of of R and Stan code to complete WDFW analysis for the 2020 State Of the Salmon (SOS) Report:
 1. For a tutorial in reproducing the 2020 SOS analysis click here: [**(link)**](https://github.com/tbuehrens/WDFW_SOS_Analysis/blob/main/WDFW_SOS_Analysis.pdf)
