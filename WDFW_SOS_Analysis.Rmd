@@ -242,17 +242,23 @@ dat<-prepCAdata(CAfilename = CAfilename,
                 ESU_DPS_list = ESU_DPS_list,
                 Recovery_Goals = Recovery_Goals, 
                 POPFIT_exceptions = POPFIT_exceptions, 
-                specialcaselist = specialcaselist)
+                specialcaselist = specialcaselist,
+                databeforelisting="No"
+                )
 
 #prep NON CA data (data must be pre-filtered/final )
 dat2<-prepNONCAdata(data_date=data_date,
                     NONCAfilename = NONCAfilename,
-                    ESU_DPS_list = ESU_DPS_list)
+                    ESU_DPS_list = ESU_DPS_list,
+                    databeforelisting="No"
+                    )
 
 #make analysis files for status and trend analysis 
 #(we use bind_rows to combine CA and Non-CA data)
 makefiles(data=bind_rows(dat[,colnames(dat)%in%colnames(dat2)],dat2),
-          data_date=data_date)
+          data_date=data_date,
+          databeforelisting="No"
+          )
 
 #make plots of raw abundance data by population and ESU/DPS 
 plotfunc(data=bind_rows(data=dat[,colnames(dat)%in%colnames(dat2)],dat2),
@@ -331,7 +337,7 @@ esu_results_plot(ESU_DIP_results=ESU_DIP_results,
 
 # Format Data for Data.wa.gov
 Here we will merge our raw population name list, recovery goals, and final abundance data used for analysis with the population name list used by data.wa.gov in order to display the data on the web. Unfortunately, this portion of the program involves two manual steps. First, a lookup table ("recoverygoals_LUT_raw.csv") is created to compare the population set from the SOS analysis with that in data.wa.gov using the function make_data_wa_gov_recover_goals_lut. This lookup table uses character matching to match names and needs manual inspection and proofing. Once this function is done, open, inspect, and edit as necessary "recoverygoals_LUT_raw.csv" and re-save as "recoverygoals_LUT_edited.csv" in the data folder. You many then run the following 3 functions: make_data_wa_gov_recovery_goals, make_escapement_data_wa_gov,make_population_data_wa_gov. The final file these functions creates ("Population_Data_For_data_wa_gov_raw.csv") will have missing information for populations that are not listed in the inventory of populations on data.wa.gov. This file should be downloaded, inspected, edited, and re-sawed as "Population_Data_For_data_wa_gov.csv" and is then ready for upload to data.wa.gov
-```{r format_data_for_data_wa_gov,message=FALSE, warning=FALSE}
+```{r format_data_for_data_wa_gov,message=FALSE, warning=FALSE,results = "hide"}
 #===========================
 #make tables for data.wa.gov
 #===========================
@@ -346,7 +352,8 @@ make_data_wa_gov_recovery_goals(data_date = data_date,
                                 ESU_DPS_list
                                 )
 make_escapement_data_wa_gov(data_date=data_date,
-                            Recovery_Goals_LUT_edited=Recovery_Goals_LUT_edited
+                            Recovery_Goals_LUT_edited=Recovery_Goals_LUT_edited,
+                            databeforelisting="Yes"
                             )
 make_population_data_wa_gov(data_date=data_date,
                             Recovery_Goals=Recovery_Goals,
@@ -361,3 +368,4 @@ In order to reproduce this pdf or html page you need to have a LaTex application
 ```{r install_tinytex,message=FALSE, warning=FALSE}
 #tinytex::install_tinytex()
 ```
+
