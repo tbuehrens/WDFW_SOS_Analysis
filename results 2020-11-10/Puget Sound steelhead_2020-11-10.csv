@@ -1,21 +1,4 @@
 "ESU","MAJOR_POPULATION_GROUP","COMMON_POPULATION_NAME","SPECIES","RUN_TIMING","STREAM_NAME","BROOD_YEAR","NUMBER_OF_SPAWNERS","FRACWILD","CATCH","AGE_1_RETURNS","AGE_2_RETURNS","AGE_3_RETURNS","AGE_4_RETURNS","AGE_5_RETURNS","AGE_6_RETURNS","AGE_7_RETURNS"
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1984,636,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1985,224,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1986,900,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1987,456,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1988,588,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1989,306,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1990,406,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1991,394,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","Cedar River - winter Steelhead","Steelhead","Winter","Cedar River",1992,554,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",1988,438,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",1989,429,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",1990,408,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",1991,423,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",1992,292,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",1993,338,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",1994,337,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",1996,261,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",2011,455,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",2013,619,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","Dungeness River - summer and winter Steelhead","Steelhead","Both summer & winter","Dungeness River",2014,492,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -39,7 +22,6 @@
 "Puget Sound steelhead","Central and South Puget Sound","Nisqually River - winter Steelhead","Steelhead","Winter","Nisqually River",2017,616,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Central and South Puget Sound","Nisqually River - winter Steelhead","Steelhead","Winter","Nisqually River",2018,1738,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Central and South Puget Sound","Nisqually River - winter Steelhead","Steelhead","Winter","Nisqually River",2019,1950,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Nooksack River - winter Steelhead","Steelhead","Winter","Nooksack River",2004,1592,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Nooksack River - winter Steelhead","Steelhead","Winter","Nooksack River",2010,1901,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Nooksack River - winter Steelhead","Steelhead","Winter","Nooksack River",2011,1774,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Nooksack River - winter Steelhead","Steelhead","Winter","Nooksack River",2012,1747,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -49,45 +31,6 @@
 "Puget Sound steelhead","Northern Cascades","Nooksack River - winter Steelhead","Steelhead","Winter","Nooksack River",2016,1842,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Nooksack River - winter Steelhead","Steelhead","Winter","Nooksack River",2017,1714,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Nooksack River - winter Steelhead","Steelhead","Winter","Nooksack River",2018,2006,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1984,614,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1985,250,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1986,916,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1987,716,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1988,270,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1989,380,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1990,308,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1991,227,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1992,45,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1993,40,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1994,6,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1995,0,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1996,2,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1997,4,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1998,8,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","North Lake Washington and Lake Sammamish - winter Steelhead","Steelhead","Winter","North Lake Washington and Lake Sammamish",1999,4,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1981,490,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1982,657,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1983,779,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1984,930,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1985,1706,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1986,1644,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1987,1416,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1988,1424,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1989,1650,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1990,1124,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1991,968,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1992,1582,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1994,1308,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1995,1588,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1998,1558,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",1999,1270,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2000,590,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2001,462,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2002,279,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2003,696,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2004,1522,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2005,604,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2006,580,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2007,976,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2008,646,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2009,344,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -101,26 +44,6 @@
 "Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2017,644,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2018,588,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Pilchuck River - winter Steelhead","Steelhead","Winter","Pilchuck River",2019,336,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1979,224,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1980,80,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1981,142,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1985,1052,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1987,836,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1988,606,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1989,244,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1990,106,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1994,941,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1995,918,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1996,797,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1998,586,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",1999,617,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2000,676,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2001,908,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2002,859,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2003,915,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2004,930,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2005,597,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2006,791,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2007,494,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2008,432,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2009,434,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -133,33 +56,6 @@
 "Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2016,1456,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2017,862,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Samish River and Bellingham Bay Tributaries - winter Steelhead","Steelhead","Winter","Samish River and Bellingham Bay Tributaries",2018,1232,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1978,5757,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1979,2982,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1980,5288,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1981,4308,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1982,9609,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1983,7732,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1984,8963,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1985,8603,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1986,11098,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1987,8305,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1988,13194,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1989,11854,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1990,10017,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1991,5818,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1992,7514,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1993,6900,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1994,6412,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1995,7656,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1998,7448,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",1999,7870,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2000,3780,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2001,4584,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2002,5394,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2003,6818,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2004,7332,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2005,6382,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2006,6757,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2007,4242,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2008,4887,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2009,2502,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -172,29 +68,6 @@
 "Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2016,7926,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2017,6380,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Skagit River - summer and winter Steelhead","Steelhead","Both summer & winter","Skagit River",2018,6084,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1981,1297,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1982,2242,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1983,1843,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1984,3197,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1985,3082,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1986,4076,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1987,3628,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1988,4710,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1989,3618,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1990,2896,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1991,3136,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1992,4760,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1994,4014,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1995,4130,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1998,4132,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",1999,2937,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2000,1558,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2001,1265,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2002,1166,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2003,1915,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2004,3404,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2005,2850,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2006,3038,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2010,732,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2011,1150,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2012,876,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -205,29 +78,6 @@
 "Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2017,888,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2018,372,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snohomish/Skykomish Rivers - winter Steelhead","Steelhead","Winter","Snohomish/Skykomish Rivers",2019,385,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1981,1167,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1982,1261,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1983,2536,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1984,2305,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1985,1748,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1986,2070,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1987,2420,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1988,1610,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1989,1810,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1990,1478,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1991,1832,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1992,2246,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1994,1848,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1995,2004,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1998,2004,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",1999,2164,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2000,674,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2001,1395,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2002,789,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2003,988,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2004,1506,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2005,1060,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2006,1856,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2007,992,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2010,662,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2011,664,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -239,15 +89,6 @@
 "Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2017,460,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2018,292,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Snoqualmie River - winter Steelhead","Steelhead","Winter","Snoqualmie River",2019,244,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",1998,171,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",1999,405,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2000,241,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2001,206,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2002,146,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2003,103,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2004,226,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2005,114,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2006,269,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2007,196,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2008,159,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2009,68,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -261,26 +102,6 @@
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2017,29,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2018,132,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Hood Canal and Strait of Juan de Fuca","South Hood Canal Tributaries - winter Steelhead","Steelhead","Winter","Union River/Tahuya River",2019,244,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1985,140,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1986,84,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1987,88,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1989,60,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1991,45,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1992,108,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1993,202,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1994,161,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1995,151,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1996,170,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1997,213,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1998,366,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",1999,214,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2000,185,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2001,167,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2002,115,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2003,198,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2004,34,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2005,68,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2006,114,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2007,50,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2008,52,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2009,86,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -294,30 +115,6 @@
 "Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2017,62,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2018,30,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Northern Cascades","Tolt River - summer Steelhead","Steelhead","Summer","Tolt River",2019,58,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1983,239,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1984,794,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1985,855,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1986,621,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1987,561,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1988,1390,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1989,1123,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1990,545,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1991,593,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1992,837,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1993,420,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1994,349,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1995,313,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1996,364,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1997,314,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1998,322,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",1999,252,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2000,382,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2001,420,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2002,519,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2003,162,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2004,184,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2005,153,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2006,137,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2007,276,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2008,183,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound steelhead","Central and South Puget Sound","White River - winter Steelhead","Steelhead","Winter","White River",2009,146,1,-99,-99,-99,-99,-99,-99,-99,-99
