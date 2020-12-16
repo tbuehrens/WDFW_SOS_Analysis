@@ -1,5 +1,5 @@
 COMMON_POPULATION_NAME,Stock.Number,WDFW.Name
-Cispus River - spring Chinook salmon,9991,
+Cispus River - spring Chinook salmon,1554,Cispus Spring Chinook 
 Coweeman River - fall Chinook salmon,1560,Coweeman Fall (Tule) Chinook
 Elochoman River - fall Chinook salmon,1508,Elochoman/Skamokawa Fall (Tule) Chinook
 Grays and Chinook Rivers - fall Chinook salmon,1496,Grays/Chinook Fall (Tule) Chinook
@@ -8,13 +8,13 @@ Kalama River - spring Chinook salmon,1592,Kalama Spring Chinook
 Lewis River - fall Chinook salmon,1610,Lewis River Fall (Tule) Chinook
 Lewis River - late fall Chinook salmon,1620,Lewis River Late Fall (Bright) Chinook
 Lower Cowlitz River - fall Chinook salmon,1557,Lower Cowlitz Fall (Tule) Chinook
-Lower Gorge Tributaries - fall Chinook salmon,9996,
+Lower Gorge Tributaries - fall Chinook salmon,1629,Lower Gorge (Columbia) Late Fall (Bright) Chinook
 "Mill, Abernathy, and Germany Creeks - fall Chinook salmon",1525,Mill/Abernathy/Germany Creeks Fall (Tule) Chinook
 North Fork Lewis River - spring Chinook salmon,1600,North Fork Lewis Spring Chinook
 Salmon Creek - fall Chinook salmon,1623,Salmon Creek Fall (Tule) Chinook
-Tilton River - spring Chinook salmon,9992,
+Tilton River - spring Chinook salmon,1010,Tilton Spring Chinook
 Toutle River - fall Chinook salmon,1577,Toutle Fall (Tule) Chinook
-Toutle River - spring Chinook salmon,9993,
+Toutle River - spring Chinook salmon,1578,Toutle Spring Chinook 
 Upper Cowlitz River - fall Chinook salmon,1558,Upper Cowlitz Fall (Tule) Chinook
 Upper Cowlitz River - spring Chinook salmon,1553,Upper Cowlitz and Cispus Spring Chinook
 Upper Gorge Tributaries - fall Chinook salmon,1634,Upper Gorge (Columbia) Fall (Tule) Chinook
@@ -61,7 +61,7 @@ Upper Gorge Tributaries - fall Chum salmon,2757,Upper Gorge (Columbia) Fall Chum
 Washougal River - fall Chum salmon,2756,Washougal Fall Chum
 Hood Canal - summer chum salmon,2300,Hood Canal Summer Chum
 Strait of Juan de Fuca - summer chum salmon,2500,Strait of Juan de Fuca Summer Chum
-Cispus River - early and late Coho salmon,9994,
+Cispus River - early and late Coho salmon,3698,Cispus Coho 3698
 Coweeman River - late Coho salmon,3700,Coweeman Coho
 East Fork Lewis River - early and late Coho salmon,3760,East Fork Lewis Coho
 Elochoman River - late Coho salmon,3645,Elochoman/Skamokawa Coho
@@ -79,7 +79,7 @@ Upper Cowlitz River - early and late Coho salmon,3694,Upper Cowlitz and Cispus C
 Upper Gorge Tributaries - late Coho salmon,3792,Upper Gorge (Columbia) Coho
 Washougal River - late Coho salmon,3780,Washougal Coho
 Ozette Lake - sockeye salmon,5500,Ozette Sockeye
-Cispus River - winter Steelhead,9995,
+Cispus River - winter Steelhead,6703,Cispus Winter Steelhead
 Coweeman River - winter Steelhead,6707,Coweeman Winter Steelhead
 East Fork Lewis River - summer Steelhead,6763,East Fork Lewis Summer Steelhead
 East Fork Lewis River - winter Steelhead,6770,East Fork Lewis Winter Steelhead
