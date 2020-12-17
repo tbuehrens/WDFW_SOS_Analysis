@@ -6,6 +6,7 @@ SASI<-SASI%>%rename_at(vars(colnames(SASI)), ~ gsub("\\."," ",colnames(SASI)))%>
   filter(`Escapement Methodology`=="SOS 2020 Abundance Analysis")%>%
   mutate(key=paste0(`Stock Number`,Year))
 
+
 #load SASI data and filter for Escapement Methodology = SOS 2020 records, create stock number/year key
 dat<-data.frame(read_csv("https://raw.githubusercontent.com/tbuehrens/WDFW_SOS_Analysis/main/results%202020-11-10/Escapement_Data_For_data_wa_gov_with_existing.csv"))
 newnames<-gsub("\\."," ",colnames(dat))
@@ -13,8 +14,7 @@ dat<-dat%>%rename_at(vars(colnames(dat)), ~ gsub("\\."," ",colnames(dat)))%>%
   filter(`Escapement Methodology`=="SOS 2020 Abundance Analysis")%>%
   mutate(key=paste0(`Stock Number`,Year))
 
-dat%>%filter(is.na(`Population Name`))
-dat%>%filter(`Population Name`=="Cispus River - winter Steelhead")
+
 #look at dinensions
 dim(SASI)
 dim(dat)
