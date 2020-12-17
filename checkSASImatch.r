@@ -21,14 +21,14 @@ dim(dat)
 
 #full join the datasets and match by key
 dat<-dat%>%full_join(SASI,by="key",suffix = c(".Thomas", ".SASI"))%>%
-  mutate(match=ifelse(`Abundance Quantity.Thomas`==`Abundance Quantity.SASI`,"Match","NoMatch"))
+  mutate(match=ifelse(`Abundance Quantity.Thomas`==`Abundance Quantity.SASI` | is.na(`Abundance Quantity.Thomas`) & is.na(`Abundance Quantity.SASI`) ,"Match","NoMatch"))
 
 #count of matching and non matching records
 dat%>%group_by(match)%>%
   summarise(count=n())
 
 #look at non-matching records
-dat%>%filter(match!="Match")
+dat%>%filter(is.na(match))
 
 
 
