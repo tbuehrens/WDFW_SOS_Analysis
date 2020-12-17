@@ -38,5 +38,14 @@ make_escapement_data_wa_gov<-function(data_date,Recovery_Goals_LUT_edited,databe
     mutate(`Stock Number`=Stock.Number,`Population Name`=COMMON_POPULATION_NAME,Year=SPAWNINGYEAR,`Abundance Quantity`=final_abundance, `Production Type`="Natural",`Calculation Type`="Expanded",`Report Types`="SCoRE,SOS")%>%
     dplyr::select(`Stock Number`,`Population Name`,Year,`Abundance Quantity`, `Production Type`,`Calculation Type`,`Report Types`)%>%
     mutate(`Calculation Type`=ifelse(is.na(Year),NA,`Calculation Type`))
-  write.csv(dat,paste(SubDir,"/Escapement_Data_For_data_wa_gov.csv",sep=""),row.names = F)# na=""
+  write.csv(dat,paste(SubDir,"/Escapement_Data_For_data_wa_gov.csv",sep=""),row.names = F)
+  #version 2 with all of the preexisting data
+  dat<-dat%>%mutate(`Escapement Methodology`="SOS 2020 Abundance Analysis")
+  SASI<-data.frame(read_csv("https://data.wa.gov/api/views/fgyz-n3uk/rows.csv?accessType=DOWNLOAD&bom=true&format=true"))
+  newnames<-gsub("\\."," ",colnames(SASI))
+  SASI<-SASI%>%rename_at(vars(colnames(SASI)), ~ gsub("\\."," ",colnames(SASI)))%>%
+    filter(`Escapement Methodology`!="SOS 2020 Abundance Analysis")
+  dat<-bind_rows(dat,SASI)
+  write.csv(dat,paste(SubDir,"/Escapement_Data_For_data_wa_gov_with_existing.csv",sep=""),row.names = F)
+
 }
