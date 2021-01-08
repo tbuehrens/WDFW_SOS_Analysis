@@ -70,7 +70,8 @@ using("tidyverse",
       "readr",
       "ggplot2",
       "gridExtra",
-      "tinytex"
+      "tinytex",
+      "stringdist"
       )
 ```
 
