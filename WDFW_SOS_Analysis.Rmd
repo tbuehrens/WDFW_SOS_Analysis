@@ -71,7 +71,8 @@ using("tidyverse",
       "ggplot2",
       "gridExtra",
       "tinytex",
-      "stringdist"
+      "stringdist",
+      "DBI"
       )
 ```
 
@@ -81,16 +82,14 @@ We need to specify data source file names, list some manual  data filter conditi
 #=========================
 #designate data file names
 #=========================
-#CA flatfile name
-CAfilename<-"ca-data-all 09-10-2020 15 36.xlsx"
 #data not in CA
 NONCAfilename<-"Raw data for pops not in CA_11.10.2020.csv"
 #ESU_DPS_list file name (also lists which ESUs to use CA for)
-ESU_DPS_list<-"ESU_DPS_List_2020_09_17.csv" 
+ESU_DPS_list<-"ESU_DPS_List.csv" 
 #ESU_DPS_list file name 
 ESU_DIP_list_all<-"ESU_DIP_list_all.csv" 
 #Recovery_Goals file name
-Recovery_Goals<-"Recovery goals_formatted_9.21.2020.csv"
+Recovery_Goals<-"Recovery_Goals.csv"
 #WDFW SCORE files to join based on pop name with SOS outputs 
 WDFW_Salmonid_Stock_Inventory_Population_Recovery_Goals<-
   "WDFW-Salmonid_Stock_Inventory_Population_Recovery_Goals.csv"
@@ -105,7 +104,7 @@ Recovery_Goals_LUT_edited<-
 #set data date--this will name files and 
 #folders and tell the analysis code which 
 #date's data to use
-data_date = "2020-11-10" 
+data_date = "2022-09-27"#Sys.Date()
 
 
 #========================================
@@ -117,20 +116,16 @@ data_date = "2020-11-10"
 #be treated as NOSA substitutes
 
 HatchPops<-c(#total spawners includes substantial hatchery fish)
-              "Steelhead (Puget Sound DPS) Green River - winter" 
-            #total spawners includes substantial hatchery fish)
-             ,"Salmon, Chinook (Lower Columbia River ESU) North Fork Lewis River - spring" 
-             #total spawners includes substantial hatchery fish)
-             ,"Salmon, Chinook (Puget Sound ESU) Mid-Hood Canal - fall"
-            #total spawners include many late-timed supplementation fish from HC project
-             ,"Steelhead (Puget Sound DPS) East Hood Canal Tributaries - winter" 
-            #total spawners include many late-timed supplementation fish from HC project
-             ,"Steelhead (Puget Sound DPS) Skokomish River - winter" 
-            #total spawners include many late-timed supplementation fish from HC project
-             ,"Steelhead (Puget Sound DPS) West Hood Canal Tributaries - winter"
+  "Elwha River - fall Chinook salmon",
+  "Green River - winter Steelhead" ,
+  "Mid-Hood Canal - fall Chinook salmon",
+  "East Hood Canal Tributaries - winter Steelhead",
+  "Skokomish River - winter Steelhead",
+  "West Hood Canal Tributaries - winter Steelhead",
+  "North Fork Lewis River - spring Chinook salmon"
 )
 #=========================================================================
-# POPFIT_exceptions list of pops where POPFIT != 1 but is "close enough"
+# POPFIT_exceptions list of pops where POPFIT != "same" or "multiple" but is "close enough"
 # that we should use anyway; listed by COMMONPOPNAME2
 #=========================================================================
 POPFIT_exceptions<-c(#no spawners in chinook river
@@ -143,57 +138,50 @@ POPFIT_exceptions<-c(#no spawners in chinook river
                      "Lower Cowlitz River - winter Steelhead", 
                     #WA only; use 1/2 recovery goal
                      "Upper Gorge Tributaries - fall Chinook salmon",
-                    #WA only; use 1/2 recovery goal
-                     "Upper Gorge Tributaries - late Coho salmon",
+                    #WA only; use 1/2 recovery goal...but estimates still missing white salmon
+                    # "Upper Gorge Tributaries - late Coho salmon",
                     #WA only; use 1/2 recovery goal
                      "Lower Gorge Tributaries - late Coho salmon", 
                     #assumes no fish spawn in NF and mainstem Toutle below SRS
                      "Toutle River - fall Chinook salmon",
                     # some years mislabeled as partial instead of multiple
-                     "Upper Cowlitz River - spring Chinook salmon" 
-
+                     "Upper Cowlitz River - spring Chinook salmon", 
+                    #Tucannon Steelhead
+                    "Tucannon River - summer Steelhead",
+                    #Asotin Creek Steelhead
+                    #"Asotin Creek - summer Steelhead",
+                    #North Fork Toutle
+                    "North Fork Toutle River − winter Steelhead",
+                    #Hood canal summer chum
+                    "Hood Canal - summer chum salmon"
+                    
 )
 #=============================================================================
 #special cases to remove in order to get 1 abundance data pt per pop per year; 
 #these are supplied as a listed of quoted filter conditions
 #=============================================================================
 specialcaselist<-list(
-  #1: this dataset is a duplicate Joseph Creek dataset; newer Nez Perce Tribe 
-     #PIT based estimate...use ODFW estimate for now
-  quote(!COMMONPOPNAME%in%c("GRJOS-s")),   
-  #2: #below dams estimate is sketchy
-  quote(!ESAPOPNAME=="Salmon, Chinook (Lower Columbia River ESU) Lower Gorge Tributaries - fall"),  
-  #3: #duplicate; use WDFW estimates rather than USFWS estimates
+  #1: #below dams estimate is sketchy
+  quote(!COMMONPOPNAME2=="Lower Gorge Tributaries - fall Chinook salmon"),  
+  #2: Entiat data lists multiuple  methods as best....use method 4 since full timeseries.
   quote(
-    !(ESAPOPNAME=="Salmon, Chinook (Upper Columbia River spring-run ESU) Entiat River - spring"       
-      & CONTACTAGENCY=="U.S. Fish and Wildlife Service") 
+    !(COMMONPOPNAME2=="Entiat River - spring Chinook salmon" 
+      & METHODNUMBER%in%c(1,2,3)) 
+  ),#duplicate
+  quote(
+    !(COMMONPOPNAME2=="Entiat River - spring Chinook salmon" 
+      & METHODNUMBER==4 & SPAWNINGYEAR==2019) 
   ),
-  #4: duplicate; use colville tribe estimate for 2005
+  #3: Use method 2 for Nisqually steelhead...method 1 is mislabeled popfit=same.
+  # quote(
+  #   !(COMMONPOPNAME2=="Nisqually River - winter Steelhead" 
+  #     & METHODNUMBER==1) 
+  # ),
+  #4: Use method 2-3 for Joseph Creek Steelhead; Patch Occupancy model
   quote(
-    !(ESAPOPNAME=="Steelhead (Upper Columbia River DPS) Okanogan River - summer" 
-      & METHODNUMBER==2 
-      & SPAWNINGYEAR == 2005)
-  ),
-  #5lower gorge coho use WDFW only, not ODFW data
-  quote(
-    !(ESAPOPNAME=="Salmon, coho (Lower Columbia River ESU) Lower Gorge Tributaries - late" 
-      & SUBMITAGENCY=="ODFW")
-  ),
-  #6: Entiat data lists both patch occupancy and old method as best.
-     #use old method until they get patch occupancy cleaned up for upper C
-  quote(
-    !(ESAPOPNAME=="Steelhead (Upper Columbia River DPS) Entiat River - summer" 
-      & METHODNUMBER==2) 
-  ),
-  #7: Elwha chinook data loaded as of 9/17/2020 is wrong
-     #use data Neala Kendall got from NOAA/Tribe/Joe A instead
-  quote(
-    !(ESAPOPNAME=="Salmon, Chinook (Puget Sound ESU) Elwha River - fall") 
-  ),
-  #8: Sammammish Fall chinook data loaded as of 9/17/2020 is wrong
-     #popfit should be partial, therefore excluded
-  quote(
-    !(ESAPOPNAME=="Salmon, Chinook (Puget Sound ESU) Sammamish River - fall") 
+    !(COMMONPOPNAME2=="Joseph Creek - summer Steelhead"
+      & OTHERDATASOURCES%in%c("Nez Perce Tribe | Confederated Tribes of the Umatilla Indian Reservation","Confederated Tribes of the Umatilla Indian Reservation")
+    )
   )
 )
 
@@ -205,12 +193,14 @@ Withgoalsonly="yes"
 #Number of years to calculate geomean of smoothed abundance 
 geomeanyears = 5
 #last year in geomean abundance calculations
-lastyear=2019
+lastyear=2021
 #set number of years for forward projection of ESUs
 futureyears = 5
 #exlcude populations from geomean smoothed abundance calculation 
 #that have no new observed data in period geomean is being calculated for?
 filtergeomeansforpopswithnonewdata="No"
+#use only data since listing
+databeforelisting = "No"
 ```
 
 # Data Preparation
@@ -238,31 +228,31 @@ Other data inputs (available in the "data" folder) included recovery goals (pull
 
 ```{r data_prep,message=FALSE, warning=FALSE,results = "hide"}
 #prep and filter ca data
-dat<-prepCAdata(CAfilename = CAfilename, 
-                data_date = data_date,
+dat<-prepCAdata(data_date = data_date,
                 ESU_DPS_list = ESU_DPS_list,
+                Recovery_Goals_LUT_edited = Recovery_Goals_LUT_edited,
                 Recovery_Goals = Recovery_Goals, 
                 POPFIT_exceptions = POPFIT_exceptions, 
                 specialcaselist = specialcaselist,
-                databeforelisting="No"
+                databeforelisting= databeforelisting
                 )
 
 #prep NON CA data (data must be pre-filtered/final )
-dat2<-prepNONCAdata(data_date=data_date,
-                    NONCAfilename = NONCAfilename,
-                    ESU_DPS_list = ESU_DPS_list,
-                    databeforelisting="No"
-                    )
+# dat2<-prepNONCAdata(data_date=data_date,
+#                     NONCAfilename = NONCAfilename,
+#                     ESU_DPS_list = ESU_DPS_list,
+#                     databeforelisting="No"
+#                     )
 
 #make analysis files for status and trend analysis 
 #(we use bind_rows to combine CA and Non-CA data)
-makefiles(data=bind_rows(dat[,colnames(dat)%in%colnames(dat2)],dat2),
+makefiles(data=dat,
           data_date=data_date,
-          databeforelisting="No"
+          databeforelisting=databeforelisting
           )
 
 #make plots of raw abundance data by population and ESU/DPS 
-plotfunc(data=bind_rows(data=dat[,colnames(dat)%in%colnames(dat2)],dat2),
+plotfunc(data=dat,
          data_date=data_date,
          ESU_DPS_list=ESU_DPS_list,
          Recovery_Goals=Recovery_Goals,
@@ -274,9 +264,9 @@ Here we will run the status and trend analysis using Stan via rstan. We will the
 ```{r run_analysis,message=FALSE, warning=FALSE,results = "hide"}
 #run analysis for any populations that is not yet complete 
 analyzedata(data_date=data_date,
-            ESUsubset= c(# "Lower Columbia coho"
-               # ,"Lower Columbia Chinook"
-               # ,"Lower Columbia steelhead"
+            ESUsubset= c(#"Lower Columbia coho"
+               "Lower Columbia Chinook"
+                ,"Lower Columbia steelhead"
                # ,"Mid-Columbia steelhead"
                # ,"Snake River spring and summer Chinook"
                # ,"Snake River steelhead"
@@ -295,7 +285,7 @@ analyzedata(data_date=data_date,
             iter = 2000,
             warmup= 1000,
             thin = 1,
-            control=list(adapt_delta=0.9995)
+            control=list(adapt_delta=0.95)
             )
 
 #combine results output
@@ -303,7 +293,7 @@ combineresults(data_date=data_date,Recovery_Goals=Recovery_Goals)
 
 #merge results with raw data
 resultsdata<-makeresultsdata(data_date=data_date,
-                             data=bind_rows(dat[,colnames(dat)%in%colnames(dat2)],dat2),
+                             data=dat,
                              ESU_DPS_list=ESU_DPS_list,Recovery_Goals=Recovery_Goals,
                              Smoothed_Abundance=Smoothed_Abundance)
 ```
