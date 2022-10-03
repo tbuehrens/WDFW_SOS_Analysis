@@ -1,5 +1,5 @@
 #results plotting function
-esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,resultsplots=resultsplots,bypopsplots="No"){
+esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,resultsplots=resultsplots,bypopsplots="No",geomeanyears = geomeanyears,lastyear = lastyear){
   logit<-function(x){log(x/(1-x))}
   ilogit<-function(x){exp(x)/(1+exp(x))}
   SubDir <- paste("results ", data_date,sep="")
@@ -83,7 +83,7 @@ esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,res
                             "total_missing_pops",
                             "proportion_missing_pops"
   )
-  write.csv(dat_stat_csv,paste(SubDir,"/ESU_Results ", data_date,".csv",sep=""),row.names = F)
+  write.csv(dat_stat_csv,paste(SubDir,"/ESU_DPS_Results ", data_date,".csv",sep=""),row.names = F)
   rownames(dat_stat)<-paste(dat_stat[,colnames(dat_stat)=="ESU_DPS2"]," (n = ",dat_stat$count_of_pops,"/",dat_stat$count_of_pops+dat_stat$total_missing,")",sep="")
   dat_stat<-dat_stat[,!colnames(dat_stat)=="ESU_DPS2"]
   dat_stat3<-dat_stat[order(dat_stat$Q3_RR),colnames(dat_stat)%in%c("Q1_RR","Q2_RR","Q3_RR","Q4_RR","Q5_RR")]
@@ -280,7 +280,7 @@ esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,res
       xlab(label="5 Year Geomean % of Recovery Goal")+
       ylab(label="")+
       theme_bw()+
-      labs(caption="Caption: Five year (2015-2019) geomean smoothed\nabundance as a percentage of recovery goals.\nPopulations with no bars had no usable data.")+
+      labs(caption=paste0("Caption: Five year (",lastyear-(geomeanyears-1),"-",lastyear,") geomean smoothed\nabundance as a percentage of recovery goals.\nPopulations with no bars had no usable data."))+
       theme(legend.position =  "none",axis.text=element_text(size=6),
             plot.caption = element_text(vjust = -1,hjust=0, colour = "blue",size=10))+
       annotate("text", x = Inf, y = Inf, label = paste("Data Updated ",data_date,sep=""),vjust=1.5,hjust=1, col="grey60", cex=2, alpha = 0.8,srt = 00)
@@ -441,7 +441,7 @@ esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,res
     geom_text_repel(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change,label=ESU_DPS_names),color="black",size=3)+
     ylab(label="Current Status (5 year geomean % of recovery goal)")+
     xlab(label="Trend Since ESA Listing (% change per year)")+   
-    scale_y_continuous(expand = c(-0.01, -0.01), limits = c(0,max(plotdat$max_ratio_goal[plotdat$p_missing<0.4])*1.05))+
+    scale_y_continuous(expand = c(-0.01, -0.01), limits = c(0,500))+
     theme_bw()+
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ",data_date,sep=""),vjust=1.5,hjust=1, col="white", cex=2, alpha = 0.8,srt = 00)
@@ -523,7 +523,7 @@ esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,res
     geom_point(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change),size=4,color=cols3[11],shape=1) +
     geom_point(data=plotdat%>%filter(plotdat$p_missing<0.4), mapping=aes(y=median_ratio_goal,x = median_percent_change),size=4,color=cols3[11]) +
     geom_text_repel(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change,label=ESU_DPS_names),color="black",size=3)+
-    scale_y_continuous(expand=c(0,-0.01),limits = c(0,max(plotdat$max_ratio_goal[plotdat$p_missing<0.4])))+
+    scale_y_continuous(expand=c(0,-0.01),limits = c(0,500))+
     theme_bw()+
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ",data_date,sep=""),vjust=1.5,hjust=1, col="white", cex=2, alpha = 0.8,srt = 00)
@@ -595,7 +595,7 @@ esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,res
     geom_point(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change),size=4,color=cols3[11],shape=1) +
     geom_point(data=plotdat%>%filter(plotdat$p_missing<0.4), mapping=aes(y=median_ratio_goal,x = median_percent_change),size=4,color=cols3[11]) +
     geom_text_repel(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change,label=ESU_DPS_names),color="black",size=3)+
-    scale_y_continuous(expand=c(0,-0.01),limits = c(0,max(plotdat$max_ratio_goal[plotdat$p_missing<0.4])))+
+    scale_y_continuous(expand=c(0,-0.01),limits = c(0,500))+
     theme_bw()+
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ",data_date,sep=""),vjust=1.5,hjust=1, col="white", cex=2, alpha = 0.8,srt = 00)

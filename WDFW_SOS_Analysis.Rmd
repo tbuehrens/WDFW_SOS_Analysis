@@ -252,11 +252,11 @@ makefiles(data=dat,
           )
 
 #make plots of raw abundance data by population and ESU/DPS 
-plotfunc(data=dat,
-         data_date=data_date,
-         ESU_DPS_list=ESU_DPS_list,
-         Recovery_Goals=Recovery_Goals,
-         Withgoalsonly=Withgoalsonly)
+# plotfunc(data=dat,
+#          data_date=data_date,
+#          ESU_DPS_list=ESU_DPS_list,
+#          Recovery_Goals=Recovery_Goals,
+#          Withgoalsonly=Withgoalsonly)
 ```
 
 # Run Status and Trend Analysis
@@ -265,8 +265,8 @@ Here we will run the status and trend analysis using Stan via rstan. We will the
 #run analysis for any populations that is not yet complete 
 analyzedata(data_date=data_date,
             ESUsubset= c(#"Lower Columbia coho"
-               "Lower Columbia Chinook"
-                ,"Lower Columbia steelhead"
+               #"Lower Columbia Chinook"
+               # ,"Lower Columbia steelhead"
                # ,"Mid-Columbia steelhead"
                # ,"Snake River spring and summer Chinook"
                # ,"Snake River steelhead"
@@ -322,7 +322,9 @@ esu_results_plot(ESU_DIP_results=ESU_DIP_results,
                  data_date=data_date,
                  futureyears=futureyears,
                  resultsplots=resultsplots,
-                 bypopsplots="No"
+                 bypopsplots="No",
+                 geomeanyears = geomeanyears,
+                 lastyear = lastyear
                  )
 ```
 
