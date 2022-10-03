@@ -441,7 +441,7 @@ esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,res
     geom_text_repel(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change,label=ESU_DPS_names),color="black",size=3)+
     ylab(label="Current Status (5 year geomean % of recovery goal)")+
     xlab(label="Trend Since ESA Listing (% change per year)")+   
-    scale_y_continuous(expand = c(-0.01, -0.01), limits = c(0,500))+
+    scale_y_continuous(expand = c(-0.01, -0.01), limits = c(0,300))+
     theme_bw()+
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ",data_date,sep=""),vjust=1.5,hjust=1, col="white", cex=2, alpha = 0.8,srt = 00)
@@ -523,7 +523,7 @@ esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,res
     geom_point(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change),size=4,color=cols3[11],shape=1) +
     geom_point(data=plotdat%>%filter(plotdat$p_missing<0.4), mapping=aes(y=median_ratio_goal,x = median_percent_change),size=4,color=cols3[11]) +
     geom_text_repel(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change,label=ESU_DPS_names),color="black",size=3)+
-    scale_y_continuous(expand=c(0,-0.01),limits = c(0,500))+
+    scale_y_continuous(expand=c(0,-0.01),limits = c(0,300))+
     theme_bw()+
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ",data_date,sep=""),vjust=1.5,hjust=1, col="white", cex=2, alpha = 0.8,srt = 00)
@@ -595,7 +595,7 @@ esu_results_plot<-function(ESU_DIP_results,data_date,futureyears=futureyears,res
     geom_point(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change),size=4,color=cols3[11],shape=1) +
     geom_point(data=plotdat%>%filter(plotdat$p_missing<0.4), mapping=aes(y=median_ratio_goal,x = median_percent_change),size=4,color=cols3[11]) +
     geom_text_repel(data=plotdat, mapping=aes(y=median_ratio_goal,x = median_percent_change,label=ESU_DPS_names),color="black",size=3)+
-    scale_y_continuous(expand=c(0,-0.01),limits = c(0,500))+
+    scale_y_continuous(expand=c(0,-0.01),limits = c(0,300))+
     theme_bw()+
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ",data_date,sep=""),vjust=1.5,hjust=1, col="white", cex=2, alpha = 0.8,srt = 00)
