@@ -26,8 +26,10 @@ prepCAdata<-function(mainDir, data_date, ESU_DPS_list,Recovery_Goals_LUT_edited,
     Trusted_Connection = database_args$Trusted_Connection
   )
   
-  dat<- data.frame(dbGetQuery(con, "SELECT * FROM spi.vw_ca_nosa_sos;"))
+  #dat<- data.frame(dbGetQuery(con, "SELECT * FROM spi.vw_ca_nosa_sos;"))
+  dat<- data.frame(dbGetQuery(con, "SELECT * FROM spi.vw_ca_nosa_sos2;"))
   #dat<-data.frame(read_csv("vw_ca_nosa_sos.csv"))
+
   stock<- data.frame(dbGetQuery(con, "SELECT * FROM spi.stock;"))
   dbDisconnect(con)
 
@@ -120,7 +122,7 @@ prepCAdata<-function(mainDir, data_date, ESU_DPS_list,Recovery_Goals_LUT_edited,
   if(nrow(dups)>1){print(dups); stop("There is more than one data point per pop per year; additional filters needed!")}
   
 
-  #look at table of final ESUs, Pops, data type, yrs of data (to see what's there)
+  #look at table of final ESUs, Pops, data type, yrs of data (to see what"s there)
   print("Summary of ESUs, Populations, and Years of Data (a more complete dataset will be saved to your results folder)")
   dat%>%
     group_by(ESU_DPS,COMMONPOPNAME2)%>%
@@ -132,6 +134,7 @@ prepCAdata<-function(mainDir, data_date, ESU_DPS_list,Recovery_Goals_LUT_edited,
   dat<-dat[,!colnames(dat)=="ESA.listing.year"]
   #write out all data
   alldat<-data.frame(dat%>%
+                       mutate(dsid=ifelse(final_abundance_data_type=="NOSAIJ",NOSAIJ_SDSID,ifelse(final_abundance_data_type=="NOSAEJ",NOSAEJ_SDSID,ifelse(final_abundance_data_type=="TSAIJ",TSAIJ_SDSID,TSAEJ_SDSID))))%>%
                        dplyr::select(ESU_DPS = ESU_DPS,
                                      ESU_DPS_COMMONNAME = ESU_DPS_COMMONNAME,
                                      MAJORPOPGROUP=MAJORPOPGROUP,
@@ -143,6 +146,7 @@ prepCAdata<-function(mainDir, data_date, ESU_DPS_list,Recovery_Goals_LUT_edited,
                                      final_abundance = final_abundance,
                                      final_abundance_data_type = final_abundance_data_type,
                                      METHODNUMBER = METHODNUMBER,
+                                     dsid=dsid
                                      #CONTACTAGENCY = CONTACTAGENCY,
                                      #ESUBMITAGENCY = SUBMITAGENCY, 
                                      #LASTUPDATED = LASTUPDATED,
@@ -151,6 +155,7 @@ prepCAdata<-function(mainDir, data_date, ESU_DPS_list,Recovery_Goals_LUT_edited,
                        )
   )
   alldat<-alldat[order(alldat$ESU_DPS,alldat$COMMONPOPNAME2,alldat$SPAWNINGYEAR),]
+  alldat%>%group_by(dsid)%>%summarise(n=n())%>%write.csv(paste0("dsid_list_",data_date,".csv"),row.names = F)
   if(databeforelisting=="No"){
     write.csv(alldat,paste(SubDir,"/All_CA_Data_",data_date,".csv",sep=""),row.names = F)
   }else(write.csv(alldat,paste(SubDir,"/All_CA_Data_incl_before_listing_",data_date,".csv",sep=""),row.names = F))
