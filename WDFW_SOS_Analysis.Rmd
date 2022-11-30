@@ -102,7 +102,7 @@ Recovery_Goals_LUT_edited<-
 #set data date--this will name files and 
 #folders and tell the analysis code which 
 #date's data to use
-data_date = "2022-11-18"#Sys.Date()
+data_date = "2022-11-30"#Sys.Date()
 
 
 #========================================
@@ -114,12 +114,11 @@ data_date = "2022-11-18"#Sys.Date()
 #be treated as NOSA substitutes
 
 HatchPops<-c(#total spawners includes substantial hatchery fish)
-  "Elwha River - fall Chinook salmon",
   "Green River - winter Steelhead" ,
   "Mid-Hood Canal - fall Chinook salmon",
   "East Hood Canal Tributaries - winter Steelhead",
   "Skokomish River - winter Steelhead",
-  "West Hood Canal Tributaries - winter Steelhead",
+  "West Hood Canal Tributaries - winter Steelhead"
 )
 #=========================================================================
 # POPFIT_exceptions list of pops where POPFIT != "same" or "multiple" but is "close enough"
