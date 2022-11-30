@@ -43,7 +43,7 @@ ESU_DPS,COMMON_POPULATION_NAME,Recovery goal,High productivity recovery goal,Not
 "Salmon, Chinook (Puget Sound ESU)",Upper Sauk River - spring Chinook salmon,3030,750,
 "Salmon, Chinook (Puget Sound ESU)",Upper Skagit River - summer Chinook salmon,26000,5380,
 "Salmon, Chinook (Puget Sound ESU)",White River - spring Chinook salmon,NA,,No goal identified yet
-"Salmon, Chinook (Snake River fall-run ESU)",Snake River - fall Chinook salmon,14360,7500,"goals are ""interim"" and ""long term"" for natural origin component of population; hatchery origin goal of 15484"
+"Salmon, Chinook (Snake River fall-run ESU)",Snake River - fall Chinook salmon,4200,,one pop scenario https://media.fisheries.noaa.gov/dam-migration/mafac_report_cbp_phase_1_recommendations_full_report.pdf pg 69 and snake recovery plan pg 126
 "Salmon, Chinook (Snake River spring/summer-run ESU)",Tucannon River - spring Chinook salmon,750,,
 "Salmon, Chinook (Snake River spring/summer-run ESU)",Asotin Creek - spring Chinook salmon,500,,
 "Salmon, Chinook (Upper Columbia River spring-run ESU)",Entiat River - spring Chinook salmon,500,,
@@ -116,7 +116,7 @@ Steelhead (Puget Sound DPS),Drayton Harbor Tributaries - winter Steelhead,3700,1
 Steelhead (Puget Sound DPS),Dungeness River - summer and winter Steelhead,4100,1200,
 Steelhead (Puget Sound DPS),East Hood Canal Tributaries - winter Steelhead,6200,1800,
 Steelhead (Puget Sound DPS),East Kitsap Peninsula Tributaries - winter Steelhead,8700,2600,
-Steelhead (Puget Sound DPS),Elwha River - winter Steelhead,2619,2619,
+Steelhead (Puget Sound DPS),Elwha River - winter Steelhead,2619,2619,Goal is actually for whole Elwha steelhead population which is defined summer/winter by TRT. For now using relative to abundance of winter runs but needs to be re-evaluated for popfit (does abundance estimate match designated population including winter/summer?)
 Steelhead (Puget Sound DPS),Green River - winter Steelhead,18700,5600,
 Steelhead (Puget Sound DPS),Nisqually River - winter Steelhead,20500,6100,
 Steelhead (Puget Sound DPS),Nookachamps Creek - winter Steelhead,NA,NA,Goal for  Skagit/Sauk/Nookachamps

@@ -82,8 +82,6 @@ We need to specify data source file names, list some manual  data filter conditi
 #=========================
 #designate data file names
 #=========================
-#data not in CA
-NONCAfilename<-"Raw data for pops not in CA_11.10.2020.csv"
 #ESU_DPS_list file name (also lists which ESUs to use CA for)
 ESU_DPS_list<-"ESU_DPS_List.csv" 
 #ESU_DPS_list file name 
@@ -104,7 +102,7 @@ Recovery_Goals_LUT_edited<-
 #set data date--this will name files and 
 #folders and tell the analysis code which 
 #date's data to use
-data_date = "2022-09-27"#Sys.Date()
+data_date = "2022-11-18"#Sys.Date()
 
 
 #========================================
@@ -122,7 +120,6 @@ HatchPops<-c(#total spawners includes substantial hatchery fish)
   "East Hood Canal Tributaries - winter Steelhead",
   "Skokomish River - winter Steelhead",
   "West Hood Canal Tributaries - winter Steelhead",
-  "North Fork Lewis River - spring Chinook salmon"
 )
 #=========================================================================
 # POPFIT_exceptions list of pops where POPFIT != "same" or "multiple" but is "close enough"
@@ -139,8 +136,6 @@ POPFIT_exceptions<-c(#no spawners in chinook river
                     #WA only; use 1/2 recovery goal
                      "Upper Gorge Tributaries - fall Chinook salmon",
                     #WA only; use 1/2 recovery goal...but estimates still missing white salmon
-                    # "Upper Gorge Tributaries - late Coho salmon",
-                    #WA only; use 1/2 recovery goal
                      "Lower Gorge Tributaries - late Coho salmon", 
                     #assumes no fish spawn in NF and mainstem Toutle below SRS
                      "Toutle River - fall Chinook salmon",
@@ -148,13 +143,12 @@ POPFIT_exceptions<-c(#no spawners in chinook river
                      "Upper Cowlitz River - spring Chinook salmon", 
                     #Tucannon Steelhead
                     "Tucannon River - summer Steelhead",
-                    #Asotin Creek Steelhead
-                    #"Asotin Creek - summer Steelhead",
                     #North Fork Toutle
-                    "North Fork Toutle River − winter Steelhead",
+                    "North Fork Toutle River - winter Steelhead",
                     #Hood canal summer chum
-                    "Hood Canal - summer chum salmon"
-                    
+                    "Hood Canal - summer chum salmon",
+                    # Elwha steelhead--recovery goal is for whole basin. abundance estimate only includes winter runs; may need to reconsider popfit exception as work is done to determine proportion of habitat used by summer runs (and a possible summer run goal is developed)
+                    "Elwha River - winter Steelhead"
 )
 #=============================================================================
 #special cases to remove in order to get 1 abundance data pt per pop per year; 
@@ -228,7 +222,7 @@ Other data inputs (available in the "data" folder) included recovery goals (pull
 
 ```{r data_prep,message=FALSE, warning=FALSE,results = "hide"}
 #prep and filter ca data
-dat<-prepCAdata(data_date = data_date,
+dat<-prepare_SPi_data(data_date = data_date,
                 ESU_DPS_list = ESU_DPS_list,
                 Recovery_Goals_LUT_edited = Recovery_Goals_LUT_edited,
                 Recovery_Goals = Recovery_Goals, 
@@ -237,12 +231,8 @@ dat<-prepCAdata(data_date = data_date,
                 databeforelisting= databeforelisting
                 )
 
-#prep NON CA data (data must be pre-filtered/final )
-# dat2<-prepNONCAdata(data_date=data_date,
-#                     NONCAfilename = NONCAfilename,
-#                     ESU_DPS_list = ESU_DPS_list,
-#                     databeforelisting="No"
-#                     )
+#Exlude Elwha Winter steelhead
+#Exclude Washougal Summer steelhead?
 
 #make analysis files for status and trend analysis 
 #(we use bind_rows to combine CA and Non-CA data)
@@ -252,11 +242,11 @@ makefiles(data=dat,
           )
 
 #make plots of raw abundance data by population and ESU/DPS 
-# plotfunc(data=dat,
-#          data_date=data_date,
-#          ESU_DPS_list=ESU_DPS_list,
-#          Recovery_Goals=Recovery_Goals,
-#          Withgoalsonly=Withgoalsonly)
+plotfunc(data=dat,
+         data_date=data_date,
+         ESU_DPS_list=ESU_DPS_list,
+         Recovery_Goals=Recovery_Goals,
+         Withgoalsonly=Withgoalsonly)
 ```
 
 # Run Status and Trend Analysis
