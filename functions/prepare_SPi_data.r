@@ -7,11 +7,11 @@ prepare_SPi_data<-function(mainDir, data_date, ESU_DPS_list,Recovery_Goals_LUT_e
   
   database_args<-list(
     Driver = "PostgreSQL Unicode",
-    Server = "pg.test.wdfw-fish.us",
+    Server = PSys.getenv("POSTGRES_SPI_IP"),
     Database = "FISH",
     Port = 5433,
-    UID = Sys.getenv("POSTGRES_UN"),
-    PWD = Sys.getenv("POSTGRES_PW"),
+    UID = Sys.getenv("POSTGRES_SPI_UN"),
+    PWD = Sys.getenv("POSTGRES_SPI_PW"),
     Trusted_Connection = "True"
   )
   
