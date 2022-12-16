@@ -7,7 +7,7 @@ prepare_SPi_data<-function(mainDir, data_date, ESU_DPS_list,Recovery_Goals_LUT_e
   
   database_args<-list(
     Driver = "PostgreSQL Unicode",
-    Server = PSys.getenv("POSTGRES_SPI_IP"),
+    Server = Sys.getenv("POSTGRES_SPI_IP"),
     Database = "FISH",
     Port = 5433,
     UID = Sys.getenv("POSTGRES_SPI_UN"),
