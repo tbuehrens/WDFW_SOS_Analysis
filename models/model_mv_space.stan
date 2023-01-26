@@ -109,14 +109,14 @@ generated quantities{
   }
   for(t in (T_backward + T + 1):(T_backward + T + T_forward)){
     for(p in 1:P){
-      eps_pred_forward[t,p] = normal_rng(0,1);
+      eps_all[t,p] = normal_rng(0,1);
     }
-    N_all[t,1:P] = to_row_vector(exp(to_vector(log(N_all[t-1,1:P])) + slope[1:P] + L * eps_pred_forward[t,1:P]));
+    N_all[t,1:P] = to_row_vector(exp(to_vector(log(N_all[t-1,1:P])) + slope[1:P] + L * to_vector(eps_all[t,1:P])));
   }
   for(t in 1 : T_backward){
     for(p in 1:P){
-      eps_pred_backward[t,p] = normal_rng(0,1);
+      eps_all[t,p] = normal_rng(0,1);
     }
-    N_all[T_backward - t + 1,1:P] = to_row_vector(exp(to_vector(log(N_all[T_backward - t + 2,1:P])) - slope[1:P] - L * eps_pred_backward[t,1:P]));
+    N_all[T_backward - t + 1,1:P] = to_row_vector(exp(to_vector(log(N_all[T_backward - t + 2,1:P])) - slope[1:P] - L * to_vector(eps_all[t,1:P])));
   }
 }
