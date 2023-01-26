@@ -73,7 +73,8 @@ generated quantities{
   matrix[P,P] Sigma = quad_form_diag(Omega, sigma_rn);
   vector[n] N_sim;
   matrix[T + T_forward + T_backward,P] N_all;
-  vector[P] eps_pred;
+  matrix[T_forward,P] eps_pred_forward;
+  matrix[T_backward,P] eps_pred_backward;
   N_all[T_backward + 1:T_backward + T,1:P] = N;
   if(run_estimation==1){
     for(i in 1:n){
@@ -87,12 +88,17 @@ generated quantities{
   }
   for(p in 1:P){
     slope[p] = slope_mu + eps_slope[p] * sigma_slope;
-    eps_pred[p] = normal_rng(0,1);
   }
   for(t in (T_backward + T + 1):(T_backward + T + T_forward)){
-    N_all[t,1:P] = to_row_vector(exp(to_vector(log(N_all[t-1,1:P])) + slope[1:P] + diag_pre_multiply(sigma_rn,L) * eps_pred));
+    for(p in 1:P){
+      eps_pred_forward[t,p] = normal_rng(0,1);
+    }
+    N_all[t,1:P] = to_row_vector(exp(to_vector(log(N_all[t-1,1:P])) + slope[1:P] + L * to_vector(eps_pred_forward[t,1:P])));
   }
   for(t in 1 : T_backward){
-    N_all[T_backward - t + 1,1:P] = to_row_vector(exp(to_vector(log(N_all[T_backward - t + 2,1:P])) - slope[1:P] - diag_pre_multiply(sigma_rn,L) * eps_pred));
+    for(p in 1:P){
+      eps_pred_backward[t,p] = normal_rng(0,1);
+    }
+    N_all[T_backward - t + 1,1:P] = to_row_vector(exp(to_vector(log(N_all[T_backward - t + 2,1:P])) - slope[1:P] - L * to_vector(eps_pred_backward[t,1:P])));
   }
 }
