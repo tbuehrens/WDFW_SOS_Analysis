@@ -90,9 +90,10 @@ generated quantities{
   vector[P] slope;
   vector[n] N_sim;
   matrix[T + T_forward + T_backward,P] N_all;
-  matrix[T_forward,P] eps_pred_forward;
-  matrix[T_backward,P] eps_pred_backward;
+  matrix[T_backward + T + T_forward,P] eps_all;
   N_all[T_backward + 1:T_backward + T,1:P] = N;
+  eps_all[T_backward + 1,1:P] = rep_row_vector(0,P);
+  eps_all[T_backward + 2:T_backward + T,1:P] = eps;
   if(run_estimation==1){
     for(i in 1:n){
       N_sim[i] = 0;
