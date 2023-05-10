@@ -41,16 +41,20 @@ model{
     //likelihood
     N_obs ~ lognormal(log(local_N), sigma_wn);
 }
-generated quantities{
-  vector[T + T_forward + T_backward] N_all;
-  real eps_pred;
-  N_all[T_backward + 1:T_backward + T] = N;
-  eps_pred = normal_rng(0,1);
-  for(t in (T_backward + T + 1):(T_backward + T + T_forward)){
-    N_all[t] = exp(log(N_all[t-1]) + slope + eps_pred * sigma_rn);
-  }
-  for(t in 1 : T_backward){
-    N_all[T_backward - t + 1] = exp(log(N_all[T_backward - t + 2]) - slope - eps_pred * sigma_rn);
-  }
-}
+// generated quantities{
+//   vector[T + T_forward + T_backward] N_all;
+//   N_all[T_backward + 1:T_backward + T] = N;
+//   vector[T_backward + T + T_forward] eps_all;
+//   eps_all[T_backward + 1] = 0;
+//   eps_all[T_backward + 2:T_backward + T] = eps;
+//   
+//   for(t in (T_backward + T + 1):(T_backward + T + T_forward)){
+//     eps_all[t] = normal_rng(0,1);
+//     N_all[t] = exp(log(N_all[t-1]) + slope + eps_all[t] * sigma_rn);
+//   }
+//   for(t in 1 : T_backward){
+//     eps_all[t] = normal_rng(0,1);
+//     N_all[T_backward - t + 1] = exp(log(N_all[T_backward - t + 2]) - slope - eps_all[t] * sigma_rn);
+//   }
+// }
 
