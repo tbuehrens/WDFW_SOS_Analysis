@@ -8,8 +8,8 @@ ESU_DPS,COMMON_POPULATION_NAME,Recovery goal,management_goal_type_name,High prod
 "Salmon, Chinook (Lower Columbia River ESU)",Lewis River - fall Chinook salmon,1500,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Lower Columbia River ESU)",Lewis River - late fall Chinook salmon,7300,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Lower Columbia River ESU)",Lower Cowlitz River - fall Chinook salmon,3000,Recovery - Minimum Viable Target,,
-"Salmon, Chinook (Lower Columbia River ESU)",Lower Gorge Tributaries - fall Chinook salmon,2000,Recovery - Minimum Viable Target,,
-"Salmon, Chinook (Lower Columbia River ESU)","Mill, Abernathy, and Germany Creeks - fall Chinook salmon",1800,Recovery - Minimum Viable Target,,
+"Salmon, Chinook (Lower Columbia River ESU)",Lower Gorge Tributaries - fall Chinook salmon,600,Recovery - Minimum Viable Target,,
+"Salmon, Chinook (Lower Columbia River ESU)","Mill, Abernathy, and Germany Creeks - fall Chinook salmon",900,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Lower Columbia River ESU)",North Fork Lewis River - spring Chinook salmon,1500,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Lower Columbia River ESU)",Salmon Creek - fall Chinook salmon,NA,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Lower Columbia River ESU)",Tilton River - spring Chinook salmon,100,Recovery - Minimum Viable Target,,
@@ -18,7 +18,7 @@ ESU_DPS,COMMON_POPULATION_NAME,Recovery goal,management_goal_type_name,High prod
 "Salmon, Chinook (Lower Columbia River ESU)",Upper Cowlitz River - fall Chinook salmon,NA,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Lower Columbia River ESU)",Upper Cowlitz River - spring Chinook salmon,3600,Recovery - Minimum Viable Target,,"Cispus goal 1800, upper Cowlitz 1800, reported as combined goal for Upper Cowlitz"
 "Salmon, Chinook (Lower Columbia River ESU)",Upper Gorge Tributaries - fall Chinook salmon,600,Recovery - Minimum Viable Target,,goal is 1200; assumed WA portion is 600
-"Salmon, Chinook (Lower Columbia River ESU)",Washougal River - fall Chinook salmon,1500,Recovery - Minimum Viable Target,,
+"Salmon, Chinook (Lower Columbia River ESU)",Washougal River - fall Chinook salmon,1200,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Lower Columbia River ESU)",White Salmon River - fall Chinook salmon,500,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Lower Columbia River ESU)",White Salmon River - spring Chinook salmon,500,Recovery - Minimum Viable Target,,
 "Salmon, Chinook (Puget Sound ESU)",Cascade River - spring Chinook salmon,1200,Recovery - Low Productivity Target,290,
@@ -55,11 +55,11 @@ ESU_DPS,COMMON_POPULATION_NAME,Recovery goal,management_goal_type_name,High prod
 "Salmon, chum (Columbia River ESU)",Grays and Chinook Rivers - fall Chum salmon,1600,Recovery - Minimum Viable Target,,
 "Salmon, chum (Columbia River ESU)",Kalama River - fall Chum salmon,900,Recovery - Minimum Viable Target,,
 "Salmon, chum (Columbia River ESU)",Lewis River - fall Chum salmon,1300,Recovery - Minimum Viable Target,,
-"Salmon, chum (Columbia River ESU)",Lower Gorge Tributaries - fall Chum salmon,1200,Recovery - Minimum Viable Target,,
+"Salmon, chum (Columbia River ESU)",Lower Gorge Tributaries - fall Chum salmon,2000,Recovery - Minimum Viable Target,,Shared with oregon but washington estimates include both states so use full goal
 "Salmon, chum (Columbia River ESU)","Mill, Abernathy, and Germany Creeks - fall Chum salmon",1300,Recovery - Minimum Viable Target,,
 "Salmon, chum (Columbia River ESU)",Salmon Creek - fall Chum salmon,NA,Recovery - Minimum Viable Target,,
 "Salmon, chum (Columbia River ESU)",Upper Gorge Tributaries - fall Chum salmon,900,Recovery - Minimum Viable Target,,
-"Salmon, chum (Columbia River ESU)",Washougal River - fall Chum salmon,1200,Recovery - Minimum Viable Target,,
+"Salmon, chum (Columbia River ESU)",Washougal River - fall Chum salmon,1300,Recovery - Minimum Viable Target,,
 "Salmon, chum (Hood Canal summer-run ESU)",Hood Canal - summer chum salmon,21500,Recovery - Minimum Viable Target,18600,
 "Salmon, chum (Hood Canal summer-run ESU)",Strait of Juan de Fuca - summer chum salmon,5100,Recovery - Minimum Viable Target,4500,
 "Salmon, coho (Lower Columbia River ESU)",Cispus River - early and late Coho salmon,NA,Recovery - Minimum Viable Target,,"Cispus goal 2000, upper Cowlitz 2000, reported as combined goal for Upper Cowlitz"
@@ -70,7 +70,7 @@ ESU_DPS,COMMON_POPULATION_NAME,Recovery goal,management_goal_type_name,High prod
 "Salmon, coho (Lower Columbia River ESU)",Kalama River - late Coho salmon,500,Recovery - Minimum Viable Target,,
 "Salmon, coho (Lower Columbia River ESU)",Lower Cowlitz River - late Coho salmon,3700,Recovery - Minimum Viable Target,,
 "Salmon, coho (Lower Columbia River ESU)",Lower Gorge Tributaries - late Coho salmon,950,Recovery - Minimum Viable Target,,Goal is 1900 shared with Oregon; assumed WA portion is 950
-"Salmon, coho (Lower Columbia River ESU)","Mill, Abernathy, and Germany Creeks - late Coho salmon",900,Recovery - Minimum Viable Target,,
+"Salmon, coho (Lower Columbia River ESU)","Mill, Abernathy, and Germany Creeks - late Coho salmon",1800,Recovery - Minimum Viable Target,,
 "Salmon, coho (Lower Columbia River ESU)",North Fork Lewis River - early and late Coho salmon,500,Recovery - Minimum Viable Target,,
 "Salmon, coho (Lower Columbia River ESU)",North Fork Toutle River - early and late Coho salmon,1900,Recovery - Minimum Viable Target,,
 "Salmon, coho (Lower Columbia River ESU)",Salmon Creek - late Coho salmon,NA,Recovery - Minimum Viable Target,,
@@ -78,7 +78,7 @@ ESU_DPS,COMMON_POPULATION_NAME,Recovery goal,management_goal_type_name,High prod
 "Salmon, coho (Lower Columbia River ESU)",Tilton River - early and late Coho salmon,NA,Recovery - Minimum Viable Target,,
 "Salmon, coho (Lower Columbia River ESU)",Upper Cowlitz River - early and late Coho salmon,4000,Recovery - Minimum Viable Target,,"Cispus goal 2000, upper Cowlitz 2000, reported as combined goal for Upper Cowlitz"
 "Salmon, coho (Lower Columbia River ESU)",Upper Gorge Tributaries - late Coho salmon,950,Recovery - Minimum Viable Target,,Goal is 1900 shared with Oregon; assumed WA portion is 950. Some confusion; ESA pop name is Washington Upper Gorge Tribs and White Salmon…where is oregon portion…no separate pop?
-"Salmon, coho (Lower Columbia River ESU)",Washougal River - late Coho salmon,1300,Recovery - Minimum Viable Target,,
+"Salmon, coho (Lower Columbia River ESU)",Washougal River - late Coho salmon,1500,Recovery - Minimum Viable Target,,
 "Salmon, sockeye (Ozette Lake ESU)",Ozette Lake - sockeye salmon,121000,Recovery - Minimum Viable Target,31250,
 Steelhead (Lower Columbia River DPS),Cispus River - winter Steelhead,NA,Recovery - Minimum Viable Target,,"Cispus goal 500, upper Cowlitz 500, reported as combined goal for Upper Cowlitz"
 Steelhead (Lower Columbia River DPS),Coweeman River - winter Steelhead,500,Recovery - Minimum Viable Target,,
@@ -95,7 +95,7 @@ Steelhead (Lower Columbia River DPS),Salmon Creek - winter Steelhead,NA,Recovery
 Steelhead (Lower Columbia River DPS),South Fork Toutle River - winter Steelhead,600,Recovery - Minimum Viable Target,,
 Steelhead (Lower Columbia River DPS),Tilton River - winter Steelhead,200,Recovery - Minimum Viable Target,,
 Steelhead (Lower Columbia River DPS),Upper Cowlitz River - winter Steelhead,1000,Recovery - Minimum Viable Target,,"Cispus goal 500, upper Cowlitz 500, reported as combined goal"
-Steelhead (Lower Columbia River DPS),Upper Gorge Tributaries - winter Steelhead,100,Recovery - Minimum Viable Target,,Goal is 200 shared with Oregon; assumed WA portion is 100. 
+Steelhead (Lower Columbia River DPS),Upper Gorge Tributaries - winter Steelhead,NA,Recovery - Minimum Viable Target,,
 Steelhead (Lower Columbia River DPS),Washougal River - summer Steelhead,500,Recovery - Minimum Viable Target,,
 Steelhead (Lower Columbia River DPS),Washougal River - winter Steelhead,350,Recovery - Minimum Viable Target,,
 Steelhead (Lower Columbia River DPS),Wind River - summer Steelhead,1000,Recovery - Minimum Viable Target,,
