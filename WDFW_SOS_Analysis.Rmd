@@ -102,7 +102,7 @@ Recovery_Goals_LUT_edited<-
 #set data date--this will name files and 
 #folders and tell the analysis code which 
 #date's data to use
-data_date = "2022-11-30"#Sys.Date()
+data_date = "2024-10-17"#Sys.Date()
 
 
 #========================================
@@ -186,7 +186,7 @@ Withgoalsonly="yes"
 #Number of years to calculate geomean of smoothed abundance 
 geomeanyears = 5
 #last year in geomean abundance calculations
-lastyear=2021
+lastyear=2023
 #set number of years for forward projection of ESUs
 futureyears = 5
 #exlcude populations from geomean smoothed abundance calculation 
@@ -220,7 +220,7 @@ Here we will use a data filtering algorithm described in the full report to sele
 Other data inputs (available in the "data" folder) included recovery goals (pulled from various NOAA-adopted recovery plans, of which we used either the minimum viability goals or low productivity goals), a list of the ESA-listed ESU/DPSs in Washington ("ESU_DPS_List") that included listing dates, and a list of all populations by listed ESU/DPS in Washington ("ESU_DIP_List_all").
 
 ```{r data_prep,message=FALSE, warning=FALSE,results = "hide"}
-#prep and filter ca data
+#prep and filter SPI data
 dat<-prepare_SPi_data(data_date = data_date,
                 ESU_DPS_list = ESU_DPS_list,
                 Recovery_Goals_LUT_edited = Recovery_Goals_LUT_edited,
@@ -230,8 +230,7 @@ dat<-prepare_SPi_data(data_date = data_date,
                 databeforelisting= databeforelisting
                 )
 
-#Exlude Elwha Winter steelhead
-#Exclude Washougal Summer steelhead?
+
 
 #make analysis files for status and trend analysis 
 #(we use bind_rows to combine CA and Non-CA data)
