@@ -165,11 +165,6 @@ specialcaselist<-list(
     !(COMMONPOPNAME2=="Entiat River - spring Chinook salmon" 
       & METHODNUMBER==4 & SPAWNINGYEAR==2019) 
   ),
-  #3: Use method 2 for Nisqually steelhead...method 1 is mislabeled popfit=same.
-  # quote(
-  #   !(COMMONPOPNAME2=="Nisqually River - winter Steelhead" 
-  #     & METHODNUMBER==1) 
-  # ),
   #4: Use method 2-3 for Joseph Creek Steelhead; Patch Occupancy model
   quote(
     !(COMMONPOPNAME2=="Joseph Creek - summer Steelhead"

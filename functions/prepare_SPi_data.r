@@ -134,7 +134,7 @@ prepare_SPi_data<-function(mainDir, data_date, ESU_DPS_list,Recovery_Goals_LUT_e
   dat<-dat[,!colnames(dat)=="ESA.listing.year"]
   #write out all data
   alldat<-data.frame(dat%>%
-                       mutate(dsid=ifelse(final_abundance_data_type=="NOSAIJ",NOSAIJ_SDSID,ifelse(final_abundance_data_type=="NOSAEJ",NOSAEJ_SDSID,ifelse(final_abundance_data_type=="TSAIJ",TSAIJ_SDSID,TSAEJ_SDSID))))%>%
+                       mutate(dsid=ifelse(final_abundance_data_type=="NOSAEJ",NOSAIJ_SDSID,ifelse(final_abundance_data_type=="NOSAIJ",NOSAEJ_SDSID,ifelse(final_abundance_data_type=="TSAIJ",TSAIJ_SDSID,TSAEJ_SDSID))))%>%
                        dplyr::select(ESU_DPS = ESU_DPS,
                                      ESU_DPS_COMMONNAME = ESU_DPS_COMMONNAME,
                                      MAJORPOPGROUP=MAJORPOPGROUP,
