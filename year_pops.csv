@@ -18,18 +18,18 @@
 "Salmon, Chinook (Puget Sound ESU)","Cascade River - spring Chinook salmon","TSAIJ",1999,2022
 "Salmon, Chinook (Puget Sound ESU)","Cedar River - fall Chinook salmon","NOSAIJ",2004,2023
 "Salmon, Chinook (Puget Sound ESU)","Dungeness River - summer Chinook salmon","NOSAEJ",2001,2023
-"Salmon, Chinook (Puget Sound ESU)","Elwha River - fall Chinook salmon","NOSAEJ",2018,2018
-"Salmon, Chinook (Puget Sound ESU)","Green River - fall Chinook salmon","NOSAEJ",2003,2022
+"Salmon, Chinook (Puget Sound ESU)","Elwha River - fall Chinook salmon","NOSAEJ",2009,2023
+"Salmon, Chinook (Puget Sound ESU)","Green River - fall Chinook salmon","NOSAEJ",2003,2023
 "Salmon, Chinook (Puget Sound ESU)","Lower Sauk River - summer Chinook salmon","TSAIJ",1999,2022
 "Salmon, Chinook (Puget Sound ESU)","Lower Skagit River - fall Chinook salmon","TSAIJ",1999,2022
-"Salmon, Chinook (Puget Sound ESU)","Nisqually River - fall Chinook salmon","NOSAEJ",2004,2019
+"Salmon, Chinook (Puget Sound ESU)","Nisqually River - fall Chinook salmon","NOSAEJ",2004,2023
 "Salmon, Chinook (Puget Sound ESU)","North Fork Nooksack River (including Middle Fork Nooksack River) - spring Chinook salmon","NOSAIJ",1999,2016
-"Salmon, Chinook (Puget Sound ESU)","North Fork Stillaguamish River - summer Chinook salmon","NOSAIJ",2008,2020
-"Salmon, Chinook (Puget Sound ESU)","Skokomish River - fall Chinook salmon","NOSAEJ",1999,2020
-"Salmon, Chinook (Puget Sound ESU)","Skykomish River - summer Chinook salmon","NOSAIJ",1999,2020
-"Salmon, Chinook (Puget Sound ESU)","Snoqualmie River - fall Chinook salmon","NOSAEJ",1999,2020
+"Salmon, Chinook (Puget Sound ESU)","North Fork Stillaguamish River - summer Chinook salmon","NOSAIJ",2008,2023
+"Salmon, Chinook (Puget Sound ESU)","Skokomish River - fall Chinook salmon","NOSAEJ",1999,2023
+"Salmon, Chinook (Puget Sound ESU)","Skykomish River - summer Chinook salmon","NOSAIJ",1999,2023
+"Salmon, Chinook (Puget Sound ESU)","Snoqualmie River - fall Chinook salmon","NOSAEJ",1999,2023
 "Salmon, Chinook (Puget Sound ESU)","South Fork Nooksack River - spring Chinook salmon","NOSAIJ",1999,2016
-"Salmon, Chinook (Puget Sound ESU)","South Fork Stillaguamish River - fall Chinook salmon","NOSAEJ",1999,2020
+"Salmon, Chinook (Puget Sound ESU)","South Fork Stillaguamish River - fall Chinook salmon","NOSAEJ",1999,2023
 "Salmon, Chinook (Puget Sound ESU)","Suiattle River - spring Chinook salmon","TSAIJ",1999,2022
 "Salmon, Chinook (Puget Sound ESU)","Upper Sauk River - spring Chinook salmon","TSAIJ",1999,2022
 "Salmon, Chinook (Puget Sound ESU)","Upper Skagit River - summer Chinook salmon","TSAIJ",1999,2022
@@ -44,8 +44,8 @@
 "Salmon, chum (Columbia River ESU)","Lower Gorge Tributaries - fall Chum salmon","NOSAEJ",2000,2023
 "Salmon, chum (Columbia River ESU)","Upper Gorge Tributaries - fall Chum salmon","NOSAEJ",1999,2023
 "Salmon, chum (Columbia River ESU)","Washougal River - fall Chum salmon","NOSAEJ",2002,2022
-"Salmon, chum (Hood Canal summer-run ESU)","Hood Canal - summer chum salmon","NOSAEJ",1999,2020
-"Salmon, chum (Hood Canal summer-run ESU)","Strait of Juan de Fuca - summer chum salmon","NOSAEJ",1999,2021
+"Salmon, chum (Hood Canal summer-run ESU)","Hood Canal - summer chum salmon","NOSAEJ",1999,2023
+"Salmon, chum (Hood Canal summer-run ESU)","Strait of Juan de Fuca - summer chum salmon","NOSAEJ",1999,2023
 "Salmon, coho (Lower Columbia River ESU)","Coweeman River - late Coho salmon","NOSAEJ",2010,2023
 "Salmon, coho (Lower Columbia River ESU)","East Fork Lewis River - early and late Coho salmon","NOSAEJ",2010,2023
 "Salmon, coho (Lower Columbia River ESU)","Elochoman River - late Coho salmon","NOSAEJ",2010,2023
@@ -87,14 +87,14 @@
 "Steelhead (Middle Columbia River DPS)","Yakima River Upper Mainstem - summer Steelhead","NOSAIJ",1999,2018
 "Steelhead (Puget Sound DPS)","Dungeness River - summer and winter Steelhead","TSAIJ",2011,2023
 "Steelhead (Puget Sound DPS)","Elwha River - winter Steelhead","NOSAIJ",2019,2023
-"Steelhead (Puget Sound DPS)","Nisqually River - winter Steelhead","NOSAIJ",2007,2020
+"Steelhead (Puget Sound DPS)","Nisqually River - winter Steelhead","NOSAIJ",2007,2023
 "Steelhead (Puget Sound DPS)","Nooksack River - winter Steelhead","NOSAIJ",2010,2022
 "Steelhead (Puget Sound DPS)","Pilchuck River - winter Steelhead","TSAIJ",2007,2024
-"Steelhead (Puget Sound DPS)","Samish River and Bellingham Bay Tributaries - winter Steelhead","TSAIJ",2007,2018
+"Steelhead (Puget Sound DPS)","Samish River and Bellingham Bay Tributaries - winter Steelhead","TSAIJ",2007,2023
 "Steelhead (Puget Sound DPS)","Skagit River - summer and winter Steelhead","TSAIJ",2007,2022
 "Steelhead (Puget Sound DPS)","Snohomish/Skykomish Rivers - winter Steelhead","TSAIJ",2010,2024
 "Steelhead (Puget Sound DPS)","Snoqualmie River - winter Steelhead","TSAIJ",2007,2024
-"Steelhead (Puget Sound DPS)","South Hood Canal Tributaries - winter Steelhead","TSAEJ",2007,2020
+"Steelhead (Puget Sound DPS)","South Hood Canal Tributaries - winter Steelhead","TSAEJ",2007,2023
 "Steelhead (Puget Sound DPS)","Tolt River - summer Steelhead","TSAIJ",2007,2024
 "Steelhead (Puget Sound DPS)","White River - winter Steelhead","NOSAIJ",2007,2024
 "Steelhead (Snake River Basin DPS)","Asotin Creek - summer Steelhead","NOSAIJ",2010,2019
