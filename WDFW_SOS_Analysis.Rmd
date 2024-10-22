@@ -102,7 +102,7 @@ Recovery_Goals_LUT_edited<-
 #set data date--this will name files and 
 #folders and tell the analysis code which 
 #date's data to use
-data_date = "2024-10-21"#Sys.Date()
+data_date = "2024-10-22"#Sys.Date()
 
 
 #========================================
@@ -224,6 +224,15 @@ dat<-prepare_SPi_data(data_date = data_date,
                 specialcaselist = specialcaselist,
                 databeforelisting= databeforelisting
                 )
+
+####update log (compare years,pops, data types this year vs. last)
+read_csv(here::here("year_pops.csv"))%>%
+  full_join(read_csv("https://raw.githubusercontent.com/tbuehrens/WDFW_SOS_Analysis/refs/heads/2022/year_pops.csv"),
+           by=join_by(ESU_DPS,COMMONPOPNAME2),
+           suffix = c(".2024", ".2022")
+           )%>%
+  mutate(Updates = ifelse(maxyr.2024>maxyr.2022,"","not updated"))%>%
+  write.csv("update_log.csv",row.names = F)
 
 
 

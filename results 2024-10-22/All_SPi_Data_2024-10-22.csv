@@ -271,7 +271,6 @@
 "Salmon, Chinook (Puget Sound ESU)","Puget Sound Chinook","Puget Sound North West","Elwha River - fall Chinook salmon","Chinook salmon","Summer Fall","Elwha River",2016,125,"NOSAEJ",3,NA
 "Salmon, Chinook (Puget Sound ESU)","Puget Sound Chinook","Puget Sound North West","Elwha River - fall Chinook salmon","Chinook salmon","Summer Fall","Elwha River",2017,121,"NOSAEJ",3,NA
 "Salmon, Chinook (Puget Sound ESU)","Puget Sound Chinook","Puget Sound North West","Elwha River - fall Chinook salmon","Chinook salmon","Summer Fall","Elwha River",2018,176,"NOSAEJ",3,NA
-"Salmon, Chinook (Puget Sound ESU)","Puget Sound Chinook","Puget Sound North West","Elwha River - fall Chinook salmon","Chinook salmon","Summer Fall","Elwha River",2018,176,"NOSAEJ",3,NA
 "Salmon, Chinook (Puget Sound ESU)","Puget Sound Chinook","Puget Sound North West","Elwha River - fall Chinook salmon","Chinook salmon","Summer Fall","Elwha River",2019,398,"NOSAEJ",3,NA
 "Salmon, Chinook (Puget Sound ESU)","Puget Sound Chinook","Puget Sound North West","Elwha River - fall Chinook salmon","Chinook salmon","Summer Fall","Elwha River",2020,400,"NOSAEJ",3,NA
 "Salmon, Chinook (Puget Sound ESU)","Puget Sound Chinook","Puget Sound North West","Elwha River - fall Chinook salmon","Chinook salmon","Summer Fall","Elwha River",2021,176,"NOSAEJ",3,NA
@@ -717,6 +716,8 @@
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Entiat River - spring Chinook salmon","Chinook salmon","Spring","Entiat River",2018,46,"NOSAIJ",4,NA
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Entiat River - spring Chinook salmon","Chinook salmon","Spring","Entiat River",2020,120,"NOSAIJ",4,NA
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Entiat River - spring Chinook salmon","Chinook salmon","Spring","Entiat River",2021,140,"NOSAIJ",4,NA
+"Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Entiat River - spring Chinook salmon","Chinook salmon","Spring","Entiat River",2022,171,"NOSAIJ",4,NA
+"Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Entiat River - spring Chinook salmon","Chinook salmon","Spring","Entiat River",2023,122,"NOSAIJ",4,NA
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Methow River - spring Chinook salmon","Chinook salmon","Spring","Methow River",1999,45,"NOSAIJ",3,"b7820424-2c03-48fc-8a55-e45d8b721cd0"
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Methow River - spring Chinook salmon","Chinook salmon","Spring","Methow River",2000,117,"NOSAIJ",3,"b7820424-2c03-48fc-8a55-e45d8b721cd0"
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Methow River - spring Chinook salmon","Chinook salmon","Spring","Methow River",2001,1832,"NOSAIJ",3,"b7820424-2c03-48fc-8a55-e45d8b721cd0"
@@ -766,6 +767,7 @@
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Wenatchee River - spring Chinook salmon","Chinook salmon","Spring","Wenatchee River",2020,330,"NOSAIJ",4,NA
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Wenatchee River - spring Chinook salmon","Chinook salmon","Spring","Wenatchee River",2021,593,"NOSAIJ",4,NA
 "Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Wenatchee River - spring Chinook salmon","Chinook salmon","Spring","Wenatchee River",2022,754,"NOSAIJ",4,NA
+"Salmon, Chinook (Upper Columbia River spring-run ESU)","Upper Columbia spring Chinook","North Cascades","Wenatchee River - spring Chinook salmon","Chinook salmon","Spring","Wenatchee River",2023,692,"NOSAIJ",4,NA
 "Salmon, chum (Columbia River ESU)","Lower Columbia chum","Coastal","Grays and Chinook Rivers - fall Chum salmon","Chum salmon","Fall","Grays River",2001,4246,"NOSAEJ",1,NA
 "Salmon, chum (Columbia River ESU)","Lower Columbia chum","Coastal","Grays and Chinook Rivers - fall Chum salmon","Chum salmon","Fall","Grays River",2002,10493,"NOSAEJ",1,NA
 "Salmon, chum (Columbia River ESU)","Lower Columbia chum","Coastal","Grays and Chinook Rivers - fall Chum salmon","Chum salmon","Fall","Grays River",2003,15559,"NOSAEJ",1,NA
@@ -1513,6 +1515,11 @@
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Naches River - summer Steelhead","Steelhead","Summer","Yakima River",2016,1409,"NOSAIJ",1,"ff88298a-161b-47ca-b51d-7791d5dd5935"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Naches River - summer Steelhead","Steelhead","Summer","Yakima River",2017,577,"NOSAIJ",1,"ff88298a-161b-47ca-b51d-7791d5dd5935"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Naches River - summer Steelhead","Steelhead","Summer","Yakima River",2018,492,"NOSAIJ",1,"ff88298a-161b-47ca-b51d-7791d5dd5935"
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Naches River - summer Steelhead","Steelhead","Summer","Yakima River",2019,306,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Naches River - summer Steelhead","Steelhead","Summer","Yakima River",2020,568,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Naches River - summer Steelhead","Steelhead","Summer","Yakima River",2021,503,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Naches River - summer Steelhead","Steelhead","Summer","Yakima River",2022,203,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Naches River - summer Steelhead","Steelhead","Summer","Yakima River",2023,202,"NOSAIJ",1,NA
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead",NA,"Rock Creek - summer Steelhead","Steelhead","Summer","Rock Creek",2011,718,"NOSAIJ",1,"524d407e-ab6e-4e5a-80b1-846699ead702"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead",NA,"Rock Creek - summer Steelhead","Steelhead","Summer","Rock Creek",2012,645,"NOSAIJ",1,"524d407e-ab6e-4e5a-80b1-846699ead702"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead",NA,"Rock Creek - summer Steelhead","Steelhead","Summer","Rock Creek",2013,265,"NOSAIJ",1,"36b75a12-b8a3-41d5-9b59-77138c5f77bc"
@@ -1542,6 +1549,11 @@
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Satus Creek - summer Steelhead","Steelhead","Summer","Yakima River",2016,1233,"NOSAIJ",1,"5fb6f976-4242-49c1-aae1-faf2048644b8"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Satus Creek - summer Steelhead","Steelhead","Summer","Yakima River",2017,400,"NOSAIJ",1,"5fb6f976-4242-49c1-aae1-faf2048644b8"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Satus Creek - summer Steelhead","Steelhead","Summer","Yakima River",2018,341,"NOSAIJ",1,"5fb6f976-4242-49c1-aae1-faf2048644b8"
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Satus Creek - summer Steelhead","Steelhead","Summer","Yakima River",2019,269,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Satus Creek - summer Steelhead","Steelhead","Summer","Yakima River",2020,480,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Satus Creek - summer Steelhead","Steelhead","Summer","Yakima River",2021,372,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Satus Creek - summer Steelhead","Steelhead","Summer","Yakima River",2022,180,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Satus Creek - summer Steelhead","Steelhead","Summer","Yakima River",2023,135,"NOSAIJ",1,NA
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",1999,201,"NOSAIJ",1,"7754fb1f-b5a8-4fde-a4a2-3b9ac18749a8"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2000,434,"NOSAIJ",1,"7754fb1f-b5a8-4fde-a4a2-3b9ac18749a8"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2001,909,"NOSAIJ",1,"7754fb1f-b5a8-4fde-a4a2-3b9ac18749a8"
@@ -1562,6 +1574,11 @@
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2016,295,"NOSAIJ",1,"7754fb1f-b5a8-4fde-a4a2-3b9ac18749a8"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2017,154,"NOSAIJ",1,"7754fb1f-b5a8-4fde-a4a2-3b9ac18749a8"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2018,131,"NOSAIJ",1,"7754fb1f-b5a8-4fde-a4a2-3b9ac18749a8"
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2019,287,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2020,201,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2021,162,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2022,54,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Toppenish Creek - summer Steelhead","Steelhead","Summer","Yakima River",2023,72,"NOSAIJ",1,NA
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Walla Walla and Umatilla","Touchet River - summer Steelhead","Steelhead","Summer","Touchet River",1999,368,"NOSAIJ",1,NA
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Walla Walla and Umatilla","Touchet River - summer Steelhead","Steelhead","Summer","Touchet River",2000,296,"NOSAIJ",1,NA
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Walla Walla and Umatilla","Touchet River - summer Steelhead","Steelhead","Summer","Touchet River",2001,296,"NOSAIJ",1,NA
@@ -1629,6 +1646,11 @@
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Yakima River Upper Mainstem - summer Steelhead","Steelhead","Summer","Yakima River",2016,528,"NOSAIJ",1,"e194e0f9-e662-4ad0-a01b-b8d1fcfbe517"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Yakima River Upper Mainstem - summer Steelhead","Steelhead","Summer","Yakima River",2017,272,"NOSAIJ",1,"e194e0f9-e662-4ad0-a01b-b8d1fcfbe517"
 "Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Yakima River Upper Mainstem - summer Steelhead","Steelhead","Summer","Yakima River",2018,160,"NOSAIJ",1,"e194e0f9-e662-4ad0-a01b-b8d1fcfbe517"
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Yakima River Upper Mainstem - summer Steelhead","Steelhead","Summer","Yakima River",2019,122,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Yakima River Upper Mainstem - summer Steelhead","Steelhead","Summer","Yakima River",2020,99,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Yakima River Upper Mainstem - summer Steelhead","Steelhead","Summer","Yakima River",2021,225,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Yakima River Upper Mainstem - summer Steelhead","Steelhead","Summer","Yakima River",2022,43,"NOSAIJ",1,NA
+"Steelhead (Middle Columbia River DPS)","Mid-Columbia steelhead","Yakima River Group","Yakima River Upper Mainstem - summer Steelhead","Steelhead","Summer","Yakima River",2023,59,"NOSAIJ",1,NA
 "Steelhead (Puget Sound DPS)","Puget Sound steelhead","Puget Sound Steelhead DPS","Dungeness River - summer and winter Steelhead","Steelhead","Winter","Dungeness River",2011,455,"TSAIJ",1,"51bf7aea-9c77-4633-9ae6-0be928ff2071"
 "Steelhead (Puget Sound DPS)","Puget Sound steelhead","Puget Sound Steelhead DPS","Dungeness River - summer and winter Steelhead","Steelhead","Winter","Dungeness River",2013,619,"TSAIJ",1,"51bf7aea-9c77-4633-9ae6-0be928ff2071"
 "Steelhead (Puget Sound DPS)","Puget Sound steelhead","Puget Sound Steelhead DPS","Dungeness River - summer and winter Steelhead","Steelhead","Winter","Dungeness River",2014,585,"TSAIJ",1,"51bf7aea-9c77-4633-9ae6-0be928ff2071"
@@ -1824,6 +1846,10 @@
 "Steelhead (Snake River Basin DPS)","Snake River steelhead",NA,"Joseph Creek - summer Steelhead","Steelhead","Summer","Joseph Creek                                      ",2017,615,"NOSAIJ",2,NA
 "Steelhead (Snake River Basin DPS)","Snake River steelhead",NA,"Joseph Creek - summer Steelhead","Steelhead","Summer","Joseph Creek                                      ",2018,750,"NOSAIJ",2,NA
 "Steelhead (Snake River Basin DPS)","Snake River steelhead",NA,"Joseph Creek - summer Steelhead","Steelhead","Summer","Joseph Creek                                      ",2019,478,"NOSAIJ",2,NA
+"Steelhead (Snake River Basin DPS)","Snake River steelhead",NA,"Joseph Creek - summer Steelhead","Steelhead","Summer","Joseph Creek and Tributaries",2020,523,"NOSAIJ",3,NA
+"Steelhead (Snake River Basin DPS)","Snake River steelhead",NA,"Joseph Creek - summer Steelhead","Steelhead","Summer","Joseph Creek and Tributaries",2021,739,"NOSAIJ",3,NA
+"Steelhead (Snake River Basin DPS)","Snake River steelhead",NA,"Joseph Creek - summer Steelhead","Steelhead","Summer","Joseph Creek and Tributaries",2022,280,"NOSAIJ",3,NA
+"Steelhead (Snake River Basin DPS)","Snake River steelhead",NA,"Joseph Creek - summer Steelhead","Steelhead","Summer","Joseph Creek and Tributaries",2023,333,"NOSAIJ",3,NA
 "Steelhead (Snake River Basin DPS)","Snake River steelhead","Lower Snake","Tucannon River - summer Steelhead","Steelhead","Summer","Tucannon River",2010,1362,"NOSAIJ",1,NA
 "Steelhead (Snake River Basin DPS)","Snake River steelhead","Lower Snake","Tucannon River - summer Steelhead","Steelhead","Summer","Tucannon River",2011,1067,"NOSAIJ",1,NA
 "Steelhead (Snake River Basin DPS)","Snake River steelhead","Lower Snake","Tucannon River - summer Steelhead","Steelhead","Summer","Tucannon River",2012,1210,"NOSAIJ",1,NA
@@ -1863,6 +1889,7 @@
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Entiat River - summer Steelhead","Steelhead","Summer","Entiat River",2019,97,"NOSAIJ",2,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Entiat River - summer Steelhead","Steelhead","Summer","Entiat River",2020,290,"NOSAIJ",2,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Entiat River - summer Steelhead","Steelhead","Summer","Entiat River",2021,412,"NOSAIJ",2,NA
+"Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Entiat River - summer Steelhead","Steelhead","Summer","Entiat River",2022,223,"NOSAIJ",2,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Methow River - summer Steelhead","Steelhead","Summer","Methow River",1997,164,"NOSAIJ",2,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Methow River - summer Steelhead","Steelhead","Summer","Methow River",1998,69,"NOSAIJ",2,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Methow River - summer Steelhead","Steelhead","Summer","Methow River",1999,136,"NOSAIJ",2,NA
@@ -1888,6 +1915,8 @@
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Methow River - summer Steelhead","Steelhead","Summer","Methow River",2019,401,"NOSAIJ",3,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Methow River - summer Steelhead","Steelhead","Summer","Methow River",2020,528,"NOSAIJ",3,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Methow River - summer Steelhead","Steelhead","Summer","Methow River",2021,508,"NOSAIJ",3,NA
+"Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Methow River - summer Steelhead","Steelhead","Summer","Methow River",2022,404,"NOSAIJ",3,NA
+"Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Methow River - summer Steelhead","Steelhead","Summer","Methow River",2023,467,"NOSAIJ",3,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",1997,27,"NOSAIJ",2,"15cc8138-1456-455d-b969-c25b157acdab"
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",1998,20,"NOSAIJ",2,"15cc8138-1456-455d-b969-c25b157acdab"
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",1999,40,"NOSAIJ",2,"15cc8138-1456-455d-b969-c25b157acdab"
@@ -1912,6 +1941,9 @@
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",2018,120,"NOSAIJ",1,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",2019,167,"NOSAIJ",1,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",2020,260,"NOSAIJ",1,NA
+"Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",2021,146,"NOSAIJ",2,NA
+"Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",2022,124,"NOSAIJ",2,NA
+"Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Okanogan River - summer Steelhead","Steelhead","Summer","Okanogan River",2023,157,"NOSAIJ",2,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Wenatchee River - summer Steelhead","Steelhead","Summer","Wenatchee River",1997,242,"NOSAIJ",2,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Wenatchee River - summer Steelhead","Steelhead","Summer","Wenatchee River",1998,252,"NOSAIJ",2,NA
 "Steelhead (Upper Columbia River DPS)","Upper Columbia steelhead","North Cascades","Wenatchee River - summer Steelhead","Steelhead","Summer","Wenatchee River",1999,239,"NOSAIJ",2,NA
