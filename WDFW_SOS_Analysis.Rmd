@@ -102,7 +102,7 @@ Recovery_Goals_LUT_edited<-
 #set data date--this will name files and 
 #folders and tell the analysis code which 
 #date's data to use
-data_date = "2024-10-22"#Sys.Date()
+data_date = "2024-10-23"#Sys.Date()
 
 
 #========================================
@@ -256,20 +256,21 @@ Here we will run the status and trend analysis using Stan via rstan. We will the
 ```{r run_analysis,message=FALSE, warning=FALSE,results = "hide"}
 #run analysis for any populations that is not yet complete 
 analyzedata(data_date=data_date,
-            ESUsubset= c(#"Lower Columbia coho"
-               #"Lower Columbia Chinook"
+            ESUsubset= c(
+               #"Lower Columbia coho"
+               # ,"Lower Columbia Chinook"
                # ,"Lower Columbia steelhead"
                # ,"Mid-Columbia steelhead"
-               # ,"Snake River spring and summer Chinook"
-               # ,"Snake River steelhead"
-               # ,"Upper Columbia spring Chinook"
-               # ,"Upper Columbia steelhead"
-               # ,"Snake River fall Chinook"
-               # ,"Puget Sound steelhead"
-               # ,"Puget Sound Chinook"
-               # ,"Ozette Lake sockeye"
-               # ,"Hood Canal summer chum"
-               # ,"Lower Columbia chum"
+               #,"Snake River spring and summer Chinook"
+               #,"Snake River steelhead"
+               #,"Upper Columbia spring Chinook"
+               #,"Upper Columbia steelhead"
+               #,"Snake River fall Chinook"
+               #,"Puget Sound steelhead"
+               #,"Puget Sound Chinook"
+               #,"Ozette Lake sockeye"
+               #,"Hood Canal summer chum"
+               #,"Lower Columbia chum"
               ),
             ESU_DPS_list=ESU_DPS_list,
             cores=4,
