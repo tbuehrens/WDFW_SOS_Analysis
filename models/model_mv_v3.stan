@@ -8,7 +8,7 @@ data{
   vector[n] N_obs;
   int pop_obs[n];
   int year_obs[n];
-  vector<lower=0>[P] N_0_med_prior;
+  real<lower=0>N_0_med_prior[P];
 }
 transformed data{
   vector[P] Zero; //vector used for process error correlation matrix
