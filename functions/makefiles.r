@@ -29,7 +29,12 @@ makefiles <- function(data, data_date, databeforelisting = "No") {
       tdat$AGE_7_RETURNS <- -99
       tdat <- tdat[order(tdat$COMMON_POPULATION_NAME, tdat$BROOD_YEAR), ]
       tdat <- tdat[!is.na(tdat$NUMBER_OF_SPAWNERS), ]
-      write.csv(tdat, paste(SubDir, "/", unique(data$ESU_DPS_COMMONNAME)[i], "_", data_date, ".csv", sep = ""), row.names = F)
+      ## Replace "/" character with "_" in file names. Need this for the. Puget
+      ## Sound/Strait of Georgia Coho ESU, because it will expect a "Strait of
+      ## Georgia Coho ESU" file inside a "Puget Sound" directory, resulting in
+      ## a file connection error.
+      fn <- gsub("/", "_", unique(data$ESU_DPS_COMMONNAME)[i])
+      write.csv(tdat, paste(SubDir, "/", fn, "_", data_date, ".csv", sep = ""), row.names = F)
     }
     spi_data <- data.frame(read.csv(paste(SubDir, "/All_SPi_Data_", data_date, ".csv", sep = "")))
     names <- colnames(data)
