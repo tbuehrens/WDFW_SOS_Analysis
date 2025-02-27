@@ -36,13 +36,15 @@ All analyses require R software [**(link)**](https://cran.r-project.org/) (v3.4.
 # Functions
 We also need a couple of helper functions which we will load from the functions folder, which we will load using the walk() function from the purrr package (which we will install if it is not already installed).
 ```{r load_funcs, results = "hide"}
-#==========================================
+# ==========================================
 # Source function files in functions folder
-#==========================================
-if(!require("purrr")) {
+# ==========================================
+if (!require("purrr")) {
   install.packages("purrr")
   library("purrr")
-}else(library(purrr))
+} else {
+  (library(purrr))
+}
 path <- "functions/"
 files <- paste0(path, list.files(path))
 purrr::walk(files, source)
@@ -51,137 +53,139 @@ purrr::walk(files, source)
 # Packages
 In addition to purr, We also need a few packages that are not included with the base installation of R, so we begin by installing them (if necessary) and then loading them.
 ```{r load_pkgs, message = FALSE, warning = FALSE}
-#===============================================
+# ===============================================
 # Load packages, install and load if not already
-#===============================================
-using("tidyverse",
-      "rstan",
-      "reshape2",
-      "plotly",
-      "reshape2",
-      "metR",
-      "directlabels",
-      "RColorBrewer",
-      "MASS",
-      "tidyr",
-      "ggrepel",
-      "readxl",
-      "ggforce",
-      "readr",
-      "ggplot2",
-      "gridExtra",
-      "tinytex",
-      "stringdist",
-      "DBI"
-      )
+# ===============================================
+using(
+  "tidyverse",
+  "rstan",
+  "reshape2",
+  "plotly",
+  "reshape2",
+  "metR",
+  "directlabels",
+  "RColorBrewer",
+  "MASS",
+  "tidyr",
+  "ggrepel",
+  "readxl",
+  "ggforce",
+  "readr",
+  "ggplot2",
+  "gridExtra",
+  "tinytex",
+  "stringdist",
+  "DBI"
+)
 ```
 
 # User Inputs
 We need to specify data source file names, list some manual  data filter conditions, and specify which ESUs and DPSs we would like to analyze to estimate trends and smoothed abundances for:
 ```{r user_inputs,message=FALSE, warning=FALSE}
-#=========================
-#designate data file names
-#=========================
-#ESU_DPS_list file name (also lists which ESUs to use CA for)
-ESU_DPS_list<-"ESU_DPS_List.csv" 
-#ESU_DPS_list file name 
-ESU_DIP_list_all<-"ESU_DIP_list_all.csv" 
-#Recovery_Goals file name
-Recovery_Goals<-"Recovery_Goals.csv"
+# =========================
+# designate data file names
+# =========================
+# ESU_DPS_list file name (also lists which ESUs to use CA for)
+ESU_DPS_list <- "ESU_DPS_List.csv"
+# ESU_DPS_list file name
+ESU_DIP_list_all <- "ESU_DIP_list_all.csv"
+# Recovery_Goals file name
+Recovery_Goals <- "Recovery_Goals.csv"
+Recovery_Goals_LUT_edited <- "recoverygoals_LUT_edited.csv"
 
-#========================================
-#set date stamp for file names and  plots
-#========================================
-#set data date--this will name files and 
-#folders and tell the analysis code which 
-#date's data to use
-data_date = "2024-10-25"#Sys.Date()
+# ========================================
+# set date stamp for file names and  plots
+# ========================================
+# set data date--this will name files and
+# folders and tell the analysis code which
+# date's data to use
+data_date <- "2024-11-05" # Sys.Date()
 
 
-#========================================
-#set manual filter conditions for CA data
-#========================================
-#list of pops by ESAPOPNAME that 1) do not 
-#have NOSAIJ or NOSAEJ data AND 2) TSAIJ 
-#and TSAEJ have too many hatchery fish to 
-#be treated as NOSA substitutes
+# ========================================
+# set manual filter conditions for CA data
+# ========================================
+# list of pops by ESAPOPNAME that 1) do not
+# have NOSAIJ or NOSAEJ data AND 2) TSAIJ
+# and TSAEJ have too many hatchery fish to
+# be treated as NOSA substitutes
 
-HatchPops<-c(#total spawners includes substantial hatchery fish)
-  "Green River - winter Steelhead" ,
+HatchPops <- c( # total spawners includes substantial hatchery fish)
+  "Green River - winter Steelhead",
   "Mid-Hood Canal - fall Chinook salmon",
   "East Hood Canal Tributaries - winter Steelhead",
   "Skokomish River - winter Steelhead",
   "West Hood Canal Tributaries - winter Steelhead"
 )
-#=========================================================================
+# =========================================================================
 # POPFIT_exceptions list of pops where POPFIT != "same" or "multiple" but is "close enough"
 # that we should use anyway; listed by COMMONPOPNAME2
-#=========================================================================
-POPFIT_exceptions<-c(#no spawners in chinook river
-                     "Grays and Chinook Rivers - fall Chinook salmon", 
-                    #ok to use only spawners above KFH
-                     "Kalama River - spring Chinook salmon",
-                    #assumes no mainstem spawners
-                     "Lower Cowlitz River - late Coho salmon",
-                    #assumes no mainstem spawners
-                     "Lower Cowlitz River - winter Steelhead", 
-                    #WA only; use 1/2 recovery goal
-                     "Upper Gorge Tributaries - fall Chinook salmon",
-                    #WA only; use 1/2 recovery goal...but estimates still missing white salmon
-                     "Lower Gorge Tributaries - late Coho salmon", 
-                    #assumes no fish spawn in NF and mainstem Toutle below SRS
-                     "Toutle River - fall Chinook salmon",
-                    # some years mislabeled as partial instead of multiple
-                     "Upper Cowlitz River - spring Chinook salmon", 
-                    #Tucannon Steelhead
-                    "Tucannon River - summer Steelhead",
-                    #North Fork Toutle
-                    "North Fork Toutle River - winter Steelhead",
-                    #Hood canal summer chum
-                    "Hood Canal - summer chum salmon",
-                    # Elwha steelhead--recovery goal is for whole basin. abundance estimate only includes winter runs; may need to reconsider popfit exception as work is done to determine proportion of habitat used by summer runs (and a possible summer run goal is developed)
-                    "Elwha River - winter Steelhead"
+# =========================================================================
+POPFIT_exceptions <- c( # no spawners in chinook river
+  "Grays and Chinook Rivers - fall Chinook salmon",
+  # ok to use only spawners above KFH
+  "Kalama River - spring Chinook salmon",
+  # assumes no mainstem spawners
+  "Lower Cowlitz River - late Coho salmon",
+  # assumes no mainstem spawners
+  "Lower Cowlitz River - winter Steelhead",
+  # WA only; use 1/2 recovery goal
+  "Upper Gorge Tributaries - fall Chinook salmon",
+  # WA only; use 1/2 recovery goal...but estimates still missing white salmon
+  "Lower Gorge Tributaries - late Coho salmon",
+  # assumes no fish spawn in NF and mainstem Toutle below SRS
+  "Toutle River - fall Chinook salmon",
+  # some years mislabeled as partial instead of multiple
+  "Upper Cowlitz River - spring Chinook salmon",
+  # Tucannon Steelhead
+  "Tucannon River - summer Steelhead",
+  # North Fork Toutle
+  "North Fork Toutle River - winter Steelhead",
+  # Hood canal summer chum
+  "Hood Canal - summer chum salmon",
+  # Elwha steelhead--recovery goal is for whole basin. abundance estimate only includes winter runs; may need to reconsider popfit exception as work is done to determine proportion of habitat used by summer runs (and a possible summer run goal is developed)
+  "Elwha River - winter Steelhead"
 )
-#=============================================================================
-#special cases to remove in order to get 1 abundance data pt per pop per year; 
-#these are supplied as a listed of quoted filter conditions
-#=============================================================================
-specialcaselist<-list(
-  #1: #below dams estimate is sketchy
-  quote(!COMMONPOPNAME2=="Lower Gorge Tributaries - fall Chinook salmon"),  
-  #2: Entiat data lists multiuple  methods as best....use method 4 since full timeseries.
+# =============================================================================
+# special cases to remove in order to get 1 abundance data pt per pop per year;
+# these are supplied as a listed of quoted filter conditions
+# =============================================================================
+specialcaselist <- list(
+  # 1: #below dams estimate is sketchy
+  quote(!COMMONPOPNAME2 == "Lower Gorge Tributaries - fall Chinook salmon"),
+  # 2: Entiat data lists multiuple  methods as best....use method 4 since full timeseries.
   quote(
-    !(COMMONPOPNAME2=="Entiat River - spring Chinook salmon" 
-      & METHODNUMBER%in%c(1,2,3)) 
-  ),#duplicate
+    !(COMMONPOPNAME2 == "Entiat River - spring Chinook salmon" &
+      METHODNUMBER %in% c(1, 2, 3))
+  ), # duplicate
   quote(
-    !(COMMONPOPNAME2=="Entiat River - spring Chinook salmon" 
-      & METHODNUMBER==4 & SPAWNINGYEAR==2019) 
+    !(COMMONPOPNAME2 == "Entiat River - spring Chinook salmon" &
+      METHODNUMBER == 4 & SPAWNINGYEAR == 2019)
   ),
-  #4: Use method 2-3 for Joseph Creek Steelhead; Patch Occupancy model
+  # 4: Use method 2-3 for Joseph Creek Steelhead; Patch Occupancy model
   quote(
-    !(COMMONPOPNAME2=="Joseph Creek - summer Steelhead"
-      & OTHERDATASOURCES%in%c("Nez Perce Tribe | Confederated Tribes of the Umatilla Indian Reservation","Confederated Tribes of the Umatilla Indian Reservation")
+    !(COMMONPOPNAME2 == "Joseph Creek - summer Steelhead" &
+      OTHERDATASOURCES %in% c("Nez Perce Tribe | Confederated Tribes of the Umatilla Indian Reservation", "Confederated Tribes of the Umatilla Indian Reservation")
     )
   )
 )
 
-#============================================
-#Set parameters for summarization of results
-#============================================
-#Only include population in ESU summary that include recovery goals?
-Withgoalsonly="yes"
-#Number of years to calculate geomean of smoothed abundance 
-geomeanyears = 5
-#last year in geomean abundance calculations
-lastyear=2023
-#set number of years for forward projection of ESUs
-futureyears = 5
-#exlcude populations from geomean smoothed abundance calculation 
-#that have no new observed data in period geomean is being calculated for?
-filtergeomeansforpopswithnonewdata="No"
-#use only data since listing
-databeforelisting = "No"
+# ============================================
+# Set parameters for summarization of results
+# ============================================
+# Only include population in ESU summary that include recovery goals?
+Withgoalsonly <- "yes"
+# Number of years to calculate geomean of smoothed abundance
+geomeanyears <- 5
+# last year in geomean abundance calculations
+lastyear <- 2023
+# set number of years for forward projection of ESUs
+futureyears <- 5
+# exlcude populations from geomean smoothed abundance calculation
+# that have no new observed data in period geomean is being calculated for?
+filtergeomeansforpopswithnonewdata <- "No"
+# use only data since listing
+databeforelisting <- "No"
 ```
 
 # Data Preparation
@@ -208,115 +212,129 @@ Here we will use a data filtering algorithm described in the full report to sele
 Other data inputs (available in the "data" folder) included recovery goals (pulled from various NOAA-adopted recovery plans, of which we used either the minimum viability goals or low productivity goals), a list of the ESA-listed ESU/DPSs in Washington ("ESU_DPS_List") that included listing dates, and a list of all populations by listed ESU/DPS in Washington ("ESU_DIP_List_all").
 
 ```{r data_prep,message=FALSE, warning=FALSE,results = "hide"}
-#prep and filter SPI data
-dat<-prepare_SPi_data(data_date = data_date,
-                ESU_DPS_list = ESU_DPS_list,
-                Recovery_Goals_LUT_edited = Recovery_Goals_LUT_edited,
-                Recovery_Goals = Recovery_Goals, 
-                POPFIT_exceptions = POPFIT_exceptions, 
-                specialcaselist = specialcaselist,
-                databeforelisting= databeforelisting
-                )
+# prep and filter SPI data
+dat <- prepare_SPi_data(
+  data_date = data_date,
+  ESU_DPS_list = ESU_DPS_list,
+  Recovery_Goals_LUT_edited = Recovery_Goals_LUT_edited,
+  Recovery_Goals = Recovery_Goals,
+  POPFIT_exceptions = POPFIT_exceptions,
+  specialcaselist = specialcaselist,
+  databeforelisting = databeforelisting
+)
 
-####update log (compare years,pops, data types this year vs. last)
-read_csv(here::here("year_pops.csv"))%>%
+#### update log (compare years,pops, data types this year vs. last)
+read_csv(here::here("year_pops.csv")) %>%
   full_join(read_csv("https://raw.githubusercontent.com/tbuehrens/WDFW_SOS_Analysis/refs/heads/2022/year_pops.csv"),
-           by=join_by(ESU_DPS,COMMONPOPNAME2),
-           suffix = c(".2024", ".2022")
-           )%>%
-  mutate(Updates = ifelse(maxyr.2024>maxyr.2022,"","not updated"))%>%
-  write.csv("update_log.csv",row.names = F)
+    by = join_by(ESU_DPS, COMMONPOPNAME2),
+    suffix = c(".2024", ".2022")
+  ) %>%
+  mutate(Updates = ifelse(maxyr.2024 > maxyr.2022, "", "not updated")) %>%
+  write.csv("update_log.csv", row.names = F)
 
 
 
-#make analysis files for status and trend analysis 
-#(we use bind_rows to combine CA and Non-CA data)
-makefiles(data=dat,
-          data_date=data_date,
-          databeforelisting=databeforelisting
-          )
+# make analysis files for status and trend analysis
+# (we use bind_rows to combine CA and Non-CA data)
+makefiles(
+  data = dat,
+  data_date = data_date,
+  databeforelisting = databeforelisting
+)
 
-#make plots of raw abundance data by population and ESU/DPS 
-plotfunc(data=dat,
-         data_date=data_date,
-         ESU_DPS_list=ESU_DPS_list,
-         Recovery_Goals=Recovery_Goals,
-         Withgoalsonly=Withgoalsonly)
+# make plots of raw abundance data by population and ESU/DPS
+plotfunc(
+  data = dat,
+  data_date = data_date,
+  ESU_DPS_list = ESU_DPS_list,
+  Recovery_Goals = Recovery_Goals,
+  Withgoalsonly = Withgoalsonly
+)
 ```
 
 # Run Status and Trend Analysis
 Here we will run the status and trend analysis using Stan via rstan. We will then tidy up the results to prepare for summarization and plotting. You must have rtools installed and stan installed for this to work:
 ```{r run_analysis,message=FALSE, warning=FALSE,results = "hide"}
-#run analysis for any populations that is not yet complete 
-analyzedata(data_date=data_date,
-            ESUsubset= c(
-               #"Lower Columbia coho"
-               # ,"Lower Columbia Chinook"
-               # ,"Lower Columbia steelhead"
-               # ,"Mid-Columbia steelhead"
-               #,"Snake River spring and summer Chinook"
-               #,"Snake River steelhead"
-               #,"Upper Columbia spring Chinook"
-               #,"Upper Columbia steelhead"
-               #,"Snake River fall Chinook"
-               #,"Puget Sound steelhead"
-               #,"Puget Sound Chinook"
-               #,"Ozette Lake sockeye"
-               #,"Hood Canal summer chum"
-               #,"Lower Columbia chum"
-              ),
-            ESU_DPS_list=ESU_DPS_list,
-            cores=4,
-            chains = 4,
-            iter = 2000,
-            warmup= 1000,
-            thin = 1,
-            control=list(adapt_delta=0.95)
-            )
+# run analysis for any populations that is not yet complete
+analyzedata(
+  data_date = data_date,
+  ESUsubset = c(
+    "Lower Columbia coho",
+    "Lower Columbia Chinook",
+    "Lower Columbia steelhead",
+    "Mid-Columbia steelhead",
+    "Snake River spring and summer Chinook",
+    "Snake River steelhead",
+    "Upper Columbia spring Chinook",
+    "Upper Columbia steelhead",
+    "Snake River fall Chinook",
+    "Puget Sound steelhead",
+    "Puget Sound Chinook",
+    "Ozette Lake sockeye",
+    "Hood Canal summer chum",
+    "Lower Columbia chum"
+  ),
+  ESU_DPS_list = ESU_DPS_list,
+  cores = 4,
+  chains = 4,
+  iter = 2000,
+  warmup = 1000,
+  thin = 1,
+  control = list(adapt_delta = 0.95)
+)
 
-#combine results output
-combineresults(data_date=data_date,Recovery_Goals=Recovery_Goals)
+# combine results output
+combineresults(data_date = data_date, Recovery_Goals = Recovery_Goals)
 
-#merge results with raw data
-resultsdata<-makeresultsdata(data_date=data_date,
-                             data=dat,
-                             ESU_DPS_list=ESU_DPS_list,Recovery_Goals=Recovery_Goals,
-                             Smoothed_Abundance=Smoothed_Abundance)
+# merge results with raw data
+resultsdata <- makeresultsdata(
+  data_date = data_date,
+  data = dat,
+  ESU_DPS_list = ESU_DPS_list, Recovery_Goals = Recovery_Goals,
+  Smoothed_Abundance = Smoothed_Abundance
+)
 ```
 
 # Summarize Status and Trend Results
 Here we will summarize our status and trend results, first at the population level, and then at the ESU/DPS level. This code may take up to 5-15 minutes to run; adjust expectations accordingly.
 ```{r summarize_results,message=FALSE, warning=FALSE,results = "hide"}
-#make plots of raw abundance data by population and ESU/DPS 
-#with smoothed abundances added as lines
-resultsplots<-plotfunc2(resultsdata=resultsdata,
-                        Recovery_Goals=Recovery_Goals,
-                        Withgoalsonly=Withgoalsonly,
-                        data_date=data_date
-                        )
+# make plots of raw abundance data by population and ESU/DPS
+# with smoothed abundances added as lines
+resultsplots <- plotfunc2(
+  resultsdata = resultsdata,
+  Recovery_Goals = Recovery_Goals,
+  Withgoalsonly = Withgoalsonly,
+  data_date = data_date
+)
 
-#make ESU and DIP Results
-ESU_DIP_results<-make_ESU_DIP_results(
-  resultsdata=resultsdata,
-  lastyear=lastyear,data_date =data_date,
-  geomeanyears=geomeanyears,
-  filtergeomeansforpopswithnonewdata=filtergeomeansforpopswithnonewdata
-  )
+# make ESU and DIP Results
+ESU_DIP_results <- make_ESU_DIP_results(
+  resultsdata = resultsdata,
+  lastyear = lastyear, data_date = data_date,
+  geomeanyears = geomeanyears,
+  filtergeomeansforpopswithnonewdata = filtergeomeansforpopswithnonewdata
+)
 
-#plot results
-esu_results_plot(ESU_DIP_results=ESU_DIP_results,
-                 data_date=data_date,
-                 futureyears=futureyears,
-                 resultsplots=resultsplots,
-                 bypopsplots="No",
-                 geomeanyears = geomeanyears,
-                 lastyear = lastyear
-                 )
+# plot results
+esu_results_plot(
+  ESU_DIP_results = ESU_DIP_results,
+  data_date = data_date,
+  futureyears = futureyears,
+  resultsplots = resultsplots,
+  bypopsplots = "No",
+  geomeanyears = geomeanyears,
+  lastyear = lastyear
+)
 ```
 
 # Reproducing this pdf or html page
 In order to reproduce this pdf or html page you need to have a LaTex application installed. Running this snippet of code will automatically install tinytex on your machine so you can render pdfs and html:
 ```{r install_tinytex,message=FALSE, warning=FALSE}
-#tinytex::install_tinytex()
+# tinytex::install_tinytex()
 ```
 
+This document was compiled at `r Sys.time()` using the following packages:
+
+```{r}
+sessionInfo()
+```

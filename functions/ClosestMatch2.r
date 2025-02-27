@@ -1,4 +1,4 @@
-ClosestMatch2 = function(string, stringVector){
+ClosestMatch2 <- function(string, stringVector) {
   library(stringdist)
-  stringVector[amatch(string, stringVector, maxDist=Inf)]
+  stringVector[amatch(string, stringVector, maxDist = Inf)]
 }
