@@ -1,14 +1,15 @@
 analyzedata <- function(data_date, ESUsubset, ESU_DPS_list, cores = 4, chains = 4, iter = 2000, warmup = 1000, thin = 1, control = list(adapt_delta = 0.9995)) {
   if (length(ESUsubset) > 0) {
-    ESU_DPSs <- data.frame(read.csv(paste("data/", ESU_DPS_list, sep = "")))
+    ESU_DPSs <- data.frame(read.csv(file.path("data", ESU_DPS_list)))
     SubDir <- paste("results ", data_date, sep = "")
     if (!file.exists(SubDir)) {
       dir.create(file.path(SubDir))
     }
-    analysislist <- paste(ESUsubset, "_", data_date, ".csv", sep = "")
+    analysislist <- gsub("/", "_", paste(ESUsubset, "_", data_date, ".csv", sep = ""))
+
     for (i in 1:length(analysislist)) {
       # fit model to real data
-      dat <- data.frame(read.csv(paste(SubDir, "/", analysislist[i], sep = "")))
+      dat <- data.frame(read.csv(file.path(SubDir, analysislist[i])))
       # dat<-dat[dat$COMMON_POPULATION_NAME=="Coweeman River - late Coho salmon",]
       dat <- merge(dat, ESU_DPSs[, colnames(ESU_DPSs) %in% c("ESU_DPS_COMMONNAME", "ESA.listing.year")], by.x = "ESU", by.y = "ESU_DPS_COMMONNAME")
       pops <- length(unique(dat$COMMON_POPULATION_NAME))
@@ -58,7 +59,9 @@ analyzedata <- function(data_date, ESUsubset, ESU_DPS_list, cores = 4, chains = 
       # parset<-c("sigma_rn","sigma_wn","slope")
       # pairs(stanfit,pars=parset)
       summary <- summary(stanfit)$summary
-      write.csv(summary, paste(SubDir, "/", ESUsubset[i], "_STAN_summary", data_date, ".csv", sep = ""))
+      fn <- paste0(gsub("/", "_", ESUsubset[i]), "_STAN_summary", data_date, ".csv")
+      write.csv(summary, file.path(SubDir, fn))
+      # write.csv(summary, paste(SubDir, "/", ESUsubset[i], "_STAN_summary", data_date, ".csv", sep = ""))
       res <- rstan::extract(stanfit)
       if (pops > 1) {
         N_quants <- apply(res$N_all, 2:3, function(x) quantile(x, c(0.025, 0.25, 0.5, 0.75, 0.975)))
@@ -92,8 +95,12 @@ analyzedata <- function(data_date, ESUsubset, ESU_DPS_list, cores = 4, chains = 
         dat3$COMMON_POPULATION_NAME <- unique(dat$COMMON_POPULATION_NAME)
         dat3$ESU <- ESUsubset[i]
       }
-      write.csv(dat2, paste(SubDir, "/", ESUsubset[i], "_", data_date, "_SmoothResults.csv", sep = ""), row.names = F)
-      write.csv(dat3, paste(SubDir, "/", ESUsubset[i], "_", data_date, "_Slope.csv", sep = ""), row.names = F)
+      fn <- paste0(gsub("/", "_", ESUsubset[i]), "_", data_date, "_SmoothResults.csv")
+      write.csv(dat2, file.path(SubDir, fn), row.names = FALSE)
+      # write.csv(dat2, paste(SubDir, "/", ESUsubset[i], "_", data_date, "_SmoothResults.csv", sep = ""), row.names = F)
+      fn <- paste0(gsub("/", "_", ESUsubset[i]), "_", data_date, "_Slope.csv")
+      write.csv(dat3, file.path(SubDir, fn), row.names = FALSE)
+      # write.csv(dat3, paste(SubDir, "/", ESUsubset[i], "_", data_date, "_Slope.csv", sep = ""), row.names = F)
     }
   }
 }

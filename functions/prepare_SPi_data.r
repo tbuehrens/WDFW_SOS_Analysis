@@ -1,5 +1,5 @@
 # prepare SPi data for analysis function
-prepare_SPi_data <- function(mainDir, data_date, ESU_DPS_list, Recovery_Goals_LUT_edited, Recovery_Goals, POPFIT_exceptions, specialcaselistif, databeforelisting = "No") {
+prepare_SPi_data <- function(mainDir, data_date, ESU_DPS_list, Recovery_Goals_LUT_edited, Recovery_Goals, POPFIT_exceptions, specialcaselistif, databeforelisting = "No", addl_rows = NULL) {
   SubDir <- paste("results ", data_date, sep = "")
   if (!file.exists(SubDir)) {
     dir.create(file.path(SubDir))
@@ -54,6 +54,9 @@ prepare_SPi_data <- function(mainDir, data_date, ESU_DPS_list, Recovery_Goals_LU
       dplyr::select(ESU_DPS, COMMON_POPULATION_NAME) %>%
       dplyr::rename(COMMONPOPNAME2 = COMMON_POPULATION_NAME))
 
+  if (!is.null(addl_rows)) {
+    dat <- bind_rows(dat, addl_rows)
+  }
 
   dat[dat == "NA"] <- NA
 
