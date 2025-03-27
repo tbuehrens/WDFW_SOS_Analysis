@@ -23,6 +23,7 @@
 "Puget Sound Chinook","Puget Sound Central East","Cascade River - spring Chinook salmon","Chinook salmon","Spring","Cascade River",2020,115,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Cascade River - spring Chinook salmon","Chinook salmon","Spring","Cascade River",2021,145,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Cascade River - spring Chinook salmon","Chinook salmon","Spring","Cascade River",2022,410,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Cascade River - spring Chinook salmon","Chinook salmon","Spring","Cascade River",2023,353,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","Cedar River - fall Chinook salmon","Chinook salmon","Summer Fall","Cedar River",2004,842,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","Cedar River - fall Chinook salmon","Chinook salmon","Summer Fall","Cedar River",2005,582,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","Cedar River - fall Chinook salmon","Chinook salmon","Summer Fall","Cedar River",2006,1164,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -126,30 +127,32 @@
 "Puget Sound Chinook","Puget Sound Central East","Lower Sauk River - summer Chinook salmon","Chinook salmon","Summer","Sauk River",2020,423,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Lower Sauk River - summer Chinook salmon","Chinook salmon","Summer","Sauk River",2021,233,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Lower Sauk River - summer Chinook salmon","Chinook salmon","Summer","Sauk River",2022,733,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",1999,1043,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2000,3262,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2001,2606,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2002,4866,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2003,1161,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2004,3070,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2005,3320,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2006,3508,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2007,1053,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2008,2685,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2009,1439,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2010,1017,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2011,820,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2012,3295,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2013,1551,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2014,1785,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2015,2203,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2016,2840,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2017,3786,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2018,1923,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2019,1336,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2020,869,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2021,664,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Dewatto River",2022,4585,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Sauk River - summer Chinook salmon","Chinook salmon","Summer","Sauk River",2023,559,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",1999,1043,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2000,3262,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2001,2606,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2002,4866,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2003,1161,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2004,3070,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2005,3320,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2006,3508,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2007,1053,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2008,2685,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2009,1439,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2010,1017,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2011,820,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2012,3295,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2013,1551,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2014,1785,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2015,2203,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2016,2840,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2017,3786,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2018,1923,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2019,1336,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2020,869,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2021,664,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2022,4585,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Lower Skagit River - fall Chinook salmon","Chinook salmon","Fall","Skagit River",2023,2854,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","Nisqually River - fall Chinook salmon","Chinook salmon","Summer Fall","Nisqually River",2004,269,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","Nisqually River - fall Chinook salmon","Chinook salmon","Summer Fall","Nisqually River",2005,936,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","Nisqually River - fall Chinook salmon","Chinook salmon","Summer Fall","Nisqually River",2006,222,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -188,6 +191,15 @@
 "Puget Sound Chinook","Puget Sound North East","North Fork Nooksack River (including Middle Fork Nooksack River) - spring Chinook salmon","Chinook salmon","Spring","North Fork Nooksack River",2014,91,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound North East","North Fork Nooksack River (including Middle Fork Nooksack River) - spring Chinook salmon","Chinook salmon","Spring","North Fork Nooksack River",2015,401,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound North East","North Fork Nooksack River (including Middle Fork Nooksack River) - spring Chinook salmon","Chinook salmon","Spring","North Fork Nooksack River",2016,187,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",1999,422,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2000,1343,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2001,968,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2002,1058,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2003,665,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2004,1245,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2005,516,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2006,603,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2007,216,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2008,646,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2009,416,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2010,296,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -203,7 +215,8 @@
 "Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2020,304,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2021,598,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2022,680,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2023,299,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2023,345,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","North Fork Stillaguamish River - summer Chinook salmon","Chinook salmon","Summer","North Fork Stillaguamish River",2024,569,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central West","Skokomish River - fall Chinook salmon","Chinook salmon","Summer Fall","Skokomish River",1999,382,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central West","Skokomish River - fall Chinook salmon","Chinook salmon","Summer Fall","Skokomish River",2000,220,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central West","Skokomish River - fall Chinook salmon","Chinook salmon","Summer Fall","Skokomish River",2001,105,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -229,6 +242,7 @@
 "Puget Sound Chinook","Puget Sound Central West","Skokomish River - fall Chinook salmon","Chinook salmon","Summer Fall","Skokomish River",2021,208,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central West","Skokomish River - fall Chinook salmon","Chinook salmon","Summer Fall","Skokomish River",2022,930,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central West","Skokomish River - fall Chinook salmon","Chinook salmon","Summer Fall","Skokomish River",2023,892,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central West","Skokomish River - fall Chinook salmon","Chinook salmon","Summer Fall","Skokomish River",2024,353,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Skykomish River - summer Chinook salmon","Chinook salmon","Summer Fall","Skykomish River",1999,1401,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Skykomish River - summer Chinook salmon","Chinook salmon","Summer Fall","Skykomish River",2000,1775,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Skykomish River - summer Chinook salmon","Chinook salmon","Summer Fall","Skykomish River",2001,3054,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -269,7 +283,7 @@
 "Puget Sound Chinook","Puget Sound Central East","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2018,823,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2019,443,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2020,804,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2021,423,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2021,611,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2022,861,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Snoqualmie River - fall Chinook salmon","Chinook salmon","Fall","Snoqualmie River",2023,423,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound North East","South Fork Nooksack River - spring Chinook salmon","Chinook salmon","Spring","South Fork Nooksack River",1999,32,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -314,7 +328,7 @@
 "Puget Sound Chinook","Puget Sound Central East","South Fork Stillaguamish River - fall Chinook salmon","Chinook salmon","Fall","South Fork Stillaguamish River",2020,29,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","South Fork Stillaguamish River - fall Chinook salmon","Chinook salmon","Fall","South Fork Stillaguamish River",2021,66,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","South Fork Stillaguamish River - fall Chinook salmon","Chinook salmon","Fall","South Fork Stillaguamish River",2022,146,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","South Fork Stillaguamish River - fall Chinook salmon","Chinook salmon","Fall","South Fork Stillaguamish River",2023,50,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","South Fork Stillaguamish River - fall Chinook salmon","Chinook salmon","Fall","South Fork Stillaguamish River",2024,180,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Suiattle River - spring Chinook salmon","Chinook salmon","Spring","Suiattle River",1999,208,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Suiattle River - spring Chinook salmon","Chinook salmon","Spring","Suiattle River",2000,360,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Suiattle River - spring Chinook salmon","Chinook salmon","Spring","Suiattle River",2001,688,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -339,6 +353,7 @@
 "Puget Sound Chinook","Puget Sound Central East","Suiattle River - spring Chinook salmon","Chinook salmon","Spring","Suiattle River",2020,396,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Suiattle River - spring Chinook salmon","Chinook salmon","Spring","Suiattle River",2021,433,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Suiattle River - spring Chinook salmon","Chinook salmon","Spring","Suiattle River",2022,535,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Suiattle River - spring Chinook salmon","Chinook salmon","Spring","Suiattle River",2023,360,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Upper Sauk River - spring Chinook salmon","Chinook salmon","Spring","Sauk River",1999,180,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Upper Sauk River - spring Chinook salmon","Chinook salmon","Spring","Sauk River",2000,388,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Upper Sauk River - spring Chinook salmon","Chinook salmon","Spring","Sauk River",2001,543,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -363,29 +378,32 @@
 "Puget Sound Chinook","Puget Sound Central East","Upper Sauk River - spring Chinook salmon","Chinook salmon","Spring","Sauk River",2020,938,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Upper Sauk River - spring Chinook salmon","Chinook salmon","Spring","Sauk River",2021,1024,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound Central East","Upper Sauk River - spring Chinook salmon","Chinook salmon","Spring","Sauk River",2022,2542,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",1999,3586,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2000,13092,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2001,10084,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2002,13815,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2003,7123,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2004,20040,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2005,16608,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2006,16165,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2007,9845,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2008,8441,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2009,5290,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2010,6644,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2011,4480,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2012,9808,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2013,8801,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2014,8308,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2015,10705,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2016,15406,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2017,7792,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2018,8602,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2019,10155,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2020,9652,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Wind River",2022,12005,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Sauk River - spring Chinook salmon","Chinook salmon","Spring","Sauk River",2023,471,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",1999,3586,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2000,13092,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2001,10084,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2002,13815,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2003,7123,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2004,20040,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2005,16608,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2006,16165,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2007,9845,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2008,8441,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2009,5290,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2010,6644,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2011,4480,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2012,9808,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2013,8801,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2014,8308,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2015,10705,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2016,15406,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2017,7792,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2018,8602,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2019,10155,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2020,9652,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2021,6410,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2022,12005,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound Central East","Upper Skagit River - summer Chinook salmon","Chinook salmon","Summer","Skagit River",2023,8330,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",1999,579,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2000,788,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2001,1375,1,-99,-99,-99,-99,-99,-99,-99,-99
@@ -409,5 +427,5 @@
 "Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2019,802,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2020,1727,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2021,2306,1,-99,-99,-99,-99,-99,-99,-99,-99
-"Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2022,1173,1,-99,-99,-99,-99,-99,-99,-99,-99
+"Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2022,2346,1,-99,-99,-99,-99,-99,-99,-99,-99
 "Puget Sound Chinook","Puget Sound South","White River - spring Chinook salmon","Chinook salmon","Spring","White River",2023,1032,1,-99,-99,-99,-99,-99,-99,-99,-99
