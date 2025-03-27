@@ -29,4 +29,4 @@ ggplot(dat3 %>%
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   geom_hline(yintercept = 0) +  # Add horizontal line at y = 0
   coord_flip() +  #_
-  scale_y_continuous(labels = scales::label_percent(scale = 1))  #
+  scale_y_continuous(labels = scales::label_percent(scale = 100))  #
