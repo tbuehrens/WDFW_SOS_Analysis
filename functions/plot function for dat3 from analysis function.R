@@ -1,11 +1,8 @@
-# Load the necessary libraries
-library(dplyr)
-library(ggplot2)
-library(scales)  # This loads the label_percent function
-
-# Apply transformation only to the numeric columns (Q2.5., Q50., Q75., Q97.5.)
 ggplot(dat3 %>% 
-         mutate(across(c(Q2.5., Q50., Q75., Q97.5.), ~ exp(.) - 1)), aes(x = COMMON_POPULATION_NAME)) +
+         mutate(across(c(Q2.5., Q50., Q75., Q97.5.), ~ exp(.) - 1)) %>%
+         arrange(Q50.) %>%
+         mutate(COMMON_POPULATION_NAME = factor(COMMON_POPULATION_NAME, levels = COMMON_POPULATION_NAME)),
+       aes(x = COMMON_POPULATION_NAME)) +
   # Add the lower whisker
   geom_segment(aes(y = Q2.5., yend = Q25., xend = COMMON_POPULATION_NAME), size = 1) +
   # Add the upper whisker
@@ -23,10 +20,11 @@ ggplot(dat3 %>%
   # Customize theme and labels
   theme_minimal() +
   labs(
-    x=NULL,
+    x = NULL,
     y = "Population-Specific Trend Slopes"
   ) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   geom_hline(yintercept = 0) +  # Add horizontal line at y = 0
-  coord_flip() +  #_
-  scale_y_continuous(labels = scales::label_percent(scale = 100))  #
+  coord_flip() +  # Flip the axes
+  scale_y_continuous(labels = scales::label_percent(scale = 100))
+
