@@ -1,4 +1,4 @@
-analyzedata <- function(data_date, ESUsubset, ESU_DPS_list, cores = 4, chains = 4, iter = 2000, warmup = 1000, thin = 1, control = list(adapt_delta = 0.9995)) {
+analyzedata <- function(data_date, ESUsubset, ESU_DPS_list, cores = 4, chains = 4, iter = 2000, warmup = 1000, thin = 1, control = list(adapt_delta = 0.9995), nu_slope = 3) {
   if (length(ESUsubset) > 0) {
     ESU_DPSs <- data.frame(read.csv(file.path("data", ESU_DPS_list)))
     SubDir <- paste("results ", data_date, sep = "")
@@ -30,6 +30,7 @@ analyzedata <- function(data_date, ESUsubset, ESU_DPS_list, cores = 4, chains = 
       }
       if (pops == 1) {
         stan.dat <- list(
+          nu_slope = nu_slope,
           T = max(dat$BROOD_YEAR) - min(dat$BROOD_YEAR) + 1,
           T_forward = as.numeric(format(Sys.Date(), "%Y")) - max(dat$BROOD_YEAR),
           T_backward = min(dat$BROOD_YEAR) - min(dat$ESA.listing.year),
