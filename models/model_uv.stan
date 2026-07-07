@@ -11,24 +11,18 @@ parameters{
   vector[T-1] eps2;
   real slope;
   real<lower=0> N_0;
-  real mu_log_sigma_total;
-  real mu_logit_prop_proc;
+  real<lower=0>sigma_total;
+  real<lower=0, upper=1> prop_proc;
 }
 transformed parameters{
   vector[T-1] eps;
   real mean_eps;
-  real<lower=0> sigma_total;
-  real<lower=0, upper=1> prop_proc;
   real<lower=0> sigma_rn;
   real<lower=0> sigma_wn;
   vector<lower=0>[T] N;
 
   mean_eps = mean(eps2);
   eps = eps2 - mean_eps;
-
-  sigma_total = exp(mu_log_sigma_total);
-  prop_proc = inv_logit(mu_logit_prop_proc);
-
   sigma_rn = sqrt(prop_proc) * sigma_total;
   sigma_wn = sqrt(1 - prop_proc) * sigma_total;
 
@@ -44,8 +38,8 @@ model{
     }
     //Priors
     slope ~ normal(0,0.25);
-    mu_log_sigma_total ~ normal(log(0.25), 1);
-    mu_logit_prop_proc ~ normal(0, 1.5);
+    sigma_total ~ normal(0,0.25);
+    prop_proc ~ beta(1,1);
     eps2 ~ std_normal();
     N_0 ~ lognormal(log(N_0_med_prior),2);
     //likelihood
