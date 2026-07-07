@@ -15,7 +15,7 @@ transformed data{
 	Zero = rep_vector(0,P);
 }
 parameters{
-  matrix[T-1,P] eps;
+  matrix[T-1,P] eps2;
   vector[P] eps_slope;
   real slope_mu;
   real<lower=0> sigma_slope;
@@ -29,9 +29,19 @@ parameters{
   cholesky_factor_corr[P] L;
 }
 transformed parameters{
+  matrix[T-1,P] eps;
+  vector[P] mean_eps;
   matrix<lower=0>[T,P] N;
   vector<lower=0>[P] sigma_rn = sigma_rn_mu + eps_sigma_rn * sigma_rn_sigma; 
   vector<lower=0>[P] sigma_wn = sigma_wn_mu + eps_sigma_wn * sigma_wn_sigma; 
+  
+  for (p in 1:P){
+    mean_eps[p] = mean(eps2[, p]);
+  }
+
+  // Center process errors within each population
+  eps = eps2 - rep_matrix(mean_eps', T - 1);
+  
   N[1,1:P] = to_row_vector(N_0[1:P]);
   for(t in 2:T){
     N[t,1:P] = to_row_vector(exp(to_vector(log(N[t-1,1:P])) + slope_mu + eps_slope[1:P] * sigma_slope + diag_pre_multiply(sigma_rn,L) * to_vector(eps[t-1,1:P])));
@@ -59,7 +69,7 @@ model{
   //correlation matrix
   L ~ lkj_corr_cholesky(1);
   //process errors
-  to_vector(eps) ~ std_normal();
+  to_vector(eps2) ~ std_normal();
   //initial states
   N_0 ~ lognormal(log(N_0_med_prior),2);
   //=========likelihood=============
@@ -94,12 +104,12 @@ generated quantities{
     for(p in 1:P){
       eps_all[t,p] = normal_rng(0,1);
     }
-    N_all[t,1:P] = to_row_vector(exp(to_vector(log(N_all[t-1,1:P])) + slope[1:P] + L * to_vector(eps_all[t,1:P])));
+    N_all[t,1:P] = to_row_vector(exp(to_vector(log(N_all[t-1,1:P])) + slope[1:P] + diag_pre_multiply(sigma_rn, L) * to_vector(eps_all[t,1:P])));
   }
   for(t in 1 : T_backward){
     for(p in 1:P){
       eps_all[t,p] = normal_rng(0,1);
     }
-    N_all[T_backward - t + 1,1:P] = to_row_vector(exp(to_vector(log(N_all[T_backward - t + 2,1:P])) - slope[1:P] - L * to_vector(eps_all[t,1:P])));
+    N_all[T_backward - t + 1,1:P] = to_row_vector(exp(to_vector(log(N_all[T_backward - t + 2,1:P])) - slope[1:P] - diag_pre_multiply(sigma_rn, L) * to_vector(eps_all[t,1:P])));
   }
 }
