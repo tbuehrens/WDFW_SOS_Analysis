@@ -75,7 +75,8 @@ using(
   "gridExtra",
   "tinytex",
   "stringdist",
-  "DBI"
+  "DBI",
+  "odbc"
 )
 ```
 
@@ -99,7 +100,7 @@ Recovery_Goals_LUT_edited <- "recoverygoals_LUT_edited.csv"
 # set data date--this will name files and
 # folders and tell the analysis code which
 # date's data to use
-data_date <- "2025-01-23" # Sys.Date()
+data_date <- "2026-06-25" # Sys.Date()
 
 
 # ========================================
@@ -178,7 +179,7 @@ Withgoalsonly <- "no"
 # Number of years to calculate geomean of smoothed abundance
 geomeanyears <- 5
 # last year in geomean abundance calculations
-lastyear <- 2023
+lastyear <- 2025
 # set number of years for forward projection of ESUs
 futureyears <- 5
 # exlcude populations from geomean smoothed abundance calculation
@@ -212,12 +213,6 @@ Here we will use a data filtering algorithm described in the full report to sele
 Other data inputs (available in the "data" folder) included recovery goals (pulled from various NOAA-adopted recovery plans, of which we used either the minimum viability goals or low productivity goals), a list of the ESA-listed ESU/DPSs in Washington ("ESU_DPS_List") that included listing dates, and a list of all populations by listed ESU/DPS in Washington ("ESU_DIP_List_all").
 
 ```{r data_prep,message=FALSE, warning=FALSE,results = "hide"}
-# Import manually-prepared coho data
-coho_df <- read_csv(
-  here::here("data/ps_coho_rows.csv"),
-)
-addl_rows <- coho_df
-
 # prep and filter SPI data
 dat <- prepare_SPi_data(
   data_date = data_date,
@@ -227,16 +222,15 @@ dat <- prepare_SPi_data(
   POPFIT_exceptions = POPFIT_exceptions,
   specialcaselist = specialcaselist,
   databeforelisting = databeforelisting,
-  addl_rows = coho_df
 )
 
 #### update log (compare years,pops, data types this year vs. last)
 read_csv(here::here("year_pops.csv")) %>%
-  full_join(read_csv("https://raw.githubusercontent.com/tbuehrens/WDFW_SOS_Analysis/refs/heads/2022/year_pops.csv"),
+  full_join(read_csv("https://raw.githubusercontent.com/tbuehrens/WDFW_SOS_Analysis/refs/heads/2024/year_pops.csv"),
     by = join_by(ESU_DPS, COMMONPOPNAME2),
-    suffix = c(".2024", ".2022")
+    suffix = c(".2026", ".2024")
   ) %>%
-  mutate(Updates = ifelse(maxyr.2024 > maxyr.2022, "", "not updated")) %>%
+  mutate(Updates = ifelse(maxyr.2026 > maxyr.2024, "", "not updated")) %>%
   write.csv("update_log.csv", row.names = F)
 
 
