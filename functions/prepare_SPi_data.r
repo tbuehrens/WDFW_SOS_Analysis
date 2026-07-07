@@ -1,18 +1,21 @@
 # prepare SPi data for analysis function
-prepare_SPi_data <- function(mainDir, data_date, ESU_DPS_list, Recovery_Goals_LUT_edited, Recovery_Goals, POPFIT_exceptions, specialcaselistif, databeforelisting = "No", addl_rows = NULL) {
+prepare_SPi_data <- function(mainDir, data_date, ESU_DPS_list, Recovery_Goals_LUT_edited, Recovery_Goals, POPFIT_exceptions, specialcaselistif, databeforelisting = "No") {
   SubDir <- paste("results ", data_date, sep = "")
   if (!file.exists(SubDir)) {
     dir.create(file.path(SubDir))
   }
 
   database_args <- list(
-    Driver = "PostgreSQL Unicode",
+    Driver = "PostgreSQL Unicode(x64)",
     Server = Sys.getenv("POSTGRES_SPI_IP"),
-    Database = "FISH",
-    Port = 5433,
+    Database = "fish",
+    Port = 5432,
     UID = Sys.getenv("POSTGRES_SPI_UN"),
     PWD = Sys.getenv("POSTGRES_SPI_PW"),
-    Trusted_Connection = "True"
+    SSLmode  = "require",
+    Timeout  = 10
+      #,
+    #Trusted_Connection = "True"
   )
 
   con <- DBI::dbConnect(
@@ -23,7 +26,9 @@ prepare_SPi_data <- function(mainDir, data_date, ESU_DPS_list, Recovery_Goals_LU
     Port = database_args$Port,
     UID = database_args$UID,
     PWD = database_args$PWD,
-    Trusted_Connection = database_args$Trusted_Connection
+    SSLmode  = database_args$SSLmode,
+    Timeout  = database_args$Timeout
+    #Trusted_Connection = database_args$Trusted_Connection
   )
 
   # dat<- data.frame(dbGetQuery(con, "SELECT * FROM spi.vw_ca_nosa_sos;"))
@@ -53,10 +58,6 @@ prepare_SPi_data <- function(mainDir, data_date, ESU_DPS_list, Recovery_Goals_LU
     left_join(Recovery_Goals %>%
       dplyr::select(ESU_DPS, COMMON_POPULATION_NAME) %>%
       dplyr::rename(COMMONPOPNAME2 = COMMON_POPULATION_NAME))
-
-  if (!is.null(addl_rows)) {
-    dat <- bind_rows(dat, addl_rows)
-  }
 
   dat[dat == "NA"] <- NA
 
@@ -149,6 +150,11 @@ prepare_SPi_data <- function(mainDir, data_date, ESU_DPS_list, Recovery_Goals_LU
   dat %>%
     group_by(ESU_DPS, COMMONPOPNAME2) %>%
     summarise(final_abundance_data_type = first(final_abundance_data_type), minyr = min(SPAWNINGYEAR), maxyr = max(SPAWNINGYEAR)) %>%
+    right_join(Recovery_Goals%>%
+                 rename(COMMONPOPNAME2=COMMON_POPULATION_NAME)%>%
+                 dplyr::select(COMMONPOPNAME2,ESU_DPS),
+                 by = c("COMMONPOPNAME2", "ESU_DPS")
+               )%>%
     write.csv(file = "year_pops.csv", row.names = F)
   #
   # DataSource
