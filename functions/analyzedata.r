@@ -23,8 +23,7 @@ analyzedata <- function(data_date, ESUsubset, ESU_DPS_list, cores = 4, chains = 
           n = nrow(dat),
           N_obs = pmax(dat$NUMBER_OF_SPAWNERS, 1),
           pop_obs = as.numeric(as.factor(dat$COMMON_POPULATION_NAME)),
-          year_obs = dat$BROOD_YEAR - min(dat$BROOD_YEAR) + 1,
-          N_0_med_prior = pmax(as.numeric(c(unlist(data.frame(dat %>% group_by(COMMON_POPULATION_NAME) %>% filter(BROOD_YEAR == min(BROOD_YEAR)) %>% summarise(first(NUMBER_OF_SPAWNERS)))[, 2]))), 1)
+          year_obs = dat$BROOD_YEAR - min(dat$BROOD_YEAR) + 1
         )
         model <- stan_model("models/model_mv_v3.stan")
       }
@@ -36,8 +35,7 @@ analyzedata <- function(data_date, ESUsubset, ESU_DPS_list, cores = 4, chains = 
           T_backward = min(dat$BROOD_YEAR) - min(dat$ESA.listing.year),
           n = nrow(dat),
           N_obs = pmax(dat$NUMBER_OF_SPAWNERS, 1),
-          year_obs = dat$BROOD_YEAR - min(dat$BROOD_YEAR) + 1,
-          N_0_med_prior = pmax(unlist(data.frame(dat %>% filter(BROOD_YEAR == min(BROOD_YEAR)) %>% summarise(first(NUMBER_OF_SPAWNERS)))), 1)
+          year_obs = dat$BROOD_YEAR - min(dat$BROOD_YEAR) + 1
         )
         model <- stan_model("models/model_uv.stan")
       }
