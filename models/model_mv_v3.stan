@@ -21,20 +21,31 @@ parameters{
   real slope_mu;
   real<lower=0> sigma_slope;
   vector<lower=0>[P] N_0;
-  real<lower=0> sigma_rn_mu;
-  real<lower=0> sigma_wn_mu;
-  real<lower=0> sigma_rn_sigma;
-  real<lower=0> sigma_wn_sigma;
-  vector<lower=0>[P] eps_sigma_rn; 
-  vector<lower=0>[P] eps_sigma_wn; 
+  
+  real mu_log_sigma_total;
+  real<lower=0> sd_log_sigma_total;
+  vector[P] z_log_sigma_total;
+
+  real mu_logit_prop_proc;
+  real<lower=0> sd_logit_prop_proc;
+  vector[P] z_logit_prop_proc;
+  
   cholesky_factor_corr[P] L;
 }
 transformed parameters{
   matrix[T-1,P] eps;
   vector[P] mean_eps;
   matrix<lower=0>[T,P] N;
-  vector<lower=0>[P] sigma_rn = sigma_rn_mu + eps_sigma_rn * sigma_rn_sigma; 
-  vector<lower=0>[P] sigma_wn = sigma_wn_mu + eps_sigma_wn * sigma_wn_sigma; 
+  vector<lower=0>[P] sigma_total;
+  vector<lower=0, upper=1>[P] prop_proc;
+  vector<lower=0>[P] sigma_rn;
+  vector<lower=0>[P] sigma_wn;
+
+  sigma_total = exp(mu_log_sigma_total + sd_log_sigma_total * z_log_sigma_total);
+  prop_proc = inv_logit(mu_logit_prop_proc + 
+                      sd_logit_prop_proc * z_logit_prop_proc);
+  sigma_rn = sqrt(prop_proc) .* sigma_total;
+  sigma_wn = sqrt(1 - prop_proc) .* sigma_total;
   
   for (p in 1:P){
     mean_eps[p] = mean(eps2[, p]);
@@ -61,12 +72,13 @@ model{
   sigma_slope ~ cauchy(0,0.1);
   eps_slope[1:P] ~ student_t(nu_slope,0,1);
   //observation  & process error sds
-  sigma_rn_mu ~ inv_gamma(1,0.125); 
-  sigma_wn_mu ~ inv_gamma(1,0.125);
-  sigma_rn_sigma ~ cauchy(0,0.1);
-  sigma_wn_sigma ~ cauchy(0,0.1);
-  eps_sigma_rn ~ cauchy(0,1);
-  eps_sigma_wn ~ cauchy(0,1);
+  mu_log_sigma_total ~ normal(log(0.25), 1);
+  sd_log_sigma_total ~ normal(0, 0.5);
+  z_log_sigma_total ~ std_normal();
+
+  mu_logit_prop_proc ~ normal(0, 1.5);
+  sd_logit_prop_proc ~ normal(0, 1);
+  z_logit_prop_proc ~ std_normal();
   //correlation matrix
   L ~ lkj_corr_cholesky(1);
   //process errors
