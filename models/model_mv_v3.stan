@@ -4,6 +4,7 @@ data{
   int T_forward;
   int T_backward;
   int P;
+  real<lower=2> nu_slope;
   int n; 
   vector[n] N_obs;
   int pop_obs[n];
@@ -58,7 +59,7 @@ model{
   //slope
   slope_mu ~ normal(0,0.25); 
   sigma_slope ~ cauchy(0,0.1);
-  eps_slope[1:P] ~ std_normal();
+  eps_slope[1:P] ~ student_t(nu_slope,0,1);
   //observation  & process error sds
   sigma_rn_mu ~ inv_gamma(1,0.125); 
   sigma_wn_mu ~ inv_gamma(1,0.125);
