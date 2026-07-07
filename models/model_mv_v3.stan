@@ -84,12 +84,6 @@ transformed parameters{
   }
 }
 model{
-  vector[n] local_N;
-  vector[n] local_sigma_wn;
-  for(i in 1:n){
-    local_N[i] = N[year_obs[i],pop_obs[i]];
-    local_sigma_wn[i] = sigma_wn[pop_obs[i]];
-  }
   //=========Priors================
   //slope
   slope_mu ~ normal(0,0.25); 
