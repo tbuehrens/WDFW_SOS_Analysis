@@ -9,11 +9,30 @@ data{
   vector[n] N_obs;
   int pop_obs[n];
   int year_obs[n];
-  real<lower=0>N_0_med_prior[P];
 }
 transformed data{
   vector[P] Zero; //vector used for process error correlation matrix
-	Zero = rep_vector(0,P);
+	int first_obs_year[P];
+  int first_obs_index[P];
+  int use_obs[n];
+  Zero = rep_vector(0,P);
+  for (p in 1:P) {
+    first_obs_year[p] = T + 1;
+    first_obs_index[p] = 0;
+  }
+  for (i in 1:n) {
+    int p = pop_obs[i];
+    if (year_obs[i] < first_obs_year[p]) {
+      first_obs_year[p] = year_obs[i];
+      first_obs_index[p] = i;
+    }
+  }
+  for (i in 1:n) {
+    use_obs[i] = 1;
+  }
+  for (p in 1:P) {
+    use_obs[first_obs_index[p]] = 0;
+  }
 }
 parameters{
   matrix[T-1,P] eps2;
@@ -33,6 +52,7 @@ parameters{
   cholesky_factor_corr[P] L;
 }
 transformed parameters{
+  vector[P] slope;
   matrix[T-1,P] eps;
   vector[P] mean_eps;
   matrix<lower=0>[T,P] N;
@@ -54,9 +74,13 @@ transformed parameters{
   // Center process errors within each population
   eps = eps2 - rep_matrix(mean_eps', T - 1);
   
+  for(p in 1:P){
+    slope[p] = slope_mu + eps_slope[p] * sigma_slope;
+  }
+  
   N[1,1:P] = to_row_vector(N_0[1:P]);
   for(t in 2:T){
-    N[t,1:P] = to_row_vector(exp(to_vector(log(N[t-1,1:P])) + slope_mu + eps_slope[1:P] * sigma_slope + diag_pre_multiply(sigma_rn,L) * to_vector(eps[t-1,1:P])));
+    N[t,1:P] = to_row_vector(exp(to_vector(log(N[t-1,1:P])) + slope + diag_pre_multiply(sigma_rn,L) * to_vector(eps[t-1,1:P])));
   }
 }
 model{
@@ -84,14 +108,19 @@ model{
   //process errors
   to_vector(eps2) ~ std_normal();
   //initial states
-  N_0 ~ lognormal(log(N_0_med_prior),2);
+  for (p in 1:P) {
+    log(N_0[p]) ~ normal(log(N_obs[first_obs_index[p]]) - (first_obs_year[p] - 1) * slope[p], sqrt(square(sigma_wn[p]) + (first_obs_year[p] - 1) * square(sigma_rn[p])));
+  }
   //=========likelihood=============
   if(run_estimation==1){
-    N_obs ~ lognormal(log(local_N), local_sigma_wn);
+    for (i in 1:n) {
+      if(use_obs[i] == 1) {
+        N_obs[i] ~ lognormal(log(N[year_obs[i], pop_obs[i]]),sigma_wn[pop_obs[i]]);
+      }
+    }
   }
 }
 generated quantities{
-  vector[P] slope;
   matrix[P,P] Omega = multiply_lower_tri_self_transpose(L);
   matrix[P,P] Sigma = quad_form_diag(Omega, sigma_rn);
   vector[n] N_sim;
@@ -109,9 +138,6 @@ generated quantities{
     for(i in 1:n){
       N_sim[i] = lognormal_rng(log(N[year_obs[i],pop_obs[i]]), sigma_wn[pop_obs[i]]);
     }
-  }
-  for(p in 1:P){
-    slope[p] = slope_mu + eps_slope[p] * sigma_slope;
   }
   for(t in (T_backward + T + 1):(T_backward + T + T_forward)){
     for(p in 1:P){
