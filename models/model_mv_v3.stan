@@ -14,7 +14,6 @@ transformed data{
   vector[P] Zero; //vector used for process error correlation matrix
 	int first_obs_year[P];
   int first_obs_index[P];
-  int use_obs[n];
   Zero = rep_vector(0,P);
   for (p in 1:P) {
     first_obs_year[p] = T + 1;
@@ -27,19 +26,13 @@ transformed data{
       first_obs_index[p] = i;
     }
   }
-  for (i in 1:n) {
-    use_obs[i] = 1;
-  }
-  for (p in 1:P) {
-    use_obs[first_obs_index[p]] = 0;
-  }
 }
 parameters{
   matrix[T-1,P] eps2;
   vector[P] eps_slope;
   real slope_mu;
   real<lower=0> sigma_slope;
-  vector<lower=0>[P] N_0;
+  vector[P] log_N_0;
   
   real mu_log_sigma_total;
   real<lower=0> sd_log_sigma_total;
@@ -78,16 +71,22 @@ transformed parameters{
     slope[p] = slope_mu + eps_slope[p] * sigma_slope;
   }
   
-  N[1,1:P] = to_row_vector(N_0[1:P]);
+  N[1,1:P] = to_row_vector(exp(log_N_0[1:P]));
   for(t in 2:T){
     N[t,1:P] = to_row_vector(exp(to_vector(log(N[t-1,1:P])) + slope + diag_pre_multiply(sigma_rn,L) * to_vector(eps[t-1,1:P])));
   }
 }
 model{
+  vector[n] local_N;
+  vector[n] local_sigma_wn;
+  for (i in 1:n) {
+    local_N[i] = N[year_obs[i], pop_obs[i]];
+    local_sigma_wn[i] = sigma_wn[pop_obs[i]];
+  }
   //=========Priors================
   //slope
   slope_mu ~ normal(0,0.25); 
-  sigma_slope ~ cauchy(0,0.1);
+  sigma_slope ~ normal(0,0.1);
   eps_slope[1:P] ~ student_t(nu_slope,0,1);
   //observation  & process error sds
   mu_log_sigma_total ~ normal(log(0.25), 1);
@@ -95,7 +94,7 @@ model{
   z_log_sigma_total ~ std_normal();
 
   mu_logit_prop_proc ~ normal(0, 1.5);
-  sd_logit_prop_proc ~ normal(0, 1);
+  sd_logit_prop_proc ~ normal(0, 0.5);
   z_logit_prop_proc ~ std_normal();
   //correlation matrix
   L ~ lkj_corr_cholesky(1);
@@ -103,15 +102,11 @@ model{
   to_vector(eps2) ~ std_normal();
   //initial states
   for (p in 1:P) {
-    log(N_0[p]) ~ normal(log(N_obs[first_obs_index[p]]) - (first_obs_year[p] - 1) * slope[p], sqrt(square(sigma_wn[p]) + (first_obs_year[p] - 1) * square(sigma_rn[p])));
+    log_N_0[p] ~ normal(log(N_obs[first_obs_index[p]]) - (first_obs_year[p] - 1) * slope[p], fmax(1.0, sqrt(square(sigma_wn[p]) + (first_obs_year[p] - 1) * square(sigma_rn[p]))));
   }
   //=========likelihood=============
   if(run_estimation==1){
-    for (i in 1:n) {
-      if(use_obs[i] == 1) {
-        N_obs[i] ~ lognormal(log(N[year_obs[i], pop_obs[i]]),sigma_wn[pop_obs[i]]);
-      }
-    }
+    N_obs ~ lognormal(log(local_N), local_sigma_wn);
   }
 }
 generated quantities{

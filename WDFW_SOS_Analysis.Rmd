@@ -100,7 +100,7 @@ Recovery_Goals_LUT_edited <- "recoverygoals_LUT_edited.csv"
 # set data date--this will name files and
 # folders and tell the analysis code which
 # date's data to use
-data_date <- "2026-06-25" # Sys.Date()
+data_date <- "2026-07-07" # Sys.Date()
 
 
 # ========================================
@@ -282,7 +282,7 @@ analyzedata(
   iter = 2000,
   warmup = 1000,
   thin = 1,
-  control = list(adapt_delta = 0.8),
+  control = list(adapt_delta = 0.8,max_treedepth=10),
   nu_slope = 3
 )
 
