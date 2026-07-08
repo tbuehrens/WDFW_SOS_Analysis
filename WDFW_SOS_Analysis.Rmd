@@ -87,11 +87,11 @@ We need to specify data source file names, list some manual  data filter conditi
 # designate data file names
 # =========================
 # ESU_DPS_list file name (also lists which ESUs to use CA for)
-ESU_DPS_list <- "ESU_DPS_List_plus_coho.csv"
+ESU_DPS_list <- "ESU_DPS_List.csv"
 # ESU_DPS_list file name
 ESU_DIP_list_all <- "ESU_DIP_list_all.csv"
 # Recovery_Goals file name
-Recovery_Goals <- "Recovery_Goals_plus_coho.csv"
+Recovery_Goals <- "Recovery_Goals.csv"
 Recovery_Goals_LUT_edited <- "recoverygoals_LUT_edited.csv"
 
 # ========================================
@@ -260,29 +260,28 @@ Here we will run the status and trend analysis using Stan via rstan. We will the
 analyzedata(
   data_date = data_date,
   ESUsubset = c(
-    "Lower Columbia coho",
-    "Lower Columbia Chinook",
-    "Lower Columbia steelhead",
-    "Mid-Columbia steelhead",
-    "Snake River spring and summer Chinook",
-    "Snake River steelhead",
-    "Upper Columbia spring Chinook",
-    "Upper Columbia steelhead",
-    "Snake River fall Chinook",
-    "Puget Sound steelhead",
-    "Puget Sound Chinook",
-    "Ozette Lake sockeye",
-    "Hood Canal summer chum",
-    "Lower Columbia chum",
-    "Puget Sound/Strait of Georgia Coho"
+    # "Lower Columbia coho",
+    # "Lower Columbia Chinook",
+    # "Lower Columbia steelhead",
+    # "Mid-Columbia steelhead",
+    # "Snake River spring and summer Chinook",
+    # "Snake River steelhead",
+    # "Upper Columbia spring Chinook",
+    # "Upper Columbia steelhead",
+    # "Snake River fall Chinook",
+    # "Puget Sound steelhead",
+    # "Puget Sound Chinook",
+    # "Ozette Lake sockeye",
+    # "Hood Canal summer chum",
+    # "Lower Columbia chum",
   ),
   ESU_DPS_list = ESU_DPS_list,
   cores = 4,
   chains = 4,
-  iter = 2000,
+  iter = 3000,
   warmup = 1000,
   thin = 1,
-  control = list(adapt_delta = 0.8,max_treedepth=10),
+  control = list(adapt_delta = 0.95,max_treedepth=12),
   nu_slope = 3
 )
 
