@@ -97,7 +97,7 @@ model{
   sd_logit_prop_proc ~ normal(0, 0.5);
   z_logit_prop_proc ~ std_normal();
   //correlation matrix
-  L ~ lkj_corr_cholesky(1);
+  L ~ lkj_corr_cholesky(2);
   //process errors
   to_vector(eps2) ~ std_normal();
   //initial states
