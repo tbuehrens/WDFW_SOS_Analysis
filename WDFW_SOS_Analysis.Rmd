@@ -100,7 +100,7 @@ Recovery_Goals_LUT_edited <- "recoverygoals_LUT_edited.csv"
 # set data date--this will name files and
 # folders and tell the analysis code which
 # date's data to use
-data_date <- "2026-07-07" # Sys.Date()
+data_date <- "2026-07-28" # Sys.Date()
 
 
 # ========================================
@@ -122,7 +122,8 @@ HatchPops <- c( # total spawners includes substantial hatchery fish)
 # POPFIT_exceptions list of pops where POPFIT != "same" or "multiple" but is "close enough"
 # that we should use anyway; listed by COMMONPOPNAME2
 # =========================================================================
-POPFIT_exceptions <- c( # no spawners in chinook river
+POPFIT_exceptions <- c( 
+  # no spawners in chinook river
   "Grays and Chinook Rivers - fall Chinook salmon",
   # ok to use only spawners above KFH
   "Kalama River - spring Chinook salmon",
@@ -168,7 +169,13 @@ specialcaselist <- list(
     !(COMMONPOPNAME2 == "Joseph Creek - summer Steelhead" &
       OTHERDATASOURCES %in% c("Nez Perce Tribe | Confederated Tribes of the Umatilla Indian Reservation", "Confederated Tribes of the Umatilla Indian Reservation")
     )
+  ),
+  quote(
+     !(COMMONPOPNAME2 == "North Fork Toutle River - winter Steelhead"&
+      POPFITNOTES %in% c("Green River redd count expansion on MS and Tributary indexes","NF Toutle River Trap Count")
+     )
   )
+  
 )
 
 # ============================================
@@ -232,7 +239,6 @@ read_csv(here::here("year_pops.csv")) %>%
   ) %>%
   mutate(Updates = ifelse(maxyr.2026 > maxyr.2024, "", "not updated")) %>%
   write.csv("update_log.csv", row.names = F)
-
 
 
 # make analysis files for status and trend analysis
