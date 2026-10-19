@@ -7,6 +7,7 @@
 "Salmon, Chinook (Lower Columbia River ESU)","Lewis River - fall Chinook salmon","NOSAEJ",2010,2025
 "Salmon, Chinook (Lower Columbia River ESU)","Lewis River - late fall Chinook salmon","NOSAIJ",2013,2025
 "Salmon, Chinook (Lower Columbia River ESU)","Lower Cowlitz River - fall Chinook salmon","NOSAIJ",2010,2025
+"Salmon, Chinook (Lower Columbia River ESU)","Lower Gorge Tributaries - fall Chinook salmon","NOSAEJ",2010,2025
 "Salmon, Chinook (Lower Columbia River ESU)","Mill, Abernathy, and Germany Creeks - fall Chinook salmon","NOSAEJ",2005,2025
 "Salmon, Chinook (Lower Columbia River ESU)","North Fork Lewis River - spring Chinook salmon","NOSAIJ",2013,2025
 "Salmon, Chinook (Lower Columbia River ESU)","Toutle River - fall Chinook salmon","NOSAEJ",2010,2025
@@ -45,7 +46,7 @@
 "Salmon, chum (Columbia River ESU)","Grays and Chinook Rivers - fall Chum salmon","NOSAEJ",2001,2025
 "Salmon, chum (Columbia River ESU)","Kalama River - fall Chum salmon","NOSAEJ",2012,2024
 "Salmon, chum (Columbia River ESU)","Lewis River - fall Chum salmon","NOSAEJ",2012,2024
-"Salmon, chum (Columbia River ESU)","Lower Gorge Tributaries - fall Chum salmon","NOSAEJ",2000,2023
+"Salmon, chum (Columbia River ESU)","Lower Gorge Tributaries - fall Chum salmon","NOSAEJ",2000,2024
 "Salmon, chum (Columbia River ESU)","Mill, Abernathy, and Germany Creeks - fall Chum salmon","NOSAEJ",2016,2024
 "Salmon, chum (Columbia River ESU)","Upper Gorge Tributaries - fall Chum salmon","NOSAEJ",1999,2023
 "Salmon, chum (Columbia River ESU)","Washougal River - fall Chum salmon","NOSAEJ",2002,2023
@@ -108,7 +109,6 @@
 "Steelhead (Upper Columbia River DPS)","Okanogan River - summer Steelhead","NOSAIJ",1997,2025
 "Steelhead (Upper Columbia River DPS)","Wenatchee River - summer Steelhead","NOSAIJ",1997,2025
 "Salmon, Chinook (Lower Columbia River ESU)","Cispus River - spring Chinook salmon",NA,NA,NA
-"Salmon, Chinook (Lower Columbia River ESU)","Lower Gorge Tributaries - fall Chinook salmon",NA,NA,NA
 "Salmon, Chinook (Lower Columbia River ESU)","Salmon Creek - fall Chinook salmon",NA,NA,NA
 "Salmon, Chinook (Lower Columbia River ESU)","Tilton River - spring Chinook salmon",NA,NA,NA
 "Salmon, Chinook (Lower Columbia River ESU)","Toutle River - spring Chinook salmon",NA,NA,NA
