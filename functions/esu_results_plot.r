@@ -275,128 +275,39 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   ESU_DPS2[grep(c("Sockeye"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Sockeye"), ESU_DPS2)], "ESU")
   ESU_DPS2[grep(c("Chum"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Chum"), ESU_DPS2)], "ESU")
   DIP_Results$ESU_DPS2 <- ESU_DPS2
-  
-  ##START NEW MATERIAL for 1st plot
-  # Load quantiles and recovery goals to calculate 95% CIs
-  library(readxl)
-  quantiles_df <- read.csv("Approximate-Population-Geomean-Quantiles.csv", stringsAsFactors = FALSE)
-  goals_df <- read_excel("Recovery_Goals.xlsx")
-  
-  # Ensure column name consistency and calculate lower/upper CI bounds (% of goal)
-  # Recovery goal column in Recovery_Goals.xlsx is named `Recovery goal`
-  goals_clean <- goals_df %>%
-    dplyr::select(COMMON_POPULATION_NAME, Recovery_goal = `Recovery goal`)
-  
-  ci_df <- quantiles_df %>%
-    dplyr::select(COMMON_POPULATION_NAME, Q2.5., Q97.5.) %>%
-    dplyr::left_join(goals_clean, by = "COMMON_POPULATION_NAME") %>%
-    dplyr::mutate(
-      CI_lower_prop_goal = (Q2.5. / Recovery_goal) * 100,
-      CI_upper_prop_goal = (Q97.5. / Recovery_goal) * 100
-    )
-  
-  # Merge CI values into DIP_Results matching on population name
-  DIP_Results <- DIP_Results %>%
-    dplyr::left_join(
-      ci_df %>% dplyr::select(COMMON_POPULATION_NAME, CI_lower_prop_goal, CI_upper_prop_goal),
-      by = c("COMMONPOPNAME2" = "COMMON_POPULATION_NAME")
-    )
-  #END NEW MATERIAL for 1st plot
-  
-  ##START NEW MATERIAL for 2nd plot
-  # --- Load and combine all ESU/DPS slope files for Trend 95% CIs ---
-  slope_files <- list.files(pattern = "_Slope\\.csv$", full.names = TRUE)
-  
-  if (length(slope_files) > 0) {
-    slope_df <- do.call(rbind, lapply(slope_files, function(f) {
-      read.csv(f, stringsAsFactors = FALSE)
-    }))
-    
-    # Calculate lower and upper 95% CIs as percent change per year: (exp(slope) - 1) * 100
-    # (Note: If your slope quantiles are already simple linear annual rates, use Q * 100 instead)
-    slope_df <- slope_df %>%
-      dplyr::select(COMMON_POPULATION_NAME, Q2.5., Q97.5.) %>%
-      dplyr::mutate(
-        Trend_CI_lower = (exp(Q2.5.) - 1) * 100,
-        Trend_CI_upper = (exp(Q97.5.) - 1) * 100
-      )
-    
-    # Merge trend CIs into DIP_Results
-    DIP_Results <- DIP_Results %>%
-      dplyr::left_join(
-        slope_df %>% dplyr::select(COMMON_POPULATION_NAME, Trend_CI_lower, Trend_CI_upper),
-        by = c("COMMONPOPNAME2" = "COMMON_POPULATION_NAME")
-      )
-  } else {
-    DIP_Results$Trend_CI_lower <- NA_real_
-    DIP_Results$Trend_CI_upper <- NA_real_
-  }
-  #END NEW MATERIAL for 2nd plot
-  
+
   pdf(paste(SubDir, "/DIP_RESULTS_PLOTS_", data_date, ".pdf", sep = ""))
   counter <- 0
   for (i in 1:length(unique(DIP_Results$ESU_DPS))) {
-    ##START NEW MATERIAL for 1st plot
-    p <- ggplot(data = DIP_Results %>% filter(ESU_DPS == unique(DIP_Results$ESU_DPS)[i]), 
-                aes(x = Geomean_5yr_prop_goal * 100, 
-                    y = reorder(COMMONPOPNAME2, Geomean_5yr_prop_goal), 
-                    fill = "blue")) +
+    p <- ggplot(data = DIP_Results %>% filter(ESU_DPS == unique(DIP_Results$ESU_DPS)[i]), aes(x = Geomean_5yr_prop_goal * 100, y = reorder(COMMONPOPNAME2, Geomean_5yr_prop_goal), fill = "blue")) +
       geom_bar(stat = "identity") +
-      geom_errorbar(aes(xmin = CI_lower_prop_goal, xmax = CI_upper_prop_goal), 
-                    width = 0.35, 
-                    color = "black", 
-                    linewidth = 0.5, 
-                    na.rm = TRUE) +
       geom_vline(xintercept = 100, linetype = "dashed") +
       ggtitle(unique(DIP_Results$ESU_DPS2)[i]) +
       xlab(label = "5 Year Geomean % of Recovery Goal") +
       ylab(label = "") +
       theme_bw() +
-      labs(caption = paste0("Caption: Five year (", lastyear - (geomeanyears - 1), "-", lastyear, 
-                            ") geomean smoothed\nabundance as a percentage of recovery goals with 95% CIs.",
-                            "\nPopulations with no bars had no usable data.")) +
+      labs(caption = paste0("Caption: Five year (", lastyear - (geomeanyears - 1), "-", lastyear, ") geomean smoothed\nabundance as a percentage of recovery goals.\nPopulations with no bars had no usable data.")) +
       theme(
-        legend.position = "none", 
-        axis.text = element_text(size = 6),
+        legend.position = "none", axis.text = element_text(size = 6),
         plot.caption = element_text(vjust = -1, hjust = 0, colour = "blue", size = 10)
       ) +
-      annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), 
-               vjust = 1.5, hjust = 1, col = "grey60", cex = 2, alpha = 0.8, srt = 00)
+      annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "grey60", cex = 2, alpha = 0.8, srt = 00)
     print(p)
-    ##END NEW MATERIAL for 1st plot
-    
-    ##START NEW MATERIAL for 2nd plot
-    # Determine symmetric or fitted x-limits that encompass the full confidence intervals
-    sub_dip <- DIP_Results %>% filter(ESU_DPS == unique(DIP_Results$ESU_DPS)[i])
-    x_min_val <- min(c(sub_dip$Percent.change.per.year, sub_dip$Trend_CI_lower), na.rm = TRUE) * 1.1
-    x_max_val <- max(c(sub_dip$Percent.change.per.year, sub_dip$Trend_CI_upper), na.rm = TRUE) * 1.1
-    
-    p <- ggplot(data = sub_dip, 
-                aes(x = Percent.change.per.year, 
-                    y = reorder(COMMONPOPNAME2, Percent.change.per.year), 
-                    fill = "blue")) +
+    p <- ggplot(data = DIP_Results %>% filter(ESU_DPS == unique(DIP_Results$ESU_DPS)[i]), aes(x = Percent.change.per.year, y = reorder(COMMONPOPNAME2, Percent.change.per.year), fill = "blue")) +
       geom_bar(stat = "identity") +
-      geom_errorbar(aes(xmin = Trend_CI_lower, xmax = Trend_CI_upper), 
-                    width = 0.35, 
-                    color = "black", 
-                    linewidth = 0.5, 
-                    na.rm = TRUE) +
       geom_vline(xintercept = 0, linetype = "dashed") +
       ggtitle(unique(DIP_Results$ESU_DPS2)[i]) +
       xlab(label = "Trend Since ESA Listing (% change per year)") +
       ylab(label = "") +
       theme_bw() +
-      labs(caption = "Caption: Trend since ESA-listing (percent change in\nabundance per year) with 95% CIs. Populations with no bars\nhad no usable data.") +
-      xlim(min(x_min_val, -1), max(x_max_val, 1)) +
+      labs(caption = "Caption: Trend since ESA-listing (percent change in\nabundance per year). Populations with no bars \nhad no usable data.") +
+      xlim(min(DIP_Results$Percent.change.per.year) * 1.05, max(DIP_Results$Percent.change.per.year) * 1.05) +
       theme(
-        legend.position = "none", 
-        axis.text = element_text(size = 6),
+        legend.position = "none", axis.text = element_text(size = 6),
         plot.caption = element_text(vjust = -1, hjust = 0, colour = "blue", size = 10)
       ) +
-      annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), 
-               vjust = 1.5, hjust = 1, col = "grey60", cex = 2, alpha = 0.8, srt = 00)
+      annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "grey60", cex = 2, alpha = 0.8, srt = 00)
     print(p)
-    ##END NEW MATERIAL for 2nd plot
     counter <- counter + 1
     print(resultsplots$plots[[counter]])
     for (k in 1:resultsplots$popcount[[i]]) {

@@ -30,36 +30,6 @@ plotfunc2 <- function(resultsdata, Recovery_Goals, Withgoalsonly, data_date) {
   ESU_DPS2[grep(c("Sockeye"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Sockeye"), ESU_DPS2)], "ESU")
   ESU_DPS2[grep(c("Chum"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Chum"), ESU_DPS2)], "ESU")
   data$ESU_DPS2 <- ESU_DPS2
-  
-  ##START NEW MATERIAL for 3rd plot
-  # --- Load and combine all ESU/DPS smoothed results for 95% CI ribbons ---
-  smooth_files <- list.files(pattern = "_SmoothResults\\.csv$", full.names = TRUE)
-  
-  if (length(smooth_files) > 0) {
-    smooth_df <- do.call(rbind, lapply(smooth_files, function(f) {
-      read.csv(f, stringsAsFactors = FALSE)
-    }))
-    
-    # Keep population, year, and quantiles (rename BROOD_YEAR to match SPAWNINGYEAR)
-    smooth_clean <- smooth_df %>%
-      dplyr::select(
-        COMMON_POPULATION_NAME,
-        SPAWNINGYEAR = BROOD_YEAR,
-        CI_lower = Q2.5.,
-        CI_upper = Q97.5.
-      )
-    
-    # Merge quantiles into data
-    data <- data %>%
-      dplyr::left_join(
-        smooth_clean,
-        by = c("COMMONPOPNAME2" = "COMMON_POPULATION_NAME", "SPAWNINGYEAR" = "SPAWNINGYEAR")
-      )
-  } else {
-    data$CI_lower <- NA_real_
-    data$CI_upper <- NA_real_
-  }
-  ##END NEW MATERIAL for 3rd plot
 
   # visualize data
   p <- list(NULL)
@@ -103,18 +73,9 @@ plotfunc2 <- function(resultsdata, Recovery_Goals, Withgoalsonly, data_date) {
         geom_vline(aes(xintercept = min(subset(data$ESA.listing.year, data$ESU_DPS2 == ESU_list[i]), na.rm = T)), linetype = 5, show.legend = T) +
         geom_hline(data = subset(data, ESU_DPS2 == ESU_list[i]), aes(yintercept = Recovery.goal), linetype = 3, show.legend = T) +
         # geom_hline(data=subset(Recovery_Goals,ESU_DPS==ESU_list[j] & COMMON_POPULATION_NAME == unique(data$COMMONPOPNAME2[data$ESU_DPS==ESU_list[j]])[k]),aes(yintercept=Recovery.goal),linetype = 3,show.legend = T)+
-        ##START NEW MATERIAL for 3rd plot
-        # 95% Confidence Interval ribbon
-        geom_ribbon(aes(x = SPAWNINGYEAR, ymin = CI_lower, ymax = CI_upper, fill = COMMONPOPNAME2), 
-                    alpha = 0.2, 
-                    color = NA, 
-                    show.legend = FALSE, 
-                    na.rm = TRUE) +
-        ##END NEW MATERIAL for 3rd plot
         geom_line(aes(Smoothed.Abundance, x = SPAWNINGYEAR, color = COMMONPOPNAME2)) +
         expand_limits(y = 0) +
-        ##UPDATE this caption for the 3rd plot (just the one next line)
-        labs(caption = "Caption: Observed (points) and smoothed (line with 95% CI ribbon) abundance since year of ESA-listing (vertical dashed \nline). Horizontal dotted line is recovery goal.") +
+        labs(caption = "Caption: Observed (points) and smoothed (line) abundance since year of ESA-listing (vertical dashed \nline). Horizontal dotted line is recovery goal.") +
         theme(
           legend.position = "none", axis.text = element_text(size = 6),
           plot.caption = element_text(vjust = -1, hjust = 0, colour = "blue", size = 10)
