@@ -13,8 +13,8 @@ makeresultsdata <- function(data_date, data, ESU_DPS_list, Recovery_Goals, Smoot
     COMMONNAME = first(COMMONNAME),
     RUN = first(RUN),
     MAJORPOPGROUP = first(MAJORPOPGROUP),
-    WATERBODY = first(WATERBODY),
-    datasource = first(datasource)
+    WATERBODY = first(WATERBODY)#,
+    #datasource = first(datasource)
   ))
   data <- merge(tdat2, tdat, by = c("ESU_DPS", "COMMONPOPNAME2"), all.x = T)
   # add listing dates

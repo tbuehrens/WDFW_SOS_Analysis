@@ -103,7 +103,7 @@ res <- read_smoothresults(res_dir) |>
     names_transform = transform_qname,
     values_to = "vals"
   ) |>
-  select(COMMON_POPULATION_NAME, BROOD_YEAR, ESU, probs, vals) |>
+  dplyr::select(COMMON_POPULATION_NAME, BROOD_YEAR, ESU, probs, vals) |>
   nest(
     data = c(probs, vals),
     .by = c(COMMON_POPULATION_NAME, BROOD_YEAR, ESU)
@@ -134,7 +134,7 @@ res2 <- res |>
     `Q97.5.` = drop(quantile(geomean, 0.975))
   ) |>
   # Drop the approximate posterior samples so the results can be saved as a CSV
-  select(-geomean)
+  dplyr::select(-geomean)
 
 write_csv(
   res2,
