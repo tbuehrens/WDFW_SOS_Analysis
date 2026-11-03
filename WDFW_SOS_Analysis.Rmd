@@ -290,6 +290,13 @@ analyzedata(
   control = list(adapt_delta = 0.95,max_treedepth=12),
   nu_slope = 3
 )
+```
+
+
+```{summarize analysis results}
+if(!exists("dat")){
+  dat<-read_csv(here::here(paste0("results ",data_date),paste0("All_SPi_Data_",data_date,".csv")))
+}
 
 # combine results output
 combineresults(data_date = data_date, Recovery_Goals = Recovery_Goals)
