@@ -30,6 +30,17 @@ plotfunc2 <- function(resultsdata, Recovery_Goals, Withgoalsonly, data_date) {
   ESU_DPS2[grep(c("Sockeye"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Sockeye"), ESU_DPS2)], "ESU")
   ESU_DPS2[grep(c("Chum"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Chum"), ESU_DPS2)], "ESU")
   data$ESU_DPS2 <- ESU_DPS2
+  
+  # --- 95% intervals for smoothed abundance ---
+  # One SmoothResults file per ESU/DPS for this data_date; Q50. in these files
+  # is the Smoothed.Abundance already plotted as the line.
+  smooth_files <- list.files(SubDir, pattern = paste0("_", data_date, "_SmoothResults\\.csv$"), full.names = TRUE)
+  smooth_q <- do.call(rbind, lapply(smooth_files, read.csv)) %>%
+    dplyr::select(COMMON_POPULATION_NAME, BROOD_YEAR, Smooth_lo = Q2.5., Smooth_hi = Q97.5.) %>%
+    distinct(COMMON_POPULATION_NAME, BROOD_YEAR, .keep_all = TRUE) # guards against repeated rows
+  data <- data %>%
+    left_join(smooth_q, by = c("COMMONPOPNAME2" = "COMMON_POPULATION_NAME", "SPAWNINGYEAR" = "BROOD_YEAR"))
+  data <- data.frame(data)
 
   # visualize data
   p <- list(NULL)
@@ -73,9 +84,12 @@ plotfunc2 <- function(resultsdata, Recovery_Goals, Withgoalsonly, data_date) {
         geom_vline(aes(xintercept = min(subset(data$ESA.listing.year, data$ESU_DPS2 == ESU_list[i]), na.rm = T)), linetype = 5, show.legend = T) +
         geom_hline(data = subset(data, ESU_DPS2 == ESU_list[i]), aes(yintercept = Recovery.goal), linetype = 3, show.legend = T) +
         # geom_hline(data=subset(Recovery_Goals,ESU_DPS==ESU_list[j] & COMMON_POPULATION_NAME == unique(data$COMMONPOPNAME2[data$ESU_DPS==ESU_list[j]])[k]),aes(yintercept=Recovery.goal),linetype = 3,show.legend = T)+
+        geom_ribbon(aes(x = SPAWNINGYEAR, ymin = Smooth_lo, ymax = Smooth_hi, fill = COMMONPOPNAME2),
+                    inherit.aes = FALSE, alpha = 0.2, colour = NA, na.rm = TRUE
+        ) +
         geom_line(aes(Smoothed.Abundance, x = SPAWNINGYEAR, color = COMMONPOPNAME2)) +
         expand_limits(y = 0) +
-        labs(caption = "Caption: Observed (points) and smoothed (line) abundance since year of ESA-listing (vertical dashed \nline). Horizontal dotted line is recovery goal.") +
+        labs(caption = "Caption: Observed (points) and smoothed (line) abundance since year of ESA-listing (vertical dashed \nline). Shaded band is the 95% interval for smoothed abundance. Horizontal dotted line is recovery goal.") +
         theme(
           legend.position = "none", axis.text = element_text(size = 6),
           plot.caption = element_text(vjust = -1, hjust = 0, colour = "blue", size = 10)
