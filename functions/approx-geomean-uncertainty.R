@@ -116,6 +116,7 @@ if (any(res$convergence != 0)) {
   stop("Check convergence of optim runs")
 }
 
+set.seed(2026) # the approximate posterior draws are random; fix them so reruns give identical quantiles
 res2 <- res |>
   mutate(
     # Generate approximate samples from the posterior based on the parameters
@@ -131,6 +132,9 @@ res2 <- res |>
   ) |>
   mutate(
     `Q2.5.` = drop(quantile(geomean, 0.025)),
+    `Q25.` = drop(quantile(geomean, 0.25)),
+    `Q50.` = drop(quantile(geomean, 0.5)),
+    `Q75.` = drop(quantile(geomean, 0.75)),
     `Q97.5.` = drop(quantile(geomean, 0.975))
   ) |>
   # Drop the approximate posterior samples so the results can be saved as a CSV
