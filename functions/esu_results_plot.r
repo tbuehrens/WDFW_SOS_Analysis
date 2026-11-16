@@ -63,7 +63,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   ESU_DPS2[grep(c("Sockeye"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Sockeye"), ESU_DPS2)], "ESU")
   ESU_DPS2[grep(c("Chum"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Chum"), ESU_DPS2)], "ESU")
   dat_stat$ESU_DPS2 <- ESU_DPS2
-
+  
   dat_stat_csv <- dat_stat
   dat_stat_csv[, colnames(dat_stat_csv) %in% c("Q1", "Q2", "Q3", "Q4", "Q5")] <- dat_stat_csv[, colnames(dat_stat_csv) %in% c("Q1", "Q2", "Q3", "Q4", "Q5")] * 100
   dat_stat_csv$ESU_DPS <- dat_stat_csv$ESU_DPS2
@@ -95,7 +95,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   dat_stat2 <- NULL
   dat_stat2 <- dat_stat
   dat_stat4 <- dat_stat2
-
+  
   # edit data for plot v1
   dat_stat <- dat_stat[order(dat_stat$Q3), ]
   dat_stat <- dat_stat[, colnames(dat_stat) %in% c("Q1", "Q2", "Q3", "Q4", "Q5")]
@@ -130,7 +130,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   # par(xpd=T)
   # legend(0,9,legend=rev(c("Increasing","Little Change","Decreasing")),fill=col_list,bty="n",title = "Overall ESU Trend",cex=1.5)
   # dev.off()
-
+  
   # edit data for v2
   # dat_stat2$rec_cat<-as.numeric(cut(dat_stat2[,colnames(dat_stat2)=="rec_prop"],breaks = c(3)))
   # dat_stat2<-dat_stat2[order(dat_stat2$rec_cat,dat_stat2$Q3),]
@@ -170,7 +170,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   # legend(0.5,8,legend=rev(c(" > 2/3 Pops Above Goal","1/3 - 2/3 Pops Above Goal","< 1/3 Pops Above Goal")),fill=col_list,bty="n",
   #        title = "5-yr Geomean\n Smoothed Abundance\n Relative to Recovery Goals",cex=1.5)
   # dev.off()
-
+  
   # edit data for v4
   dat_stat4$rec_cat <- as.numeric(cut(dat_stat4[, colnames(dat_stat4) == "rec_prop"], breaks = c(4)))
   dat_stat4 <- dat_stat4[order(dat_stat4$rec_cat, dat_stat4$Q3), ]
@@ -198,7 +198,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   polygon(x = c(x[3], x[3], 50, 50), y = c(y, rev(y)), border = NULL, col = adjustcolor(col = col_list4[4], alpha.f = 0.25))
   legend("topright", legend = paste("Data Updated ", data_date, sep = ""), col = "grey70", cex = 0.6, bty = "n")
   abline(h = 0, lty = 2, lwd = 2, col = "black")
-
+  
   par(new = T)
   bxp(plot, outline = F, horizontal = F, las = 2, boxfill = cols2, ylim = c(min(dat_stat4) * 1.1, max(dat_stat4) * 1.1), xaxt = "n", yaxt = "n")
   axis(side = 1, at = 1:dim(dat_stat4)[2], las = 2, labels = colnames(dat_stat4), cex.axis = 0.75)
@@ -213,13 +213,13 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   mtext(side = 4, at = 5.5, line = -6, text = "ESU population trends", las = 2)
   par(xpd = T)
   legend(0.5, 8,
-    legend = rev(c("Pops Above Goal  > 75%", "50% < Pops Above Goal <= 75%", "25% < Pops Above Goal <= 50%", "Pops Above Goal <= 25% ")), fill = col_list4, bty = "n",
-    title = "5-yr Geomean\n Smoothed Abundance\n Relative to Recovery Goals", cex = 1.25
+         legend = rev(c("Pops Above Goal  > 75%", "50% < Pops Above Goal <= 75%", "25% < Pops Above Goal <= 50%", "Pops Above Goal <= 25% ")), fill = col_list4, bty = "n",
+         title = "5-yr Geomean\n Smoothed Abundance\n Relative to Recovery Goals", cex = 1.25
   )
   dev.off()
-
-
-
+  
+  
+  
   # plotting v1 STatus
   # pdf("ESU Plot_Status.pdf",width=11,height=8.5)
   # mat<-matrix(c(rep(1,30),rep(2,10)),nrow=5)
@@ -254,7 +254,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   # legend(0,9,legend=c("< 50% of Goal","50 - 100% of Goal","> Recovery Goal"),fill=col_list,bty="n",title = "Overall ESU Status",cex=1.5)
   # dev.off()
   #
-
+  
   # DIP Results Plots
   Location <- data.frame(unlist(strsplit(DIP_Results$ESU_DPS, "\\(|\\)"))) %>% filter(row_number() %% 2 == 0)
   Location[, 1] <- capitalize_str(gsub("-run", "", Location[, 1]))
@@ -276,71 +276,83 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   ESU_DPS2[grep(c("Chum"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Chum"), ESU_DPS2)], "ESU")
   DIP_Results$ESU_DPS2 <- ESU_DPS2
   
-  # --- 95% CIs for 5-yr geomean as % of recovery goal ---
-  # Population names match exactly across these files, so join on name only
-  # (the ESU labels in the quantiles file are in a different format).
-  # Quantiles are read from this run's results folder, e.g. "results 2026-10-15/".
+  # --- Box-and-whisker inputs ---
+  # Box = interquartile range (Q25-Q75), middle line = median (Q50),
+  # whiskers = 95% interval (Q2.5-Q97.5).
+  
+  # (1) 5-yr geomean as % of recovery goal.
+  # Quantiles come from approx-geomean-uncertainty.R (which must now also write
+  # Q25., Q50. and Q75.). Population names match exactly across these files,
+  # so join on name only (the ESU labels in the quantiles file are formatted differently).
   geomean_q <- read.csv(paste0(SubDir, "/Approximate-Population-Geomean-Quantiles.csv")) %>%
-    dplyr::select(COMMON_POPULATION_NAME, Q2.5., Q97.5.)
+    dplyr::select(COMMON_POPULATION_NAME, gm_q025 = Q2.5., gm_q25 = Q25., gm_q50 = Q50., gm_q75 = Q75., gm_q975 = Q97.5.)
   goals_ci <- read.csv("data/Recovery_Goals.csv") %>%
     dplyr::select(COMMON_POPULATION_NAME, goal_for_ci = Recovery.goal)
   DIP_Results <- DIP_Results %>%
     left_join(geomean_q, by = c("COMMONPOPNAME2" = "COMMON_POPULATION_NAME")) %>%
     left_join(goals_ci, by = c("COMMONPOPNAME2" = "COMMON_POPULATION_NAME")) %>%
     mutate(
-      Geomean_5yr_pct_goal_lo = Q2.5. / goal_for_ci * 100,
-      Geomean_5yr_pct_goal_hi = Q97.5. / goal_for_ci * 100
+      Geomean_pct_q025 = gm_q025 / goal_for_ci * 100,
+      Geomean_pct_q25 = gm_q25 / goal_for_ci * 100,
+      Geomean_pct_q50 = gm_q50 / goal_for_ci * 100,
+      Geomean_pct_q75 = gm_q75 / goal_for_ci * 100,
+      Geomean_pct_q975 = gm_q975 / goal_for_ci * 100
     )
-  # --- 95% CIs for trend since ESA listing (% change per year) ---
+  
+  # (2) Trend since ESA listing (% change per year).
   # Slope quantiles are on the log scale; convert the same way as
   # Percent.change.per.year in make_ESU_DIP_results.r: (exp(slope) - 1) * 100
   slope_files <- list.files(SubDir, pattern = paste0("_", data_date, "_Slope\\.csv$"), full.names = TRUE)
   slope_q <- do.call(rbind, lapply(slope_files, read.csv)) %>%
-    dplyr::select(COMMON_POPULATION_NAME, slope_lo = Q2.5., slope_hi = Q97.5.)
+    dplyr::select(COMMON_POPULATION_NAME, sl_q025 = Q2.5., sl_q25 = Q25., sl_q50 = Q50., sl_q75 = Q75., sl_q975 = Q97.5.)
+  pct <- function(s) (exp(s) - 1) * 100
   DIP_Results <- DIP_Results %>%
     left_join(slope_q, by = c("COMMONPOPNAME2" = "COMMON_POPULATION_NAME")) %>%
     mutate(
-      Percent_change_lo = (exp(slope_lo) - 1) * 100,
-      Percent_change_hi = (exp(slope_hi) - 1) * 100
+      Percent_change_q025 = pct(sl_q025),
+      Percent_change_q25 = pct(sl_q25),
+      Percent_change_q50 = pct(sl_q50), # identical to Percent.change.per.year
+      Percent_change_q75 = pct(sl_q75),
+      Percent_change_q975 = pct(sl_q975)
     )
   DIP_Results <- data.frame(DIP_Results)
   
   pdf(paste(SubDir, "/DIP_RESULTS_PLOTS_", data_date, ".pdf", sep = ""))
   counter <- 0
   for (i in 1:length(unique(DIP_Results$ESU_DPS))) {
-    p <- ggplot(data = DIP_Results %>% filter(ESU_DPS == unique(DIP_Results$ESU_DPS)[i]), aes(x = Geomean_5yr_prop_goal * 100, y = reorder(COMMONPOPNAME2, Geomean_5yr_prop_goal), fill = "blue")) +
-      geom_bar(stat = "identity") +
-      geom_errorbar(aes(xmin = Geomean_5yr_pct_goal_lo, xmax = Geomean_5yr_pct_goal_hi),
-                    width = 0.3, linewidth = 0.4, colour = "grey20", na.rm = TRUE
+    p <- ggplot(data = DIP_Results %>% filter(ESU_DPS == unique(DIP_Results$ESU_DPS)[i]), aes(y = reorder(COMMONPOPNAME2, Geomean_pct_q50), fill = "blue")) +
+      geom_boxplot(
+        aes(xmin = Geomean_pct_q025, xlower = Geomean_pct_q25, xmiddle = Geomean_pct_q50, xupper = Geomean_pct_q75, xmax = Geomean_pct_q975),
+        stat = "identity", orientation = "y", colour = "black", width = 0.6, na.rm = TRUE
       ) +
       geom_vline(xintercept = 100, linetype = "dashed") +
       ggtitle(unique(DIP_Results$ESU_DPS2)[i]) +
       xlab(label = "5 Year Geomean % of Recovery Goal") +
       ylab(label = "") +
       theme_bw() +
-      labs(caption = paste0("Caption: Five year (", lastyear - (geomeanyears - 1), "-", lastyear, ") geomean smoothed\nabundance as a percentage of recovery goals.\nError bars show approximate 95% confidence intervals.\nPopulations with no bars had no usable data.")) +
+      labs(caption = paste0("Caption: Five year (", lastyear - (geomeanyears - 1), "-", lastyear, ") geomean smoothed\nabundance as a percentage of recovery goals. Line = median,\nbox = interquartile range, whiskers = approximate 95% interval.\nPopulations with no box had no usable data.")) +
       theme(
         legend.position = "none", axis.text = element_text(size = 6),
         plot.caption = element_text(vjust = -1, hjust = 0, colour = "blue", size = 10)
       ) +
       annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "grey60", cex = 2, alpha = 0.8, srt = 00)
     print(p)
-    p <- ggplot(data = DIP_Results %>% filter(ESU_DPS == unique(DIP_Results$ESU_DPS)[i]), aes(x = Percent.change.per.year, y = reorder(COMMONPOPNAME2, Percent.change.per.year), fill = "blue")) +
-      geom_bar(stat = "identity") +
-      geom_errorbar(aes(xmin = Percent_change_lo, xmax = Percent_change_hi),
-                    width = 0.3, linewidth = 0.4, colour = "grey20", na.rm = TRUE
+    p <- ggplot(data = DIP_Results %>% filter(ESU_DPS == unique(DIP_Results$ESU_DPS)[i]), aes(y = reorder(COMMONPOPNAME2, Percent_change_q50), fill = "blue")) +
+      geom_boxplot(
+        aes(xmin = Percent_change_q025, xlower = Percent_change_q25, xmiddle = Percent_change_q50, xupper = Percent_change_q75, xmax = Percent_change_q975),
+        stat = "identity", orientation = "y", colour = "black", width = 0.6, na.rm = TRUE
       ) +
       geom_vline(xintercept = 0, linetype = "dashed") +
       ggtitle(unique(DIP_Results$ESU_DPS2)[i]) +
       xlab(label = "Trend Since ESA Listing (% change per year)") +
       ylab(label = "") +
       theme_bw() +
-      labs(caption = "Caption: Trend since ESA-listing (percent change in\nabundance per year). Error bars show 95% credible\nintervals. Populations with no bars had no usable data.") +
-      # axis limits widened to include the intervals; with the old limits, xlim()
-      # would silently drop any error bar extending past the most extreme trend
+      labs(caption = "Caption: Trend since ESA-listing (percent change in\nabundance per year). Line = median, box = interquartile\nrange, whiskers = 95% credible interval.\nPopulations with no box had no usable data.") +
+      # shared axis across ESUs, wide enough for every whisker; xlim() would
+      # otherwise silently drop any box whose whisker runs past the limits
       xlim(
-        min(c(DIP_Results$Percent.change.per.year, DIP_Results$Percent_change_lo), na.rm = TRUE) * 1.05,
-        max(c(DIP_Results$Percent.change.per.year, DIP_Results$Percent_change_hi), na.rm = TRUE) * 1.05
+        min(DIP_Results$Percent_change_q025, na.rm = TRUE) * 1.05,
+        max(DIP_Results$Percent_change_q975, na.rm = TRUE) * 1.05
       ) +
       theme(
         legend.position = "none", axis.text = element_text(size = 6),
@@ -356,7 +368,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
     }
   }
   dev.off()
-
+  
   # plot 4 status and trend continuous
   DIP_Results <- data.frame(DIP_Results %>% filter(!is.na(Percent.change.per.year)) %>% group_by(ESU_DPS, COMMONPOPNAME2))
   DIP_Results <- data.frame(DIP_Results %>% filter(!is.na(Geomean_5yr)) %>% group_by(ESU_DPS, COMMONPOPNAME2))
@@ -385,7 +397,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   plotdat$p_missing <- plotdat$total_missing / (plotdat$count_of_pops + plotdat$total_missing)
   plotdat$p_not_missing <- plotdat$count_of_pops / (plotdat$count_of_pops + plotdat$total_missing)
   plotdat <- data.frame(plotdat %>% mutate(ESU_rank = rank(1 / FutureStatus)))
-
+  
   Location <- data.frame(unlist(strsplit(plotdat$ESU_DPS, "\\(|\\)"))) %>% filter(row_number() %% 2 == 0)
   Location[, 1] <- capitalize_str(gsub("-run", "", Location[, 1]))
   Location[, 1] <- gsub("/s", "/S", Location[, 1])
@@ -406,7 +418,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   ESU_DPS2[grep(c("Chum"), ESU_DPS2)] <- paste(ESU_DPS2[grep(c("Chum"), ESU_DPS2)], "ESU")
   plotdat$ESU_DPS2 <- ESU_DPS2
   plotdat$ESU_DPS_names <- paste(plotdat$ESU_DPS2, " (n = ", plotdat$count_of_pops, "/", plotdat$count_of_pops + plotdat$total_missing, ")", sep = "")
-
+  
   cols3 <- brewer.pal(n = 11, "RdBu")
   # cols2<-brewer.pal(9,"RdYlGn")
   # specialcol<-add.alpha("#45A3AD01",alpha=0.5)
@@ -439,7 +451,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   #   annotation_logticks(side="lr")
   #   print(p)
   # dev.off()
-
+  
   jpeg(paste(SubDir, "/ESU Plot_Status_Trend_Continuous_median_log", data_date, ".jpeg", sep = ""), width = 11, height = 8.5, units = "in", res = 700)
   p <- ggplot(plotdat, aes(y = median_ratio_goal, x = median_percent_change)) +
     # annotate("rect",xmin=-Inf,xmax=0,ymin=0,ymax=100,fill=cols2[1],alpha=0.5,color="black")+
@@ -469,7 +481,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "white", cex = 2, alpha = 0.8, srt = 00)
   print(p)
   dev.off()
-
+  
   jpeg(paste(SubDir, "/ESU Plot_Status_Trend_Continuous_median", data_date, ".jpeg", sep = ""), width = 11, height = 8.5, units = "in", res = 700)
   p <- ggplot(plotdat, aes(y = median_ratio_goal, x = median_percent_change)) +
     # annotate("rect", xmin=-Inf,xmax=0,ymin=0,ymax=100,fill=cols2[1],alpha=0.5,color="black")+
@@ -498,10 +510,10 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   # annotation_logticks(side="lr")
   print(p)
   dev.off()
-
-
+  
+  
   jpeg(paste(SubDir, "/ESU Plot_Status_Trend_Continuous_median_combinedscore_log", data_date, ".jpeg", sep = ""), width = 11, height = 8.5, units = "in", res = 700)
-
+  
   # log version
   dat <- expand.grid(exp(seq(log(min(plotdat$min_ratio_goal[plotdat$p_missing < 0.4]) * 0.95), log(max(plotdat$max_ratio_goal, na.rm = T) * 1.05), 0.1)), seq(min(plotdat$min_percent_change, na.rm = T) * 1.05, max(plotdat$max_percent_change, na.rm = T) * 1.05, 0.1))
   #----------
@@ -542,7 +554,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "white", cex = 2, alpha = 0.8, srt = 00)
   print(p)
   dev.off()
-
+  
   jpeg(paste(SubDir, "/ESU Plot_Status_Trend_Continuous_median_combinedscore", data_date, ".jpeg", sep = ""), width = 11, height = 8.5, units = "in", res = 700)
   # no log version
   dat <- expand.grid(seq(min(plotdat$min_ratio_goal[plotdat$p_missing < 0.4]), max(plotdat$max_ratio_goal, na.rm = T) * 1.05, 0.1), seq(min(plotdat$min_percent_change, na.rm = T) * 1.05, max(plotdat$max_percent_change, na.rm = T) * 1.05, 0.1))
@@ -551,7 +563,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   dat$FutureStatus <- dat$Status * (1 + dat$Trend / 100)^futureyears
   dat <- dat[order(dat$FutureStatus), ]
   breaks <- c(0.0, 0.25, 0.5, 1) * 100
-
+  
   p <- ggplot(dat, aes(y = Status, x = Trend)) +
     geom_raster(aes(fill = FutureStatus), interpolate = TRUE) +
     # geom_tile(aes(fill = FutureStatus))+
@@ -578,8 +590,8 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "white", cex = 2, alpha = 0.8, srt = 00)
   print(p)
   dev.off()
-
-
+  
+  
   jpeg(paste(SubDir, "/ESU Plot_Status_Trend_Continuous_median_combinedscore_log_nolines", data_date, ".jpeg", sep = ""), width = 11, height = 8.5, units = "in", res = 700)
   # versions with no lines
   dat <- expand.grid(exp(seq(log(min(plotdat$min_ratio_goal[plotdat$p_missing < 0.4]) * 0.95), log(max(plotdat$max_ratio_goal, na.rm = T) * 1.05), 0.1)), seq(min(plotdat$min_percent_change, na.rm = T) * 1.05, max(plotdat$max_percent_change, na.rm = T) * 1.05, 0.1))
@@ -615,7 +627,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "white", cex = 2, alpha = 0.8, srt = 00)
   print(p)
   dev.off()
-
+  
   jpeg(paste(SubDir, "/ESU Plot_Status_Trend_Continuous_median_combinedscore_nolines", data_date, ".jpeg", sep = ""), width = 11, height = 8.5, units = "in", res = 700)
   # no log version
   dat <- expand.grid(seq(min(plotdat$min_ratio_goal[plotdat$p_missing < 0.4]), max(plotdat$max_ratio_goal, na.rm = T) * 1.05, 0.1), seq(min(plotdat$min_percent_change, na.rm = T) * 1.05, max(plotdat$max_percent_change, na.rm = T) * 1.05, 0.1))
@@ -650,7 +662,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
     annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "white", cex = 2, alpha = 0.8, srt = 00)
   print(p)
   dev.off()
-
+  
   if (bypopsplots == "Yes") {
     pdf(paste(SubDir, "/ESU Plot_Status_Trend_Continuous_median_combinedscore_byPop.pdf", sep = ""), width = 11, height = 8.5)
     for (i in 1:length(plotdat$ESU_DPS_names)) {
@@ -685,8 +697,8 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
         theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
         annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, cex = 2, col = "white", alpha = 0.8, srt = 00)
       print(p)
-
-
+      
+      
       # no log version
       dat <- expand.grid(seq(min(plotdat$min_ratio_goal[plotdat$p_missing < 0.4]), max(plotdat$max_ratio_goal, na.rm = T) * 1.05, 0.1), seq(min(plotdat$min_percent_change, na.rm = T) * 1.05, max(plotdat$max_percent_change, na.rm = T) * 1.05, 0.1))
       #----------
@@ -717,8 +729,8 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
       print(p)
     }
     dev.off()
-
-
+    
+    
     # by pop but simplied
     pdf(paste(SubDir, "/ESU Plot_Status_Trend_Continuous_median_combinedscore_byPop_simple.pdf", sep = ""), width = 11, height = 8.5)
     for (i in 1:length(plotdat$ESU_DPS_names)) {
@@ -753,8 +765,8 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
         theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
         annotate("text", x = Inf, y = Inf, label = paste("Data Updated ", data_date, sep = ""), vjust = 1.5, hjust = 1, col = "white", cex = 2, alpha = 0.8, srt = 00)
       print(p)
-
-
+      
+      
       # no log version
       dat <- expand.grid(seq(min(plotdat$min_ratio_goal[plotdat$p_missing < 0.4]), max(plotdat$max_ratio_goal, na.rm = T) * 1.05, 0.1), seq(min(plotdat$min_percent_change, na.rm = T) * 1.05, max(plotdat$max_percent_change, na.rm = T) * 1.05, 0.1))
       #----------
@@ -786,7 +798,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
     }
     dev.off()
   }
-
+  
   # #log version
   # dat<-expand.grid(exp(seq(log(min(plotdat$min_ratio_goal[plotdat$p_missing<0.4])*0.95),log(max(plotdat$max_ratio_goal,na.rm = T)*1.05),0.1)),seq(min(plotdat$min_percent_change,na.rm=T)*1.05,max(plotdat$max_percent_change,na.rm=T)*1.05,0.1))
   # #----------
@@ -857,7 +869,7 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   #   theme_bw()
   # print(p)
   # dev.off()
-
+  
   # pdf("ESU Plot_Status_Trend_Continuous_median_transpose_nolog.pdf",width=11,height=8.5)
   # p<-ggplot(plotdat, aes(x=median_ratio_goal,y = median_percent_change)) +
   #   geom_rect(data=NULL,aes(ymin=-Inf,ymax=0,xmin=0,xmax=100),fill=cols2[3],color="black")+
@@ -880,8 +892,8 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   #   #annotation_logticks(side="tb")
   # print(p)
   # dev.off()
-
-
+  
+  
   # missing data plot
   # pdf(paste("ESU Plot_Available_Data_",data_date,".pdf",sep=""),width=11,h
   # plotdat<-plotdat[order(-plotdat$p_not_missing),]
@@ -897,11 +909,11 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
   # xlab(label = "Percent of Populations with Usable Data")
   # print(p)
   # dev.off()
-
-
+  
+  
   jpeg(paste(SubDir, "/ESU Plot_Available_Data_", data_date, ".jpeg", sep = ""), width = 11, height = 8.5, units = "in", res = 700)
   plotdat <- data.frame(plotdat %>% dplyr::select(ESU_DPS_names, ESU_DPS2, p_missing, p_not_missing) %>%
-    pivot_longer(!ESU_DPS_names & !ESU_DPS2, names_to = "Type", values_to = "Proportion"))
+                          pivot_longer(!ESU_DPS_names & !ESU_DPS2, names_to = "Type", values_to = "Proportion"))
   plotdat <- plotdat[rev(order(plotdat$Type, plotdat$Proportion)), ]
   plotdat$ESU_DPS_names <- factor(plotdat$ESU_DPS_names, levels = rev(plotdat$ESU_DPS_names[plotdat$Type == "p_missing"]))
   p <- ggplot(plotdat %>% mutate(order = paste(Proportion, Type)), aes(x = Proportion * 100, y = ESU_DPS_names, fill = Type)) +
