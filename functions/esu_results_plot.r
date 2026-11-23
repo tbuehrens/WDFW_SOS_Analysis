@@ -317,6 +317,26 @@ esu_results_plot <- function(ESU_DIP_results, data_date, futureyears = futureyea
     )
   DIP_Results <- data.frame(DIP_Results)
   
+  # --- Write out the 5-yr geomean % of recovery goal quantiles ---
+  # One row per population; NA quantiles = no usable data for that population.
+  geomean_pct_out <- DIP_Results %>%
+    transmute(
+      ESU_DPS = ESU_DPS2,
+      COMMON_POPULATION_NAME = COMMONPOPNAME2,
+      Recovery_goal = goal_for_ci,
+      Geomean_5yr_pct_goal_point_estimate = Geomean_5yr_prop_goal * 100,
+      Q2.5. = Geomean_pct_q025,
+      Q25. = Geomean_pct_q25,
+      Q50. = Geomean_pct_q50,
+      Q75. = Geomean_pct_q75,
+      Q97.5. = Geomean_pct_q975
+    ) %>%
+    arrange(ESU_DPS, COMMON_POPULATION_NAME)
+  write.csv(geomean_pct_out,
+            paste0(SubDir, "/Geomean_5yr_Pct_Recovery_Goal_Quantiles_", data_date, ".csv"),
+            row.names = FALSE
+  )
+  
   pdf(paste(SubDir, "/DIP_RESULTS_PLOTS_", data_date, ".pdf", sep = ""))
   counter <- 0
   for (i in 1:length(unique(DIP_Results$ESU_DPS))) {
